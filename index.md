@@ -1,7 +1,7 @@
 ---
 title: TakeShape
 date: '2016-08-05 00:00:00'
-description: TKTKTK
+description: Let your ideas...
 layout: default
 ---
 
