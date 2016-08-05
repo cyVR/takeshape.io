@@ -1,0 +1,55 @@
+{
+  "private": true,
+  "name": "takeshape-gh-pages",
+  "version": "0.0.1",
+  "description": "TakeShape on GitHub Pages",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -f {stylesheets/*,javascripts/*,images/*}",
+    "autoprefixer": "postcss -u autoprefixer -r stylesheets/*",
+    "scss": "node-sass --output-style compressed -o stylesheets _assets/stylesheets",
+    "lint": "eslint _assets/javascripts",
+    "uglify": "mkdir -p javascripts && uglifyjs _assets/javascripts/*.js -m -o javascripts/app.js && uglifyjs _assets/javascripts/*.js -m -c -o javascripts/app.min.js",
+    "imagemin": "imagemin _assets/images/* -o images",
+    "icons": "svgo -f _assets/images/icons && mkdir -p images && svg-sprite-generate -d _assets/images/icons -o images/icons.svg",
+    "serve": "browser-sync start --server --files 'stylesheets/*.css, javascripts/*.js, **/*.html, !node_modules/**/*.html'",
+    "build:css": "npm run scss && npm run autoprefixer",
+    "build:js": "npm run lint && npm run uglify",
+    "build:images": "npm run imagemin && npm run icons",
+    "build:all": "npm run build:css && npm run build:js && npm run build:images",
+    "watch:css": "onchange '_assets/stylesheets' -- npm run build:css",
+    "watch:js": "onchange '_assets/javascripts' -- npm run build:js",
+    "watch:images": "onchange '_assets/images' -- npm run build:images",
+    "watch:all": "npm-run-all -p watch:css watch:js watch:images",
+    "postinstall": "npm run build:all && npm run watch:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takeshape/takeshape.git"
+  },
+  "keywords": [
+    "cms"
+  ],
+  "author": "TakeShape <hello@takeshape.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takeshape/takeshape/issues"
+  },
+  "homepage": "https://github.com/takeshape/takeshape#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "browser-sync": "^2.12.8",
+    "eslint": "^2.10.2",
+    "eslint-config-standard": "^5.3.1",
+    "eslint-plugin-promise": "^1.3.0",
+    "eslint-plugin-standard": "^1.3.2",
+    "imagemin-cli": "^3.0.0",
+    "node-sass": "^3.7.0",
+    "npm-run-all": "^2.1.1",
+    "onchange": "^2.4.0",
+    "postcss-cli": "^2.5.2",
+    "svg-sprite-generator": "0.0.7",
+    "svgo": "^0.6.6",
+    "uglify-js": "^2.6.2"
+  }
+}
