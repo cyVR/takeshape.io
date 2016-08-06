@@ -2,7 +2,7 @@
 title: TakeShape
 date: '2016-08-05 00:00:00'
 description: Let your ideas...
-layout: default
+layout: page
 ---
 
 ### [Welcome to GitHub Pages.](#welcome-to-github-pages)
