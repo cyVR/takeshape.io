@@ -27,7 +27,7 @@
     "watch:all": "npm-run-all -p serve watch:css watch:js watch:images watch:jekyll",
     "postinstall": "npm start",
     "preversion": "npm test",
-    "version": "npm run build:all && git add -A .",
+    "version": "npm run build:all && git add -A javascripts stylesheets images",
     "postversion": "git push && git push --tags",
     "start": "npm run build:all && npm run watch:all"
   },
