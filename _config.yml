@@ -1,2 +1,17 @@
+url: http://takeshape.io/
 permalink : pretty
-exclude : ['README.md']
+lang: en
+
+exclude:
+  - node_modules
+  - package.json
+
+compress_html:
+  clippings: []
+  comments: []
+  endings: []
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: []
