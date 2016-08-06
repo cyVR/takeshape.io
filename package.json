@@ -10,7 +10,7 @@
     "scss": "node-sass --output-style compressed -o stylesheets _assets/stylesheets",
     "lint:js": "eslint _assets/javascripts",
     "lint:css": "stylelint _assets/stylesheets/**/*.scss --syntax scss",
-    "test": "npm run lint:js && npm run list:css",
+    "test": "npm run lint:js && npm run lint:css",
     "uglify": "mkdir -p javascripts && uglifyjs _assets/javascripts/*.js -m -o javascripts/app.js && uglifyjs _assets/javascripts/*.js -m -c -o javascripts/app.min.js",
     "imagemin": "imagemin _assets/images/* -o images",
     "icons": "svgo -f _assets/images/icons && mkdir -p images && svg-sprite-generate -d _assets/images/icons -o images/icons.svg",
