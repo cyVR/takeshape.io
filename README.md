@@ -8,8 +8,8 @@ Let your ideas...
 git clone https://github.com/takeshape/takeshape
 cd takeshape
 git checkout gh-pages
-npm install
 [sudo] gem install jekyll
+npm install
 npm start
 ```
 

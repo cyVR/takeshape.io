@@ -5,7 +5,6 @@ import uglify from 'rollup-plugin-uglify';
 const {NODE_ENV} = process.env;
 
 export default {
-  entry: '_assets/javascripts/scripts.js',
   plugins: [
     nodeResolve(),
     commonjs(),
@@ -15,6 +14,5 @@ export default {
     }),
     NODE_ENV === 'production' ? uglify() : {}
   ],
-  dest: 'javascripts/scripts.js',
   format: 'cjs'
 };
