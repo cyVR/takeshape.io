@@ -1,8 +1,8 @@
 ---
 title: TakeShape
 date: '2016-08-05 00:00:00'
-description: Let your ideas...
 layout: page
+body_class: body--homepage
 ---
 
 ### [Welcome to GitHub Pages.](#welcome-to-github-pages)
