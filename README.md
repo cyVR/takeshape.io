@@ -9,8 +9,7 @@ Let your ideas...
 ```
 git clone https://github.com/takeshape/takeshape
 cd takeshape
-git checkout gh-pages
-[sudo] gem install jekyll
+git checkout -b gh-pages
 npm install
 npm start
 ```
