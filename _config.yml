@@ -1,3 +1,9 @@
+# Basics
+title: TakeShape
+description: The NOICE CMS!
+url: http://takeshape.io
+author: Ronik Design
+
 # Where things are
 destination:  ./_site
 layouts_dir:  _layouts
@@ -9,12 +15,7 @@ collections:
 
 # Handling Reading
 include:      []
-exclude:
-  - node_modules
-  - package.json
-  - rollup.config.js
-  - Gemfile
-  - Gemfile.lock
+exclude:      ["node_modules", "package.json", "rollup.config.js"]
 keep_files:   []
 encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
@@ -54,9 +55,9 @@ gems:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-gist
-
+  
   - jekyll-github-metadata
-
+  
 
 # Markdown Processors
 kramdown:

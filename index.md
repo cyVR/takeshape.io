@@ -1,6 +1,6 @@
 ---
 title: TakeShape
-date: '2016-08-05 00:00:00'
+date: 2016-08-12 12:47:34 -04:00
 layout: page
 body_class: body--homepage
 ---
