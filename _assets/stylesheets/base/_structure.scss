@@ -4,6 +4,10 @@ html, body {
 
 html {
   font-size: $font-size-base;
+
+  @include below(mobile){
+    font-size: 8px;
+  }
 }
 
 body {

@@ -2,13 +2,31 @@
   @extend %container;
 
   h1 {
-    font-size: 4.8rem;
     line-height: 1.25;
-
     @include above(mobile){
-      max-width: 69%;
+      font-size: 4.8rem;
+    }
+
+    @include below(mobile){
+      font-size: 7.5vw;
     }
   }
+}
+
+.splash__container {
+  width: 100%;
+
+  @include above(mobile){
+    max-width: 69%;
+  }
+}
+
+.splash__form {
+  position: relative;
+  font-family: $font-family!important;
+  margin-top: 10%;
+  display: flex;
+  width: 100%;
 }
 
 .wrapper {
