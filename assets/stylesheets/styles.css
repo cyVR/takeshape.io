@@ -212,7 +212,8 @@ body {
   padding: 1.6rem 0;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
-          flex: 1 1 auto; }
+          flex: 1 1 auto;
+  height: 6rem; }
 
 .input--email {
   background: transparent;
@@ -237,7 +238,38 @@ body {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-  margin-left: 0; }
+  margin-left: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1.6rem;
+  will-change: color;
+  -webkit-transition: color 0.25s cubic-bezier(0.99, 0.08, 0.49, 0.86);
+  transition: color 0.25s cubic-bezier(0.99, 0.08, 0.49, 0.86); }
+
+.input-container {
+  position: relative;
+  overflow: hidden; }
+  .input-container:after {
+    content: "";
+    background: #fe9066;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    will-change: transform;
+    -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.99, 0.08, 0.49, 0.86);
+    transition: -webkit-transform 0.25s cubic-bezier(0.99, 0.08, 0.49, 0.86);
+    transition: transform 0.25s cubic-bezier(0.99, 0.08, 0.49, 0.86);
+    transition: transform 0.25s cubic-bezier(0.99, 0.08, 0.49, 0.86), -webkit-transform 0.25s cubic-bezier(0.99, 0.08, 0.49, 0.86);
+    z-index: -100; }
+  .input-container:hover .input--submit {
+    color: #fff; }
+  .input-container:hover:after {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
 
 .body--homepage {
   margin: 0 auto;
