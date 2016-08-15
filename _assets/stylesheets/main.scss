@@ -1,11 +1,9 @@
-// External fonts
+// External
 @import url("https://fonts.googleapis.com/css?family=Work+Sans");
 
-// Concise globals
-@import "reset";
-@import "globals";
-
-// Custom styles
+// Base
+@import "base";
 @import "mixins";
+@import "layout";
 @import "components";
 @import "pages";
