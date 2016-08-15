@@ -4,6 +4,9 @@
   "version": "0.3.1",
   "description": "Let your ideas...",
   "main": "index.js",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
   "scripts": {
     "clean": "rm -f {assets/stylesheets/*,assets/javascripts/*,assets/images/*}",
     "autoprefixer": "postcss -u autoprefixer -r assets/stylesheets/styles.css",
@@ -33,7 +36,7 @@
     "version": "NODE_ENV=production npm run build:all && git add -A assets",
     "postversion": "git push && git push --tags",
     "start": "npm run build:watch && npm run watch",
-    "postcss": "postcss -u autoprefixer -u postcss-custom-media -u postcss-lh -u postcss-media-minmax -u postcss-pe -u postcss-pr -r assets/stylesheets/styles.css"
+    "postcss": "postcss -u autoprefixer -u postcss-custom-media -u postcss-media-minmax -u postcss-lh -u postcss-pr -r assets/stylesheets/styles.css"
   },
   "repository": {
     "type": "git",
