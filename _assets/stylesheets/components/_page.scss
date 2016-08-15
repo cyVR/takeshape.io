@@ -1,6 +1,0 @@
-.page {
-  @include markdown-headings();
-  @include markdown-paragraph();
-  @include markdown-blockquote();
-  @include markdown-list();
-}

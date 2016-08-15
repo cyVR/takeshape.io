@@ -1,4 +1,3 @@
 body {
-  @include markdown-typography();
-  @include markdown-hr();
+  font-family: $font-family;
 }
