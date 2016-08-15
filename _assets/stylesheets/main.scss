@@ -5,18 +5,23 @@
 @import "base/fonts";
 @import "base/reset";
 @import "base/variables";
+@import "base/structure";
 
 // Helpers
+@import "helpers/functions";
 @import "helpers/mixins";
 
 // Components
 @import "components/body";
 @import "components/footer";
+@import "components/header";
 @import "components/page";
 @import "components/post";
+@import "components/social";
 
 // Layout
 @import "layout/grid";
 
 // Pages
 @import "pages/homepage";
+@import "pages/splash";
