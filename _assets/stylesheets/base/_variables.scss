@@ -1,7 +1,27 @@
 $font-family: "Work Sans", sans-serif;
+$font-size-base: 10px;
+$font-size: 1.6rem;
+$line-height: 1.5;
 
 $colors: (
   bunting: #1e114b,
+  salmon: #fe9066,
+  cornflower-blue: #7858fc,
   black: #000000,
   white: #ffffff
+);
+
+$font-weights: (
+  light: 200,
+  book: 400,
+  semibold: 600
+);
+
+$breakpoints: (
+  mobile: 780px,
+  tablet: 900px,
+  desktop: 1024px,
+  large-desktop: 1160px,
+  hd: 1366px,
+  super-hd: 1600px
 );
