@@ -1,16 +1,16 @@
 // External
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900");
 
+// Helpers
+@import "helpers/functions";
+@import "helpers/mixins";
+
 // Base
 @import "base/fonts";
 @import "base/reset";
 @import "base/variables";
 @import "base/structure";
 @import "base/typography";
-
-// Helpers
-@import "helpers/functions";
-@import "helpers/mixins";
 
 // Components
 @import "components/body";
@@ -19,10 +19,10 @@
 @import "components/page";
 @import "components/post";
 @import "components/social";
+@import "components/input";
 
 // Layout
 @import "layout/grid";
 
 // Pages
 @import "pages/homepage";
-@import "pages/splash";
