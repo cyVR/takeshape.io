@@ -1,6 +1,6 @@
 # TakeShape on GitHub Pages
 
-The NOICE CMS!
+Let your ideas...
 
 > This boilerplate was generated with [slush-gh-pages](https://github.com/ronik-design/slush-gh-pages).
 

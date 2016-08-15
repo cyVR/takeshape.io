@@ -2,7 +2,7 @@
   "private": true,
   "name": "takeshape",
   "version": "0.1.0",
-  "description": "The NOICE CMS!",
+  "description": "Let your ideas...",
   "main": "index.js",
   "scripts": {
     "clean": "rm -f {assets/stylesheets/*,assets/javascripts/*,assets/images/*}",
@@ -83,7 +83,8 @@
   },
   "dependencies": {
     "svg4everybody": "^2.1.0",
-    "concise.css": "github:concisecss/concise.css"
+    "concise.css": "github:concisecss/concise.css",
+    "concise-utils": "github:concisecss/concise-utils"
   },
-  "generator": "slush-gh-pages v1.2.0"
+  "generator": "slush-gh-pages v1.2.3"
 }
