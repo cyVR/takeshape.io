@@ -1,12 +1,9 @@
 // External fonts
-@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans");
 
 // Concise globals
+@import "reset";
 @import "globals";
-
-// Concise library
-@import "concise.css/concise";
-@import "concise-utils/concise-utils";
 
 // Custom styles
 @import "mixins";
