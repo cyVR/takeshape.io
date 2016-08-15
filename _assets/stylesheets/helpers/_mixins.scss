@@ -84,12 +84,10 @@
 /* Media Query Helpers */
 
 @mixin above($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
 
-  @if map-has-key($breakpoints, $breakpoint) {
-
-    $anti-overlap-breakpoint: map-get($breakpoints, $breakpoint) + 1;
-
-    @include breakpoint(min-width $anti-overlap-breakpoint) {
+  @if $value != null {
+    @media (min-width: $value) {
       @content;
     }
   }
@@ -98,31 +96,18 @@
     @warn "Unknown `#{$breakpoint}` in $breakpoints.";
   }
 }
+
 
 @mixin below($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
 
-  @if map-has-key($breakpoints, $breakpoint) {
-
-    @include breakpoint(max-width map-get($breakpoints, $breakpoint)) {
+  @if $value != null {
+    @media (max-width: $value) {
       @content;
     }
   }
 
   @else {
     @warn "Unknown `#{$breakpoint}` in $breakpoints.";
-  }
-}
-
-@mixin between($breakpoint-1, $breakpoint-2) {
-
-  @if map-has-key($breakpoints, $breakpoint-1) and map-has-key($breakpoints, $breakpoint-2) {
-
-    @include breakpoint(map-get($breakpoints, $breakpoint-1) map-get($breakpoints, $breakpoint-2)) {
-      @content;
-    }
-  }
-
-  @else {
-    @warn "Unknown values in $breakpoints.";
   }
 }

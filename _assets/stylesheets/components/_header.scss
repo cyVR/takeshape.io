@@ -1,4 +1,13 @@
 .header {
+  @include basic-copy();
+
   display: flex;
   justify-content: space-between;
+  padding-top: 8%;
+}
+
+.header__logo {
+  font-size: 3.4rem;
+  font-weight: -weight(bold);
+  color: -color(salmon);
 }

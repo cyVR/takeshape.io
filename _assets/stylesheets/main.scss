@@ -1,11 +1,12 @@
 // External
-@import url("https://fonts.googleapis.com/css?family=Work+Sans");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900");
 
 // Base
 @import "base/fonts";
 @import "base/reset";
 @import "base/variables";
 @import "base/structure";
+@import "base/typography";
 
 // Helpers
 @import "helpers/functions";

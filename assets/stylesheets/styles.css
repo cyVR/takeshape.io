@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900");
 /** * Eric Meyer"s Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
 html,
 body,
@@ -153,28 +153,72 @@ body {
   background: #1e114b; }
 
 .footer {
-  color: #7858fc; }
+  padding: 5% 0;
+  color: #7858fc;
+  font-size: 1.6rem; }
+  .footer a {
+    color: inherit; }
+  .footer a:hover {
+    color: #fe9066; }
 
 .header {
+  font-size: 1.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  padding-top: 8%; }
+  .header a {
+    color: inherit; }
+  .header a:hover {
+    color: #fe9066; }
+
+.header__logo {
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #fe9066; }
 
 .social__list {
-  color: #7858fc; }
+  color: #7858fc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
-.social__item {
-  display: inline-block; }
+.social__item + * {
+  margin-left: 5rem; }
+
+.social__link {
+  padding: 2rem; }
+  .social__link svg {
+    height: 2rem;
+    width: 2rem;
+    fill: #7858fc; }
+  .social__link:hover svg {
+    fill: #fe9066; }
 
 .body--homepage {
   margin: 0 auto;
   max-width: 120rem; }
+  @media (min-width: 780px) {
+    .body--homepage {
+      padding-left: 5rem;
+      padding-right: 5rem; } }
+  @media (max-width: 780px) {
+    .body--homepage {
+      padding-left: 3rem;
+      padding-right: 3rem; } }
 
 .body--homepage h1 {
-  font-size: 4.8rem; }
+  font-size: 4.8rem;
+  line-height: 1.25; }
+  @media (min-width: 780px) {
+    .body--homepage h1 {
+      max-width: 69%; } }
 
 .wrapper {
   display: -webkit-box;
