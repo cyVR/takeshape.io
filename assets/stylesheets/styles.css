@@ -310,7 +310,7 @@ body {
   width: 100%; }
   @media (min-width: 780px) {
     .splash__container {
-      max-width: 69%; } }
+      max-width: 70%; } }
 
 .splash__form {
   position: relative;
