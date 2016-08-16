@@ -156,7 +156,7 @@ body {
   background: #1e114b; }
 
 .footer {
-  padding: 5% 0;
+  margin: 5% 0;
   color: #ffffff;
   font-size: 1.6rem; }
   .footer a {
@@ -286,14 +286,16 @@ body {
       padding-left: 3rem;
       padding-right: 3rem; } }
 
-.body--homepage h1 {
-  line-height: 1.25; }
-  @media (min-width: 780px) {
-    .body--homepage h1 {
-      font-size: 4.8rem; } }
-  @media (max-width: 780px) {
-    .body--homepage h1 {
-      font-size: 7.5vw; } }
+.body--homepage {
+  pointer-events: none; }
+  .body--homepage h1 {
+    line-height: 1.25; }
+    @media (min-width: 780px) {
+      .body--homepage h1 {
+        font-size: 4.8rem; } }
+    @media (max-width: 780px) {
+      .body--homepage h1 {
+        font-size: 7.5vw; } }
 
 .splash__container {
   width: 100%; }
@@ -322,4 +324,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  .wrapper > * {
+    pointer-events: auto; }
 /*# sourceMappingURL=styles.css.map */
