@@ -1,6 +1,6 @@
 $placeholder-color: rgba(255, 255, 255, 0.65);
 
-[class^="input--"]{
+[class^="input--"] {
   font-size: 1.8rem;
   border: 0;
   border-radius: 0;
@@ -24,7 +24,7 @@ $placeholder-color: rgba(255, 255, 255, 0.65);
     color: $placeholder-color !important;
   }
 
-  &::-moz-placeholder {  /* Firefox 19+ */
+  &::-moz-placeholder { /* Firefox 19+ */
     color: $placeholder-color !important;
   }
 
