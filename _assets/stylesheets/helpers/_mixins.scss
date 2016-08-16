@@ -3,15 +3,16 @@
   @if $value == on {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  } @else {
+  }
+
+  @else {
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
   }
 }
 
 @mixin cf() {
-
-  &::after {
+  &:after {
     content: "";
     display: table;
     clear: both;
@@ -29,7 +30,7 @@
 @mixin ratio-box($percent) {
   position: relative;
 
-  &::before {
+  &:before {
     content: "";
     display: block;
     padding-top: $percent;
@@ -48,7 +49,6 @@
   @include strip-input-style();
 
   $hover-color: #fff;
-
   color: $color;
   line-height: 1;
   background-color: transparent;
@@ -86,7 +86,9 @@
     @media (min-width: $value) {
       @content;
     }
-  } @else {
+  }
+
+  @else {
     @warn "Unknown `#{$breakpoint}` in $breakpoints.";
   }
 }
@@ -98,7 +100,9 @@
     @media (max-width: $value) {
       @content;
     }
-  } @else {
+  }
+
+  @else {
     @warn "Unknown `#{$breakpoint}` in $breakpoints.";
   }
 }
