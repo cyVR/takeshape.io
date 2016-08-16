@@ -31,6 +31,11 @@ $placeholder-color: rgba(255, 255, 255, 0.65);
   &:-ms-input-placeholder {
     color: $placeholder-color !important;
   }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #3a3062 inset !important;
+    -webkit-text-fill-color: #fff !important;
+  }
 }
 
 .input--submit {
