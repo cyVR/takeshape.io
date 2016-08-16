@@ -1,5 +1,4 @@
 @mixin font-smoothing($value: on) {
-
   @if $value == on {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -42,38 +41,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-  }
-}
-
-@mixin button($size, $color) {
-  @include strip-input-style();
-
-  $hover-color: #fff;
-  color: $color;
-  line-height: 1;
-  background-color: transparent;
-  position: relative;
-  display: inline-block;
-  appearance: none;
-  outline: 0 none;
-  border: 0.1rem solid $color;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  will-change: background, color, opacity;
-  transition: background 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.2s ease-in-out, opacity 0.15s ease-in;
-
-  &:disabled {
-    opacity: 0.5;
-  }
-
-  &:not(:disabled) {
-    cursor: pointer;
-
-    &:hover {
-      color: $hover-color;
-      background-color: $color;
-    }
   }
 }
 
