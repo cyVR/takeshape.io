@@ -158,11 +158,20 @@ body {
 .footer {
   margin: 5% 0;
   color: #ffffff;
+  pointer-events: none;
   font-size: 1.6rem; }
   .footer a {
     color: inherit; }
   .footer a:hover {
     color: #fe9066; }
+
+.footer__copy {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .footer__copy a {
+    pointer-events: auto; }
 
 .header {
   font-size: 1.6rem;

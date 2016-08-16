@@ -1,6 +1,15 @@
 .footer {
   margin: 5% 0;
   color: -color(white);
+  pointer-events: none;
 
   @include basic-copy();
+}
+
+.footer__copy {
+  user-select: none;
+
+  a {
+    pointer-events: auto;
+  }
 }
