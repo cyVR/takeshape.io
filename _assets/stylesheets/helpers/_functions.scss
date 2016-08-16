@@ -5,6 +5,7 @@
       @return $i;
     }
   }
+
   @return null;
 }
 
@@ -15,6 +16,7 @@
   @if $mod {
     @return $index + $mod;
   }
+
   @return $index;
 }
 
@@ -22,6 +24,7 @@
   @if map-has-key($colors, $key) {
     @return map-get($colors, $key);
   }
+
   @warn "Unknown `#{$key}` in $colors.";
   @return null;
 }
@@ -30,6 +33,7 @@
   @if map-has-key($font-weights, $key) {
     @return map-get($font-weights, $key);
   }
+
   @warn "Unknown `#{$key}` in $font-weights.";
   @return null;
 }
@@ -38,6 +42,7 @@
   @if map-has-key($breakpoints, $key) {
     @return map-get($breakpoints, $key);
   }
+
   @warn "Unknown `#{$key}` in $breakpoints.";
   @return null;
 }
