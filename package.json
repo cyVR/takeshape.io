@@ -9,7 +9,7 @@
   },
   "scripts": {
     "clean": "rm -f {assets/stylesheets/*,assets/javascripts/*,assets/images/*}",
-    "postcss": "postcss -u autoprefixer -u postcss-custom-media -u postcss-lh -u postcss-media-minmax -u postcss-pe -u postcss-pr -r assets/stylesheets/styles.css",
+    "postcss": "postcss --config postcss.config.js --replace assets/stylesheets/styles.css",
     "scss": "node-sass --importer node_modules/node-sass-import --output-style compressed _assets/stylesheets/main.scss assets/stylesheets/styles.css",
     "scss:dev": "node-sass --importer node_modules/node-sass-import --source-map true _assets/stylesheets/main.scss assets/stylesheets/styles.css",
     "lint:js": "eslint _assets/javascripts",
@@ -69,9 +69,7 @@
     "onchange": "^2.4.0",
     "postcss-cli": "^2.5.2",
     "postcss-custom-media": "^5.0.1",
-    "postcss-lh": "^1.1.3",
     "postcss-media-minmax": "^2.1.2",
-    "postcss-pr": "github:takeshape/postcss-pr",
     "rollup": "^0.34.3",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-commonjs": "^3.3.1",
@@ -84,9 +82,7 @@
     "svgo": "^0.6.6"
   },
   "dependencies": {
-    "svg4everybody": "^2.1.0",
-    "concise.css": "github:concisecss/concise.css",
-    "concise-utils": "github:concisecss/concise-utils"
+    "svg4everybody": "^2.1.0"
   },
   "generator": "slush-gh-pages v1.2.3"
 }
