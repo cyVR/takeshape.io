@@ -5,4 +5,4 @@ layout: splash
 body_class: body--homepage
 ---
 
-# The CMS, API, and static site generator you always wanted. Get ready to create delightfully.
+# The CMS, API, and static site generator you've been dreaming of. Get ready to love your CMS.
