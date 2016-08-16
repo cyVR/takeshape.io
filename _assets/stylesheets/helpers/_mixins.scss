@@ -1,12 +1,9 @@
-
 @mixin font-smoothing($value: on) {
 
   @if $value == on {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  @else {
+  } @else {
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
   }
@@ -33,6 +30,8 @@
   position: relative;
 
   &::before {
+
+
     content: "";
     display: block;
     padding-top: $percent;
@@ -80,7 +79,6 @@
   }
 }
 
-
 /* Media Query Helpers */
 
 @mixin above($breakpoint) {
@@ -90,13 +88,10 @@
     @media (min-width: $value) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @warn "Unknown `#{$breakpoint}` in $breakpoints.";
   }
 }
-
 
 @mixin below($breakpoint) {
   $value: map-get($breakpoints, $breakpoint);
@@ -105,9 +100,7 @@
     @media (max-width: $value) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @warn "Unknown `#{$breakpoint}` in $breakpoints.";
   }
 }
