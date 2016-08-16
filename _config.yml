@@ -1,6 +1,6 @@
 # Basics
 title: TakeShape
-description: Let your ideas...
+description: Take back control of your content management system. TakeShape lets you develop a fully custom CMS with ease. Powerful tools for developers, intuitive interface for clients.
 url: http://takeshape.io
 author: Ronik Design
 
@@ -55,9 +55,9 @@ gems:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-gist
-  
+
   - jekyll-github-metadata
-  
+
 
 # Markdown Processors
 kramdown:
