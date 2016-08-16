@@ -3,6 +3,7 @@
 
   h1 {
     line-height: 1.25;
+
     @include above(mobile) {
       font-size: 4.8rem;
     }
