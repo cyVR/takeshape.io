@@ -1,6 +1,6 @@
 .footer {
   margin: 5% 0;
-  color: -color(white);
+  color: -color(cornflowerblue);
   pointer-events: none;
 
   @include basic-copy();
@@ -12,4 +12,6 @@
   a {
     pointer-events: auto;
   }
+
+
 }

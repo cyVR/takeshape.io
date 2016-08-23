@@ -9,6 +9,7 @@ destination:  ./_site
 layouts_dir:  _layouts
 data_dir:     _data
 includes_dir: _includes
+sass_dir: _assets/stylesheetzz
 collections:
   posts:
     output:   true
@@ -87,3 +88,5 @@ compress_html:
   blanklines: false
   profile: false
   startings: []
+
+
