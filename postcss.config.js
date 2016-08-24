@@ -1,6 +1,7 @@
 module.exports = {
   'use': [
-    'autoprefixer'
+    'autoprefixer',
+    'lost'
   ],
   'autoprefixer': {
     'browsers': '> 5%'
