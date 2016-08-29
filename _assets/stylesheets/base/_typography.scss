@@ -1,10 +1,6 @@
 @mixin basic-copy {
   font-size: 1.6rem;
 
-  a {
-    color: blue;
-  }
-
   a:hover {
     color: -color(blue);
   }

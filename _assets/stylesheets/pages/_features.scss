@@ -1,0 +1,31 @@
+  .features-container{
+    height: 60rem;
+    width: 100%;
+    margin-top: 7.3rem;
+    margin-left: 14rem;
+  }
+
+  .feature {
+    lost-column: 1/3;
+    margin: 0;
+
+  h2{
+    font-family: "Work Sans", sans-serif;
+    font-size: large;
+    height: 3.6rem;
+    width: 13.9rem;
+  }
+
+  h3{
+    font-family: "Courier New";
+    font-size: medium;
+    height: 5.6rem;
+    width: 29rem;
+  }
+}
+
+  .feature__img{
+    height: 22rem;
+    width: 36rem;
+    background-color: lightgray;
+  }

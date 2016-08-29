@@ -1,0 +1,58 @@
+.interface-display {
+  margin-top: 25.5rem;
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+  height: 100%;
+
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 1.5em;
+    padding-right: 1.5em;
+    padding-left: 0;
+    padding-bottom: 0;
+
+  }
+
+  a {
+    font-size: 1.5em;
+    margin-top: 3em;
+    padding: .5em;
+  }
+  a:hover {
+    border-bottom: solid #bb07ff;
+  }
+
+  .product-box {
+    margin-top: 4rem;
+
+    div {
+      height: 25rem;
+      width: 10rem;
+      margin: 0;
+      background-color: lightgray;
+      lost-column: 1/2;
+
+    }
+
+    .product-box__comments {
+      height: 15rem;
+      width: 5rem;
+      margin: 0;
+      lost-column: 1/2;
+
+      h3 {
+        padding-left: 3rem;
+        padding-right: 3rem;
+
+      }
+      h4 {
+        padding-left: 3rem;
+        padding-right: 3rem;
+
+      }
+    }
+
+  }
+
+}
