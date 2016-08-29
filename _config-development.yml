@@ -1,8 +1,5 @@
-# Serving
-detach: false
-port:   4000
-host:   127.0.0.1
+verbose:  true
 
 # Outputting
 liquid:
-  error_mode: lax
+  error_mode: strict

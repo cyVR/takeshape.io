@@ -19,6 +19,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 keep_files:   []
 include:      []
 exclude:
+  - vendor
   - node_modules
   - package.json
   - rollup.config.js
@@ -62,7 +63,6 @@ gems:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-gist
-
   - jekyll-github-metadata
 
 
@@ -75,7 +75,6 @@ kramdown:
   smart_quotes:   lsquo,rsquo,ldquo,rdquo
   input:          GFM
   hard_wrap:      false
-  footnote_nr:    1
 
 # Html Compressor
 compress_html:

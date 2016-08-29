@@ -7,7 +7,6 @@ lib-cov
 *.pid
 *.gz
 .DS_Store
-.idea
 
 pids
 logs
@@ -18,3 +17,5 @@ node_modules
 
 _site
 .githubtoken
+.jekyll-metadata
+vendor
