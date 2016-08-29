@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "takeshape",
-  "version": "0.7.2",
+  "version": "0.8.0",
   "description": "Let your ideas...",
   "main": "index.js",
   "engines": {
