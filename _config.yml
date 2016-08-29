@@ -54,6 +54,16 @@ liquid:
 repository: takeshape/takeshape
 
 # Plugins
+whitelist:
+  - jekyll-mentions
+  - jemoji
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-github-metadata  
 gems:
   - jekyll-mentions
   - jemoji
