@@ -1,50 +1,46 @@
 .header {
-  width: 100%;
-  display: block;
-  background-color: white;
-  font-family: "Work Sans", sans-serif;
+  @extend %basic-block;
 
+  background-color: -color(white);
+  padding: 3.6rem 0;
+
+  &__inner {
+    @extend %container;
   }
 
-  .header__logo {
+  &__logo {
     display: inline-block;
-    height: 100%;
-    font-size: 3.4rem;
-    font-weight: -weight(bold);
-    color: gold;
-    height: 3.6rem;
-    width: 19.9rem;
-    margin-top: 5.1rem;
-    margin-right: 20.6rem;
-    margin-left: 14rem;
-    margin-bottom: 4.9rem;
 
-
+    h1 {
+      font-family: $atlas;
+      font-size: 3.4rem;
+      font-weight: bold;
+      font-weight: -weight(bold);
+      color: gold;
+    }
   }
 
-  .header__nav{
+  .header__nav {
     float: right;
-    width: 67.9rem;
-    margin-top: 5.1rem;
-    margin-bottom: 5.8rem;
-    margin-right: 14rem;
 
+    ul {
+      display: inline-block;
+      margin-right: 4.8rem;
+    }
+
+    li {
+      display: inline-block;
+
+      & + * {
+        margin-left: 4.8rem;
+      }
+      a {
+
+        font-family: $atlas;
+        font-size: 1.8rem;
+        color: -color(ebony-clay);
+
+      }
+    }
   }
-
-  .header__nav li {
-    lost-column: 1/6;
-    color: black;
-    width: 8.6rem;
-    height: 1.8rem;
-
-
-  }
-
-  .button {
-    border-radius: 8%;
-    background-color: #00cc99;
-    width: 20.1rem;
-    height: 6.4rem;
-
-
-  }
+}

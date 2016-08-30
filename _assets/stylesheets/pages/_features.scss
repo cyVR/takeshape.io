@@ -1,31 +1,34 @@
-  .features-container{
-    height: 60rem;
-    width: 100%;
-    margin-top: 7.3rem;
-    margin-left: 14rem;
-  }
+.features-container {
+  @extend %basic-block;
+
+  padding: 16.4rem 0 25.3rem 4rem;
 
   .feature {
-    lost-column: 1/3;
-    margin: 0;
+    display: inline-block;
+    margin-right: 4rem;
 
-  h2{
-    font-family: "Work Sans", sans-serif;
-    font-size: large;
-    height: 3.6rem;
-    width: 13.9rem;
+
+    h2 {
+      font-family: $atlas;
+      font-size: 3.6rem;
+      margin-top: 3.5rem;
+
+    }
+
+    p {
+      font-family: "Atlas Typewriter";
+      font-size: 1.8rem;
+      line-height: 1.6;
+      margin-top: 2.3rem;
+
+    }
+
+    &__img {
+      height: 22rem;
+      width: 36rem;
+      background-color: lightgray;
+    }
   }
 
-  h3{
-    font-family: "Courier New";
-    font-size: medium;
-    height: 5.6rem;
-    width: 29rem;
-  }
+
 }
-
-  .feature__img{
-    height: 22rem;
-    width: 36rem;
-    background-color: lightgray;
-  }

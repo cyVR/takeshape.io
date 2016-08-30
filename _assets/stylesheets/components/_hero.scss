@@ -1,0 +1,34 @@
+.hero {
+  @extend %basic-block;
+
+  background-color: -color(bunting);
+  height: 78rem;
+  color: -color(white);
+  padding: 10rem 0 13.5rem;
+
+  &__inner {
+    @extend %container;
+
+    h1 {
+      font-family: $atlas;
+      font-size: 5.4rem;
+      line-height: 1.28;
+    }
+
+    p {
+      font-family: $atlas-typewriter;
+      font-size: 2.1rem;
+      line-height: 1.62;
+      margin-top: 3.1rem;
+    }
+
+    .button {
+      margin-top: 5.6rem;
+    }
+  }
+
+  &__content {
+    max-width: 73rem;
+  }
+}
+

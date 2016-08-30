@@ -1,49 +1,17 @@
 .body--homepage {
   @extend %container;
 
-  h1 {
-    line-height: 1.25;
-    font-weight: 400;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: column;
 
-    @include above(mobile) {
-      font-size: 4.8rem;
+    > * {
+      pointer-events: auto;
     }
 
-    @include below(mobile) {
-      font-size: 7.5vw;
-    }
-  }
-
-  h4 {
-    font-weight: 600;
-  }
-
-  pointer-events: none;
-}
-
-.splash__container {
-  width: 100%;
-
-  @include above(mobile) {
-    max-width: 70%;
   }
 }
 
-.splash__form {
-  position: relative;
-  font-family: $font-family !important;
-  margin-top: 10%;
-  display: flex;
-  width: 100%;
-}
 
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-  flex-direction: column;
-
-  > * {
-    pointer-events: auto;
-  }
-}

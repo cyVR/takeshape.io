@@ -1,14 +1,16 @@
 %container {
   margin: 0 auto;
-  max-width: 120rem;
-
-  @include above(mobile) {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
+  max-width: 124rem;
+  width: 100%;
 
   @include below(mobile) {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
+
+  @include above(mobile) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
 }

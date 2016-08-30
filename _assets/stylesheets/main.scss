@@ -3,6 +3,8 @@
 // Helpers
 @import "helpers/functions";
 @import "helpers/mixins";
+@import "helpers/placeholders";
+
 // Base
 @import "base/fonts";
 @import "base/reset";
@@ -17,13 +19,14 @@
 @import "components/post";
 @import "components/social";
 @import "components/input";
+@import "components/button";
+@import "components/hero";
 // Layout
 @import "layout/grid";
 // Pages
 @import "pages/homepage";
-@import "pages/hero";
 @import "pages/features";
 @import "pages/interface";
 @import "pages/get-started";
 @import "pages/why-features-pricing";
-@import "pages/quote";
+@import "pages/quote-block";
