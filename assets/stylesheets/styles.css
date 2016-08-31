@@ -366,15 +366,34 @@ h6 {
 
 .features-container {
   padding: 16.4rem 0 25.3rem 4rem; }
+
+.features-container:before{
+  content: '';
+  display: table; }
+
+.features-container:after{
+  content: '';
+  display: table;
+  clear: both; }
   .features-container .feature {
-    display: inline-block;
-    margin-right: 4rem; }
+    width: calc(99.9% * 1/3 - (30px - 30px * 1/3)); }
+  .features-container .feature:nth-child(1n){
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+  .features-container .feature:last-child{
+  margin-right: 0; }
+  .features-container .feature:nth-child(3n){
+  margin-right: 0;
+  float: right; }
+  .features-container .feature:nth-child(3n + 1){
+  clear: both; }
     .features-container .feature h2 {
       font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 3.6rem;
       margin-top: 3.5rem; }
     .features-container .feature p {
-      font-family: "Atlas Typewriter";
+      font-family: "Atlas Typewriter", "Lucida Grande", monospace;
       font-size: 1.8rem;
       line-height: 1.6;
       margin-top: 2.3rem; }
@@ -521,7 +540,8 @@ h6 {
 .quote-block {
   padding-left: 12rem; }
   .quote-block .quote__img-container {
-    display: inline-block; }
+    display: inline-block;
+    vertical-align: top; }
   .quote-block .quote__img {
     display: inline-block;
     width: 12.4rem;
