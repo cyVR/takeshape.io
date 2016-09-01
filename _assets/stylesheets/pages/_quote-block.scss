@@ -1,11 +1,12 @@
 .quote-block {
   @extend %basic-block;
+  @extend %container;
 
-  padding-left: 12rem;
 
   .quote__img-container {
     display: inline-block;
     vertical-align: top;
+    padding-right: 3.8rem;
 
   }
 

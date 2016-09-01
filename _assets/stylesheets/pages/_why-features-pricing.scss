@@ -1,18 +1,25 @@
 .why-container {
   @extend %basic-block;
+
+  display: flex;
   lost-utility: clearfix;
   margin-top: 18rem;
+  padding: 0 10rem;
 
-
-  .why_div{
-    display: inline-block;
+  .why_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 0 5rem 0 5.7rem;
-    lost-column: 1/3 no-flex;
+    lost-column: 1/3;
 
   }
 
+  .why_div:nth-of-type(1) {
+    border-right: solid #DEDEE9;
+  }
+
   .why_div:nth-of-type(2){
-    border-left: solid #DEDEE9;
     border-right: solid #DEDEE9;
   }
 
@@ -20,11 +27,14 @@
     font-family: $atlas;
     font-size: 3.6rem;
     margin-bottom: 1.7rem;
+
   }
 
   h2 {
     font-family: $atlas-typewriter;
     font-size: 1.6rem;
+    margin-bottom: 1.7rem;
+
 
   }
 
@@ -44,13 +54,16 @@
     border-radius: .3rem;
     cursor: pointer;
     transition: .22s background-color cubic-bezier(0.165, .84, .44, 1);
-    margin-top: 3.3rem;
+    max-width: 30rem;
+
+
+
+
 
     a {
       font-family: $atlas;
       font-weight: bold;
       font-size: 1.6rem;
-      text-align: center;
     }
   }
 
