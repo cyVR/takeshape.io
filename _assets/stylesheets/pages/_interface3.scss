@@ -1,0 +1,68 @@
+.interface3 {
+  @extend %basic-block;
+  @extend %container;
+
+  margin-bottom: 44rem;
+
+  .interface3__text {
+    @extend %container;
+
+
+    text-align: center;
+    max-width: 63rem;
+    margin-bottom: 12rem;
+
+    h1 {
+      font-family: $atlas;
+      font-size: 5.4rem;
+      letter-spacing: 0.025rem;
+    }
+  }
+
+  .interface3__product-box {
+
+    display: flex;
+
+    img {
+      width: 80rem;
+      height: 50rem;
+      padding-right: 5.5rem;
+    }
+
+    .interface3__users-container {
+
+      display: flex;
+      flex-flow: column;
+      padding: 2rem 0;
+
+      .interface3__user {
+
+        padding-left: 1rem;
+        margin-bottom: 7rem;
+        border-left: solid -color(white);
+
+        h2 {
+          font-family: $atlas;
+          font-size: 2.4rem;
+          font-weight: bold;
+          margin-bottom: 1.2rem;
+        }
+
+        h3 {
+          font-family: $atlas-typewriter;
+          font-size: 1.6rem;
+        }
+
+      }
+
+      .interface3__user:hover {
+        border-left: solid #68D9BB;
+
+        h2{
+          color: #68D9BB;
+        }
+      }
+    }
+  }
+
+}

@@ -2,11 +2,13 @@
   @extend %basic-block;
   @extend %container;
 
+  max-width: 120rem;
+  padding-left: 15rem;
 
   .quote__img-container {
     display: inline-block;
-    vertical-align: top;
     padding-right: 3.8rem;
+    vertical-align: top;
 
   }
 
