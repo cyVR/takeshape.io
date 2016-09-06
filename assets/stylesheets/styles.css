@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900");
 /* Return index of matched value in list */
 /* Media Query Helpers */
-.footer, .header, .hero, .features-container, .interface-display, .interface2, .interface3, .get-started, .why-container, .quote-block, .price-header, .plan-container {
+.footer, .header, .hero, .features-container, .interface-display, .interface2, .interface3, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features {
   display: block;
   width: 100%;
   position: relative; }
@@ -340,16 +340,16 @@ h6 {
   .hero__content {
     max-width: 73rem; }
 
-.header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .faq-container .faq__header, .faq-container .faq__text-container {
+.header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container {
   margin: 0 auto;
   max-width: 124rem;
   width: 100%; }
   @media (max-width: 780px) {
-    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .faq-container .faq__header, .faq-container .faq__text-container {
+    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container {
       padding-left: 4rem;
       padding-right: 4rem; } }
   @media (min-width: 780px) {
-    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .faq-container .faq__header, .faq-container .faq__text-container {
+    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container {
       padding-left: 2rem;
       padding-right: 2rem; } }
 
@@ -694,6 +694,7 @@ h6 {
 .price-header {
   text-align: center;
   max-width: 60rem;
+  margin-top: 12rem;
   margin-bottom: 10rem; }
   .price-header h1 {
     font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -702,6 +703,7 @@ h6 {
   .price-header h3 {
     font-family: "Atlas Typewriter", "Lucida Grande", monospace;
     font-size: 1.8rem;
+    font-weight: 400;
     line-height: 1.7; }
 
 .plan-container:before{
@@ -713,12 +715,7 @@ h6 {
   display: table;
   clear: both; }
   .plan-container .plan {
-    display: -webkit-box;
-    display: flex;
     text-align: center;
-    flex-flow: column;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
     width: calc(99.9% * 1/4 - (30px - 30px * 1/4)); }
   .plan-container .plan:nth-child(1n){
   float: left;
@@ -735,6 +732,8 @@ h6 {
       border-top: solid black 0.2rem;
       border-left: solid black 0.2rem;
       border-right: solid black 0.2rem;
+      border-top-left-radius: 0.4rem;
+      border-top-right-radius: 0.4rem;
       padding: 3rem 0; }
       .plan-container .plan .plan__price h3 {
         font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -764,24 +763,36 @@ h6 {
       background: #F1F1F1;
       border-bottom: solid #979797 0.2rem;
       border-left: solid #979797 0.2rem;
-      border-right: solid #979797 0.2rem; }
+      border-right: solid #979797 0.2rem;
+      border-bottom-left-radius: 0.4rem;
+      border-bottom-right-radius: 0.4rem; }
       .plan-container .plan .plan__features h3 {
         font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 1.6rem;
+        font-weight: 400;
         padding-bottom: 2rem;
-        margin: 2rem 2rem;
+        margin: 0 2rem 2rem 2rem;
         border-bottom: solid black 0.1rem; }
+      .plan-container .plan .plan__features h3:first-of-type {
+        padding-top: 2rem; }
       .plan-container .plan .plan__features h3:last-of-type {
         padding-bottom: 0;
         border-bottom: none; }
     .plan-container .plan .plan__link {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.6rem;
+      font-weight: 400;
       display: inline;
       border-bottom: solid black 0.1rem; }
     .plan-container .plan p {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.6rem;
+      font-weight: 400;
       display: inline; }
     .plan-container .plan .button {
       margin: 2.8rem 3rem 1rem; }
     .plan-container .plan .button--dedicated {
+      display: inline-block;
       outline: 0 none !important;
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -802,6 +813,41 @@ h6 {
       -webkit-transition: 0.22s background-color cubic-bezier(0.165, 0.84, 0.44, 1);
       transition: 0.22s background-color cubic-bezier(0.165, 0.84, 0.44, 1);
       margin: 2.8rem 3rem 1rem; }
+
+.checkout-features {
+  background-color: #F1F1F1;
+  margin-top: 10rem;
+  text-align: center; }
+
+.checkout-features:before{
+  content: '';
+  display: table; }
+
+.checkout-features:after{
+  content: '';
+  display: table;
+  clear: both; }
+  .checkout-features h1 {
+    display: inline-block;
+    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 4.4rem;
+    padding: 6rem 6rem 6rem 6.7rem;
+    vertical-align: middle; }
+  .checkout-features .circle {
+    display: inline-block;
+    height: 6rem;
+    width: 6rem;
+    border: solid black 0.2rem;
+    border-radius: 50%;
+    vertical-align: middle; }
+  .checkout-features .arrow {
+    height: 2.2rem;
+    width: 2.2rem;
+    margin-top: 1.8rem;
+    margin-left: 1.3rem;
+    border-bottom: solid black;
+    border-right: solid black;
+    -webkit-transform: rotate(-45deg); }
 
 .faq-container .faq__header {
   display: block;
@@ -846,11 +892,117 @@ h6 {
       font-weight: bold; }
     .faq-container .faq__text-container .faq__text h2 {
       font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 500;
       font-size: 1.8rem;
       margin-top: 3rem; }
     .faq-container .faq__text-container .faq__text h3 {
       font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 1.6rem;
+      font-weight: 400;
       margin-top: 1rem;
       line-height: 1.8; }
+
+.plan--big {
+  margin-top: -4rem;
+  text-align: center;
+  width: calc(99.9% * 1/4 - (30px - 30px * 1/4)); }
+
+.plan--big:nth-child(1n){
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+
+.plan--big:last-child{
+  margin-right: 0; }
+
+.plan--big:nth-child(4n){
+  margin-right: 0;
+  float: right; }
+
+.plan--big:nth-child(4n + 1){
+  clear: both; }
+  .plan--big .plan__price {
+    border-top: solid #979797 0.3rem;
+    border-left: solid #979797 0.3rem;
+    border-right: solid #979797 0.3rem;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    padding: 5rem 0; }
+    .plan--big .plan__price h3 {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 2.4rem;
+      font-weight: bold; }
+    .plan--big .plan__price h4 {
+      display: inline-block;
+      font-family: "Open Sans";
+      font-size: 3.6rem;
+      font-weight: bold;
+      padding-top: 2rem;
+      vertical-align: top; }
+    .plan--big .plan__price h1 {
+      display: inline-block;
+      font-family: "Open Sans";
+      font-size: 8rem;
+      font-weight: bold; }
+    .plan--big .plan__price p {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.6rem;
+      line-height: 1.7;
+      max-width: 9rem; }
+    .plan--big .plan__price .plan__number--dedicated h1 {
+      font-size: 3.6rem;
+      margin: 3.3rem 0; }
+  .plan--big .plan__features {
+    background: #F1F1F1;
+    border-bottom: solid #979797 0.3rem;
+    border-left: solid #979797 0.3rem;
+    border-right: solid #979797 0.3rem;
+    border-bottom-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem; }
+    .plan--big .plan__features h3 {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      padding-bottom: 2rem;
+      margin: 0 2rem 2rem 2rem;
+      border-bottom: solid black 0.1rem; }
+    .plan--big .plan__features h3:first-of-type {
+      padding-top: 2rem; }
+    .plan--big .plan__features h3:last-of-type {
+      padding-bottom: 0;
+      border-bottom: none; }
+  .plan--big .plan__link {
+    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    display: inline;
+    border-bottom: solid black 0.1rem; }
+  .plan--big p {
+    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    display: inline; }
+  .plan--big .button {
+    margin: 2.8rem 3rem 1rem; }
+  .plan--big .button--dedicated {
+    outline: 0 none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-decoration: none;
+    font-family: "Atlas Typewriter", "Lucida Grande", monospace;
+    font-style: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    background: 0 0;
+    border: 2px solid red;
+    color: red;
+    text-transform: uppercase;
+    padding: 2rem 2.5rem;
+    letter-spacing: .13rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    -webkit-transition: 0.22s background-color cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: 0.22s background-color cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin: 2.8rem 3rem 1rem; }
 /*# sourceMappingURL=styles.css.map */

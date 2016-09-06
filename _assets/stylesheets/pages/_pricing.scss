@@ -5,6 +5,7 @@
 
   text-align: center;
   max-width: 60rem;
+  margin-top: 12rem;
   margin-bottom: 10rem;
 
   h1 {
@@ -16,6 +17,7 @@
   h3 {
     font-family: $atlas-typewriter;
     font-size: 1.8rem;
+    font-weight: -weight(regular);
     line-height: 1.7;
   }
 
@@ -29,11 +31,10 @@
 
   .plan {
 
-    display: flex;
+
     text-align: center;
-    flex-flow: column;
-    justify-content: space-between;
-    lost-column: 1/4;
+
+    lost-column: 1/4 no-flex;
 
     .plan__price {
 
@@ -41,6 +42,9 @@
       border-top:solid black 0.2rem;
       border-left:solid black 0.2rem;
       border-right:solid black 0.2rem;
+      border-top-left-radius: 0.4rem;
+      border-top-right-radius: 0.4rem;
+
       padding: 3rem 0;
 
       h3 {
@@ -83,19 +87,28 @@
 
     }
 
+
     .plan__features {
 
       background: #F1F1F1;
       border-bottom:solid #979797 0.2rem;
       border-left:solid #979797 0.2rem;
       border-right:solid #979797 0.2rem;
+      border-bottom-left-radius: 0.4rem;
+      border-bottom-right-radius: 0.4rem;
+
 
       h3 {
         font-family: $atlas;
         font-size: 1.6rem;
+        font-weight: -weight(regular);
         padding-bottom: 2rem;
-        margin: 2rem 2rem;
+        margin: 0 2rem 2rem 2rem;
         border-bottom: solid black 0.1rem;
+      }
+
+      h3:first-of-type {
+        padding-top: 2rem;
       }
 
       h3:last-of-type{
@@ -105,11 +118,17 @@
     }
 
     .plan__link {
+      font-family: $atlas;
+      font-size: 1.6rem;
+      font-weight: -weight(regular);
       display: inline;
       border-bottom: solid black 0.1rem;
     }
 
     p {
+      font-family: $atlas;
+      font-size: 1.6rem;
+      font-weight: -weight(regular);
       display: inline;
     }
 
@@ -118,6 +137,7 @@
     }
 
     .button--dedicated {
+      display: inline-block;
       outline: 0 none !important;
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -139,7 +159,49 @@
       margin: 2.8rem 3rem 1rem;
     }
   }
+
 }
+
+
+
+.checkout-features {
+  @extend %basic-block;
+  @extend %container;
+
+  background-color: #F1F1F1;
+  margin-top: 10rem;
+  text-align: center;
+  lost-utility: clearfix;
+
+  h1 {
+    display: inline-block;
+    font-family: $atlas;
+    font-size: 4.4rem;
+    padding: 6rem 6rem 6rem 6.7rem;
+    vertical-align: middle;
+  }
+
+  .circle {
+    display: inline-block;
+    height: 6rem;
+    width: 6rem;
+    border: solid black 0.2rem;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  .arrow {
+    height: 2.2rem;
+    width: 2.2rem;
+    margin-top: 1.8rem;
+    margin-left: 1.3rem;
+    border-bottom: solid black;
+    border-right: solid black;
+    -webkit-transform: rotate(-45deg);
+  }
+}
+
+
 
 .faq-container {
 
@@ -182,6 +244,7 @@
 
       h2 {
         font-family: $atlas;
+        font-weight: -weight(medium);
         font-size: 1.8rem;
         margin-top: 3rem;
       }
@@ -189,6 +252,7 @@
       h3 {
         font-family: $atlas;
         font-size: 1.6rem;
+        font-weight: -weight(regular);
         margin-top: 1rem;
         line-height: 1.8;
       }
