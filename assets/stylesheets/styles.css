@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900");
 /* Return index of matched value in list */
 /* Media Query Helpers */
-.footer, .header, .hero, .features-container, .interface-display, .interface2, .interface3, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features {
+.footer, .header, .hero, .features-container, .interface-display, .interface2, .interface3, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features, .manifesto, .doc-container {
   display: block;
   width: 100%;
   position: relative; }
@@ -340,16 +340,16 @@ h6 {
   .hero__content {
     max-width: 73rem; }
 
-.header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container {
+.header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .features__hero, .dev-features, .tech-stack {
   margin: 0 auto;
   max-width: 124rem;
   width: 100%; }
   @media (max-width: 780px) {
-    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container {
+    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .features__hero, .dev-features, .tech-stack {
       padding-left: 4rem;
       padding-right: 4rem; } }
   @media (min-width: 780px) {
-    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container {
+    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .features__hero, .dev-features, .tech-stack {
       padding-left: 2rem;
       padding-right: 2rem; } }
 
@@ -812,7 +812,9 @@ h6 {
       cursor: pointer;
       -webkit-transition: 0.22s background-color cubic-bezier(0.165, 0.84, 0.44, 1);
       transition: 0.22s background-color cubic-bezier(0.165, 0.84, 0.44, 1);
-      margin: 2.8rem 3rem 1rem; }
+      margin: 2.8rem 3rem 1rem;
+      vertical-align: middle;
+      line-height: 1; }
 
 .checkout-features {
   background-color: #F1F1F1;
@@ -1005,4 +1007,207 @@ h6 {
     -webkit-transition: 0.22s background-color cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: 0.22s background-color cubic-bezier(0.165, 0.84, 0.44, 1);
     margin: 2.8rem 3rem 1rem; }
+
+.manifesto {
+  max-width: 60rem;
+  border-bottom: solid #CCCCCC 0.2rem;
+  padding-bottom: 5rem; }
+  .manifesto h1 {
+    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 5.4rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 7.7rem; }
+  .manifesto h2 {
+    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 4.4rem;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 5rem; }
+  .manifesto h3 {
+    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1.4rem; }
+  .manifesto h4 {
+    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    margin-bottom: 3rem; }
+
+.manifesto__footer {
+  max-width: 60rem;
+  text-align: center; }
+  .manifesto__footer h1 {
+    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 3.6rem;
+    font-weight: 500;
+    padding: 6rem 0; }
+  .manifesto__footer h2 {
+    font-family: "Atlas Typewriter", "Lucida Grande", monospace;
+    font-size: 1.8rem;
+    font-weight: 400; }
+  .manifesto__footer .manifesto__button {
+    display: inline-block;
+    outline: 0 none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-decoration: none;
+    font-family: "Atlas Typewriter", "Lucida Grande", monospace;
+    font-style: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    background: 0 0;
+    border: 2px solid red;
+    color: red;
+    text-transform: uppercase;
+    padding: 2rem 2.5rem;
+    letter-spacing: .13rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    -webkit-transition: 0.22s background-color cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: 0.22s background-color cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin: 2.8rem 3rem 1rem;
+    vertical-align: middle;
+    line-height: 1; }
+
+.doc__header {
+  margin-bottom: 8.5rem;
+  text-align: center; }
+  .doc__header h1 {
+    font-family: "Open Sans";
+    font-size: 6.4rem;
+    font-weight: 700;
+    margin-bottom: 4rem; }
+  .doc__header input {
+    font-family: "Open Sans";
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding: 0.6rem 12rem 0.6rem 5rem;
+    background-image: url("../images/search.png");
+    background-repeat: no-repeat;
+    background-size: 4rem, 4rem;
+    border-radius: 1rem; }
+
+.doc-container .doc__menu {
+  width: calc(99.9% * 1/4 - (30px - 30px * 1/4)); }
+
+.doc-container .doc__menu:nth-child(1n){
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+
+.doc-container .doc__menu:last-child{
+  margin-right: 0; }
+
+.doc-container .doc__menu:nth-child(4n){
+  margin-right: 0;
+  float: right; }
+
+.doc-container .doc__menu:nth-child(4n + 1){
+  clear: both; }
+  .doc-container .doc__menu h3 {
+    font-family: "Open Sans";
+    font-size: 2.4rem;
+    font-weight: 700; }
+  .doc-container .doc__menu p {
+    font-family: "Open Sans";
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #666666;
+    border-left: solid white;
+    padding-left: 2rem; }
+  .doc-container .doc__menu p:hover {
+    border-left: solid black; }
+  .doc-container .doc__menu .sub-menu {
+    display: none; }
+
+.doc-container .doc__text {
+  width: calc(99.9% * 3/4 - (30px - 30px * 3/4));
+  max-width: 70rem; }
+
+.doc-container .doc__text:nth-child(1n){
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+
+.doc-container .doc__text:last-child{
+  margin-right: 0; }
+
+.doc-container .doc__text:nth-child(4n){
+  margin-right: 0;
+  float: right; }
+
+.doc-container .doc__text:nth-child(4n + 1){
+  clear: both; }
+  .doc-container .doc__text p {
+    font-family: "Open Sans";
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #666666; }
+  .doc-container .doc__text h2 {
+    font-family: "Open Sans";
+    font-size: 4.4rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem; }
+  .doc-container .doc__text h3 {
+    font-family: "Open Sans";
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem; }
+  .doc-container .doc__text h4 {
+    font-family: "Open Sans";
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 4rem; }
+
+.features__hero {
+  background-color: #F3F4F9;
+  border-top: solid #9F98BD;
+  border-bottom: solid #9F98BD;
+  text-align: center; }
+  .features__hero h1 {
+    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .features__hero h2 {
+    font-family: "Atlas Typewriter", "Lucida Grande", monospace; }
+  .features__hero .features__hero--button {
+    display: inline-block;
+    color: #ffffff;
+    font-family: "Atlas Typewriter", "Lucida Grande", monospace;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: .02em;
+    vertical-align: middle;
+    border-radius: 0.2rem;
+    background-color: #1e114b;
+    padding: 2.2rem 2.8rem 2rem; }
+
+.dev-features h1 {
+  font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.dev-features .dev-features__col {
+  width: calc(99.9% * 1/2 - (30px - 30px * 1/2)); }
+
+.dev-features .dev-features__col:nth-child(1n){
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+
+.dev-features .dev-features__col:last-child{
+  margin-right: 0; }
+
+.dev-features .dev-features__col:nth-child(2n){
+  margin-right: 0;
+  float: right; }
+
+.dev-features .dev-features__col:nth-child(2n + 1){
+  clear: both; }
+  .dev-features .dev-features__col h3 {
+    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.4rem; }
+  .dev-features .dev-features__col h4 {
+    font-family: "Atlas Typewriter", "Lucida Grande", monospace;
+    font-size: 1.8rem; }
 /*# sourceMappingURL=styles.css.map */

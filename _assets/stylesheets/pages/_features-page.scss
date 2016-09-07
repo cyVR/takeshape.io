@@ -1,0 +1,59 @@
+.features__hero {
+  @extend %container;
+
+  background-color: #F3F4F9;
+  border-top: solid #9F98BD;
+  border-bottom: solid #9F98BD;
+
+  text-align: center;
+
+  h1 {
+    font-family: $atlas;
+  }
+
+  h2 {
+    font-family: $atlas-typewriter;
+  }
+
+  .features__hero--button {
+    display: inline-block;
+    color: -color(white);
+    font-family: $atlas-typewriter;
+    font-weight: -weight(bold);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: .02em;
+    vertical-align: middle;
+    border-radius: 0.2rem;
+    background-color: -color(bunting);
+    padding: 2.2rem 2.8rem 2rem;
+  }
+}
+
+.dev-features {
+  @extend %container;
+
+  h1 {
+    font-family: $atlas;
+  }
+
+  .dev-features__col {
+    lost-column: 1/2;
+
+    h3 {
+      font-family: $atlas;
+      font-size: 2.4rem;
+    }
+    h4 {
+      font-family: $atlas-typewriter;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.tech-stack {
+  @extend %container;
+
+
+}
