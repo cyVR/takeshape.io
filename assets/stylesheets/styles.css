@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900");
 /* Return index of matched value in list */
 /* Media Query Helpers */
-.footer, .header, .hero, .features-container, .interface-display, .interface2, .interface3, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features, .manifesto, .doc-container {
+.footer, .header, .hero, .features-container, .interface-display, .interface2, .interface3, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features, .manifesto, .doc-container, .features__hero {
   display: block;
   width: 100%;
   position: relative; }
@@ -340,16 +340,16 @@ h6 {
   .hero__content {
     max-width: 73rem; }
 
-.header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .features__hero, .dev-features, .tech-stack {
+.header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .features__hero, .dev-features, .tech-stack, .creator, .creator .creator__container, .creator .creator__container .creator__list, .ftbox-container {
   margin: 0 auto;
   max-width: 124rem;
   width: 100%; }
   @media (max-width: 780px) {
-    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .features__hero, .dev-features, .tech-stack {
+    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .features__hero, .dev-features, .tech-stack, .creator, .creator .creator__container, .creator .creator__container .creator__list, .ftbox-container {
       padding-left: 4rem;
       padding-right: 4rem; } }
   @media (min-width: 780px) {
-    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .features__hero, .dev-features, .tech-stack {
+    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .features__hero, .dev-features, .tech-stack, .creator, .creator .creator__container, .creator .creator__container .creator__list, .ftbox-container {
       padding-left: 2rem;
       padding-right: 2rem; } }
 
@@ -1165,11 +1165,19 @@ h6 {
   background-color: #F3F4F9;
   border-top: solid #9F98BD;
   border-bottom: solid #9F98BD;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 13rem; }
   .features__hero h1 {
-    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8rem;
+    font-weight: 700;
+    margin-top: 14rem;
+    margin-bottom: 5rem; }
   .features__hero h2 {
-    font-family: "Atlas Typewriter", "Lucida Grande", monospace; }
+    font-family: "Atlas Typewriter", "Lucida Grande", monospace;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 3.4rem; }
   .features__hero .features__hero--button {
     display: inline-block;
     color: #ffffff;
@@ -1181,33 +1189,217 @@ h6 {
     letter-spacing: .02em;
     vertical-align: middle;
     border-radius: 0.2rem;
-    background-color: #1e114b;
-    padding: 2.2rem 2.8rem 2rem; }
+    background-color: #5539D2;
+    padding: 2.2rem 2.8rem 2rem;
+    margin-bottom: 13rem; }
 
-.dev-features h1 {
-  font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.dev-features:before{
+  content: '';
+  display: table; }
 
-.dev-features .dev-features__col {
-  width: calc(99.9% * 1/2 - (30px - 30px * 1/2)); }
-
-.dev-features .dev-features__col:nth-child(1n){
+.dev-features:after{
+  content: '';
+  display: table;
+  clear: both; }
+  .dev-features h1 {
+    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8rem;
+    font-weight: 700;
+    margin-bottom: 10rem; }
+  .dev-features .dev-features__col {
+    width: calc(99.9% * 1/2 - (30px - 30px * 1/2)); }
+  .dev-features .dev-features__col:nth-child(1n){
   float: left;
   margin-right: 30px;
   clear: none; }
-
-.dev-features .dev-features__col:last-child{
+  .dev-features .dev-features__col:last-child{
   margin-right: 0; }
-
-.dev-features .dev-features__col:nth-child(2n){
+  .dev-features .dev-features__col:nth-child(2n){
   margin-right: 0;
   float: right; }
-
-.dev-features .dev-features__col:nth-child(2n + 1){
+  .dev-features .dev-features__col:nth-child(2n + 1){
   clear: both; }
-  .dev-features .dev-features__col h3 {
-    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 2.4rem; }
-  .dev-features .dev-features__col h4 {
-    font-family: "Atlas Typewriter", "Lucida Grande", monospace;
-    font-size: 1.8rem; }
+    .dev-features .dev-features__col h3 {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 2.4rem;
+      color: #261B65;
+      margin-bottom: 1.7rem; }
+    .dev-features .dev-features__col h4 {
+      font-family: "Atlas Typewriter", "Lucida Grande", monospace;
+      font-weight: 400;
+      font-size: 1.8rem;
+      margin-bottom: 5rem; }
+
+.tech-stack {
+  margin-bottom: 22rem; }
+
+.tech-stack:before{
+  content: '';
+  display: table; }
+
+.tech-stack:after{
+  content: '';
+  display: table;
+  clear: both; }
+  .tech-stack .tech__imgs {
+    width: calc(99.9% * 1/2 - (30px - 30px * 1/2)); }
+  .tech-stack .tech__imgs:nth-child(1n){
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+  .tech-stack .tech__imgs:last-child{
+  margin-right: 0; }
+  .tech-stack .tech__imgs:nth-child(2n){
+  margin-right: 0;
+  float: right; }
+  .tech-stack .tech__imgs:nth-child(2n + 1){
+  clear: both; }
+    .tech-stack .tech__imgs .tech__circle {
+      display: block;
+      height: 16rem;
+      width: 16rem;
+      border-radius: 100%;
+      background-color: #F4F3F9;
+      margin-left: 50%; }
+    .tech-stack .tech__imgs .tech__circle:nth-of-type(2) {
+      margin-left: 0; }
+    .tech-stack .tech__imgs .tech__aws {
+      padding: 5rem 0 0 4rem; }
+    .tech-stack .tech__imgs .tech__server {
+      padding: 4rem 0 0 6rem; }
+  .tech-stack .tech__copy {
+    width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
+    position: relative;
+    left: calc(99.9% * -1/6 - (30px - 30px * -1/6) + 30px);
+    max-width: 46rem;
+    margin-top: 32rem; }
+  .tech-stack .tech__copy:nth-child(1n){
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+  .tech-stack .tech__copy:last-child{
+  margin-right: 0; }
+  .tech-stack .tech__copy:nth-child(2n){
+  margin-right: 0;
+  float: right; }
+  .tech-stack .tech__copy:nth-child(2n + 1){
+  clear: both; }
+    .tech-stack .tech__copy h1 {
+      font-family: "Atlas Typewriter", "Lucida Grande", monospace;
+      font-weight: 700;
+      font-size: 5.4rem;
+      color: #261B65;
+      margin-bottom: 2rem; }
+    .tech-stack .tech__copy h3 {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 1.8rem; }
+
+.creator h1 {
+  font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 8rem;
+  font-weight: 700;
+  margin-bottom: 15rem;
+  text-align: center; }
+
+.creator h2 {
+  font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 5.4rem;
+  font-weight: 500;
+  margin-bottom: 8rem;
+  text-align: center; }
+
+.creator .creator__container {
+  margin-bottom: 12rem; }
+
+.creator .creator__container:before{
+  content: '';
+  display: table; }
+
+.creator .creator__container:after{
+  content: '';
+  display: table;
+  clear: both; }
+  .creator .creator__container .creator__list {
+    width: calc(99.9% * 1/3 - (30px - 30px * 1/3)); }
+  .creator .creator__container .creator__list:nth-child(1n){
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+  .creator .creator__container .creator__list:last-child{
+  margin-right: 0; }
+  .creator .creator__container .creator__list:nth-child(3n){
+  margin-right: 0;
+  float: right; }
+  .creator .creator__container .creator__list:nth-child(3n + 1){
+  clear: both; }
+    .creator .creator__container .creator__list h3 {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem; }
+    .creator .creator__container .creator__list h4 {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 3.8rem;
+      line-height: 1.8; }
+  .creator .creator__container img {
+    width: calc(99.9% * 2/3 - (30px - 30px * 2/3)); }
+  .creator .creator__container img:nth-child(1n){
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+  .creator .creator__container img:last-child{
+  margin-right: 0; }
+  .creator .creator__container img:nth-child(3n){
+  margin-right: 0;
+  float: right; }
+  .creator .creator__container img:nth-child(3n + 1){
+  clear: both; }
+
+.ftbox-container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between; }
+  .ftbox-container .creator-ftbox {
+    width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
+    border: solid #C8C3DF 0.1rem;
+    padding: 5rem 10rem;
+    margin-bottom: 8rem; }
+  .ftbox-container .creator-ftbox:nth-child(1n){
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+  .ftbox-container .creator-ftbox:last-child{
+  margin-right: 0; }
+  .ftbox-container .creator-ftbox:nth-child(2n){
+  margin-right: 0;
+  float: right; }
+  .ftbox-container .creator-ftbox:nth-child(2n + 1){
+  clear: both; }
+    .ftbox-container .creator-ftbox h1 {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 4.4rem;
+      font-weight: 500;
+      margin-bottom: 2.8rem; }
+    .ftbox-container .creator-ftbox h2 {
+      font-family: "Atlas Typewriter", "Lucida Grande", monospace;
+      font-weight: 400;
+      font-size: 1.8rem;
+      margin-bottom: 8rem; }
+    .ftbox-container .creator-ftbox a {
+      display: inline-block;
+      color: #ffffff;
+      font-family: "Atlas Typewriter", "Lucida Grande", monospace;
+      font-weight: 700;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: .02em;
+      vertical-align: middle;
+      border-radius: 0.2rem;
+      background-color: #5539D2;
+      padding: 2.2rem 2.8rem 2rem; }
 /*# sourceMappingURL=styles.css.map */
