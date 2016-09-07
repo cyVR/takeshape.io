@@ -340,16 +340,16 @@ h6 {
   .hero__content {
     max-width: 73rem; }
 
-.header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .features__hero, .dev-features, .tech-stack, .creator, .creator .creator__container, .creator .creator__container .creator__list, .ftbox-container {
+.header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .features__hero, .dev-features, .tech-stack, .modeler-container, .modeler-container .modeler__sample, .creator, .creator .creator__container, .creator .creator__container .creator__list, .ftbox-container {
   margin: 0 auto;
   max-width: 124rem;
   width: 100%; }
   @media (max-width: 780px) {
-    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .features__hero, .dev-features, .tech-stack, .creator, .creator .creator__container, .creator .creator__container .creator__list, .ftbox-container {
+    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .features__hero, .dev-features, .tech-stack, .modeler-container, .modeler-container .modeler__sample, .creator, .creator .creator__container, .creator .creator__container .creator__list, .ftbox-container {
       padding-left: 4rem;
       padding-right: 4rem; } }
   @media (min-width: 780px) {
-    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .features__hero, .dev-features, .tech-stack, .creator, .creator .creator__container, .creator .creator__container .creator__list, .ftbox-container {
+    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .features__hero, .dev-features, .tech-stack, .modeler-container, .modeler-container .modeler__sample, .creator, .creator .creator__container, .creator .creator__container .creator__list, .ftbox-container {
       padding-left: 2rem;
       padding-right: 2rem; } }
 
@@ -1295,6 +1295,75 @@ h6 {
       font-weight: 400;
       font-size: 1.8rem; }
 
+.modeler-container {
+  border-top: solid #BFB7D2 0.1rem;
+  border-bottom: solid #BFB7D2 0.1rem;
+  padding: 10rem 0;
+  margin-bottom: 12rem; }
+  .modeler-container h1 {
+    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 11rem; }
+  .modeler-container .modeler__sample:before{
+  content: '';
+  display: table; }
+  .modeler-container .modeler__sample:after{
+  content: '';
+  display: table;
+  clear: both; }
+    .modeler-container .modeler__sample img {
+      width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
+      position: relative;
+      left: calc(99.9% * 1/8 - (30px - 30px * 1/8) + 30px);
+      margin-bottom: 10rem; }
+    .modeler-container .modeler__sample img:nth-child(1n){
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+    .modeler-container .modeler__sample img:last-child{
+  margin-right: 0; }
+    .modeler-container .modeler__sample img:nth-child(2n){
+  margin-right: 0;
+  float: right; }
+    .modeler-container .modeler__sample img:nth-child(2n + 1){
+  clear: both; }
+    .modeler-container .modeler__sample div {
+      width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
+      background-color: #F4F3F9;
+      border: solid #C8C3DF 0.1rem;
+      padding: 4rem 2rem 13rem 20rem;
+      margin-top: 5rem; }
+    .modeler-container .modeler__sample div:nth-child(1n){
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+    .modeler-container .modeler__sample div:last-child{
+  margin-right: 0; }
+    .modeler-container .modeler__sample div:nth-child(2n){
+  margin-right: 0;
+  float: right; }
+    .modeler-container .modeler__sample div:nth-child(2n + 1){
+  clear: both; }
+    .modeler-container .modeler__sample h3 {
+      font-family: "Atlas Typewriter", "Lucida Grande", monospace;
+      font-weight: 700;
+      font-size: 2.4rem;
+      color: #1A1053;
+      margin-bottom: 1.6rem; }
+    .modeler-container .modeler__sample h4 {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 1.8rem; }
+    .modeler-container .modeler__sample .modeler__offset {
+      position: relative;
+      left: calc(99.9% * 1/8 - (30px - 30px * 1/8) + 30px);
+      padding: 4rem 18rem 10rem 6rem; }
+    .modeler-container .modeler__sample .modeler__offsetpic {
+      position: relative;
+      left: calc(99.9% * 0 - (30px - 30px * 0) + 30px); }
+
 .creator h1 {
   font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 8rem;
@@ -1367,7 +1436,12 @@ h6 {
     width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
     border: solid #C8C3DF 0.1rem;
     padding: 5rem 10rem;
-    margin-bottom: 8rem; }
+    margin-bottom: 8rem;
+    display: -webkit-box;
+    display: flex;
+    flex-flow: column;
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
   .ftbox-container .creator-ftbox:nth-child(1n){
   float: left;
   margin-right: 30px;
@@ -1390,6 +1464,7 @@ h6 {
       font-size: 1.8rem;
       margin-bottom: 8rem; }
     .ftbox-container .creator-ftbox a {
+      text-align: center;
       display: inline-block;
       color: #ffffff;
       font-family: "Atlas Typewriter", "Lucida Grande", monospace;
@@ -1401,5 +1476,6 @@ h6 {
       vertical-align: middle;
       border-radius: 0.2rem;
       background-color: #5539D2;
-      padding: 2.2rem 2.8rem 2rem; }
+      padding: 2.2rem 2.8rem 2rem;
+      max-width: 20rem; }
 /*# sourceMappingURL=styles.css.map */

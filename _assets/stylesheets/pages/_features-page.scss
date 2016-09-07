@@ -133,10 +133,68 @@
 
 }
 
+.modeler-container {
+  @extend %container;
+
+  border-top: solid #BFB7D2 0.1rem;
+  border-bottom: solid #BFB7D2 0.1rem;
+  padding: 10rem 0;
+  margin-bottom: 12rem;
+
+  h1 {
+    font-family: $atlas;
+    font-size: 8rem;
+    font-weight: -weight(bold);
+    text-align: center;
+    margin-bottom: 11rem;
+  }
+
+  .modeler__sample {
+    @extend %container;
+
+    lost-utility: clearfix;
+
+    img {
+      lost-column: 1/2;
+      lost-move: 1/8;
+      margin-bottom: 10rem;
+    }
+
+    div {
+      lost-column: 1/2;
+      background-color: #F4F3F9;
+      border: solid #C8C3DF 0.1rem;
+      padding: 4rem 2rem 13rem 20rem;
+      margin-top: 5rem;
+    }
+
+    h3 {
+      font-family: $atlas-typewriter;
+      font-weight: -weight(bold);
+      font-size: 2.4rem;
+      color: #1A1053;
+      margin-bottom: 1.6rem;
+    }
+
+    h4 {
+      font-family: $atlas;
+      font-weight: -weight(regular);
+      font-size: 1.8rem;
+    }
+
+    .modeler__offset {
+      lost-move: 1/8;
+      padding: 4rem 18rem 10rem 6rem;
+    }
+    .modeler__offsetpic {
+      lost-move: 0;
+    }
+  }
+}
+
 
 .creator {
   @extend %container;
-
 
   h1 {
     font-family: $atlas;
@@ -193,13 +251,16 @@
 
   display: flex;
   justify-content: space-between;
-  
+
   .creator-ftbox {
 
     lost-column: 1/2;
     border: solid #C8C3DF 0.1rem;
     padding: 5rem 10rem;
     margin-bottom: 8rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 
     h1 {
       font-family: $atlas;
@@ -216,6 +277,7 @@
     }
 
     a {
+      text-align: center;
       display: inline-block;
       color: -color(white);
       font-family: $atlas-typewriter;
@@ -228,6 +290,7 @@
       border-radius: 0.2rem;
       background-color: #5539D2;
       padding: 2.2rem 2.8rem 2rem;
+      max-width: 20rem;
     }
 
   }
