@@ -7,6 +7,14 @@
   margin-bottom: 30rem;
   lost-utility: clearfix;
 
+  .interface__img {
+    position: absolute;
+    display: inline;
+    margin-left: -70rem;
+    margin-top: -20rem;
+  }
+
+
   .interface__text-links {
     @extend %container;
 

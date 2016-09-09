@@ -4,6 +4,14 @@
 
   margin-bottom: 40rem;
 
+  .interface2__img {
+    position: absolute;
+    margin-left: -10rem;
+    margin-top: -30rem;
+    width: 48rem;
+    height: 48rem;
+  }
+
   .interface2__text {
     @extend %container;
 
@@ -35,7 +43,6 @@
 
     .interface2__feature {
 
-
       lost-column: 1/3;
 
       h2 {
@@ -61,7 +68,6 @@
   }
 
   img {
-
     height: 72rem;
     width: 116rem;
   }
