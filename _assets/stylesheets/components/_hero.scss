@@ -9,6 +9,8 @@
   &__inner {
     @extend %container;
 
+    lost-utility: clearfix;
+
     h1 {
       font-family: $atlas;
       font-size: 5.4rem;
@@ -23,12 +25,17 @@
     }
 
     .button {
-      margin-top: 5.6rem;
+      margin-top: 5.5rem;
     }
   }
 
   &__content {
     max-width: 73rem;
+    lost-column: 1/2;
+  }
+
+  &__img {
+    lost-column: 1/2;
   }
 }
 

@@ -1,16 +1,15 @@
 .why-container {
-  @extend %basic-block;
+  @extend %container;
 
   display: flex;
   lost-utility: clearfix;
   margin-top: 18rem;
-  padding: 0 10rem;
 
   .why_div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 5rem 0 5.7rem;
+    padding: 0 5rem;
     lost-column: 1/3;
 
   }
