@@ -5,6 +5,13 @@
   max-width: 120rem;
   padding-left: 15rem;
 
+  .quotebkgrnd__img {
+    position: absolute;
+    margin-top: -28rem;
+    margin-left: -19rem;
+    z-index: -1;
+  }
+
   .quote__img-container {
     display: inline-block;
     padding-right: 3.8rem;

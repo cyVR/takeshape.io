@@ -371,16 +371,16 @@ h6 {
   .hero__img:nth-child(2n + 1){
   clear: both; }
 
-.header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .dev-features, .tech-stack, .modeler-container .modeler__sample, .creator, .creator .creator__container, .getstarted-container, .ftbox-container {
+.header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .tech-stack, .tech-stack .tech__copy, .dev-features, .modeler-container .modeler__sample, .creator, .getstarted-container, .ftbox-container {
   margin: 0 auto;
   max-width: 124rem;
   width: 100%; }
   @media (max-width: 780px) {
-    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .dev-features, .tech-stack, .modeler-container .modeler__sample, .creator, .creator .creator__container, .getstarted-container, .ftbox-container {
+    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .tech-stack, .tech-stack .tech__copy, .dev-features, .modeler-container .modeler__sample, .creator, .getstarted-container, .ftbox-container {
       padding-left: 4rem;
       padding-right: 4rem; } }
   @media (min-width: 780px) {
-    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .dev-features, .tech-stack, .modeler-container .modeler__sample, .creator, .creator .creator__container, .getstarted-container, .ftbox-container {
+    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .tech-stack, .tech-stack .tech__copy, .dev-features, .modeler-container .modeler__sample, .creator, .getstarted-container, .ftbox-container {
       padding-left: 2rem;
       padding-right: 2rem; } }
 
@@ -625,6 +625,10 @@ h6 {
 .get-started {
   text-align: center;
   margin-top: 38.7rem; }
+  .get-started .get-started__img {
+    position: absolute;
+    margin-top: -33rem;
+    margin-left: 10rem; }
   .get-started h1 {
     font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 5.4rem;
@@ -711,6 +715,11 @@ h6 {
 .quote-block {
   max-width: 120rem;
   padding-left: 15rem; }
+  .quote-block .quotebkgrnd__img {
+    position: absolute;
+    margin-top: -28rem;
+    margin-left: -19rem;
+    z-index: -1; }
   .quote-block .quote__img-container {
     display: inline-block;
     padding-right: 3.8rem;
@@ -1236,6 +1245,28 @@ h6 {
     padding: 2.2rem 2.8rem 2rem;
     margin-bottom: 13rem; }
 
+.tech-stack {
+  max-width: 74rem;
+  margin-bottom: 22rem; }
+  .tech-stack .tech__copy {
+    padding: 6rem;
+    box-shadow: 10px 12px 8px 5px  #F9F8FF; }
+    .tech-stack .tech__copy h1 {
+      font-family: "Atlas Typewriter", "Lucida Grande", monospace;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #261B65;
+      margin-bottom: 2rem; }
+    .tech-stack .tech__copy h2 {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 2.4rem;
+      margin-bottom: 2rem; }
+    .tech-stack .tech__copy h3 {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      font-size: 1.8rem; }
+
 .dev-features:before{
   content: '';
   display: table; }
@@ -1249,8 +1280,11 @@ h6 {
     font-size: 8rem;
     font-weight: 700;
     margin-bottom: 10rem; }
+  .dev-features .dev-features__container {
+    padding: 0 12rem; }
   .dev-features .dev-features__col {
-    width: calc(99.9% * 1/2 - (30px - 30px * 1/2)); }
+    width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
+    max-width: 36rem; }
   .dev-features .dev-features__col:nth-child(1n){
   float: left;
   margin-right: 30px;
@@ -1268,87 +1302,16 @@ h6 {
       color: #261B65;
       margin-bottom: 1.7rem; }
     .dev-features .dev-features__col h4 {
-      font-family: "Atlas Typewriter", "Lucida Grande", monospace;
-      font-weight: 400;
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 300;
       font-size: 1.8rem;
       margin-bottom: 5rem; }
-
-.tech-stack {
-  margin-bottom: 22rem; }
-
-.tech-stack:before{
-  content: '';
-  display: table; }
-
-.tech-stack:after{
-  content: '';
-  display: table;
-  clear: both; }
-  .tech-stack .tech__imgs {
-    width: calc(99.9% * 1/2 - (30px - 30px * 1/2)); }
-  .tech-stack .tech__imgs:nth-child(1n){
-  float: left;
-  margin-right: 30px;
-  clear: none; }
-  .tech-stack .tech__imgs:last-child{
-  margin-right: 0; }
-  .tech-stack .tech__imgs:nth-child(2n){
-  margin-right: 0;
-  float: right; }
-  .tech-stack .tech__imgs:nth-child(2n + 1){
-  clear: both; }
-    .tech-stack .tech__imgs .tech__circle {
-      display: block;
-      height: 16rem;
-      width: 16rem;
-      border-radius: 100%;
-      background-color: #F4F3F9;
-      margin-left: 50%; }
-    .tech-stack .tech__imgs .tech__circle:nth-of-type(2) {
-      margin-left: 0; }
-    .tech-stack .tech__imgs .tech__aws {
-      padding: 5rem 0 0 4rem; }
-    .tech-stack .tech__imgs .tech__server {
-      padding: 4rem 0 0 6rem; }
-  .tech-stack .tech__copy {
-    width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
-    position: relative;
-    left: calc(99.9% * -1/6 - (30px - 30px * -1/6) + 30px);
-    max-width: 46rem;
-    margin-top: 32rem; }
-  .tech-stack .tech__copy:nth-child(1n){
-  float: left;
-  margin-right: 30px;
-  clear: none; }
-  .tech-stack .tech__copy:last-child{
-  margin-right: 0; }
-  .tech-stack .tech__copy:nth-child(2n){
-  margin-right: 0;
-  float: right; }
-  .tech-stack .tech__copy:nth-child(2n + 1){
-  clear: both; }
-    .tech-stack .tech__copy h1 {
-      font-family: "Atlas Typewriter", "Lucida Grande", monospace;
-      font-weight: 700;
-      font-size: 5.4rem;
-      color: #261B65;
-      margin-bottom: 2rem; }
-    .tech-stack .tech__copy h3 {
-      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: 400;
-      font-size: 1.8rem; }
 
 .modeler-container {
   border-top: solid #BFB7D2 0.1rem;
   border-bottom: solid #BFB7D2 0.1rem;
   padding: 10rem 0;
   margin-bottom: 12rem; }
-  .modeler-container h1 {
-    font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 8rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 11rem; }
   .modeler-container .modeler__sample {
     padding-right: 10rem; }
   .modeler-container .modeler__sample:before{
@@ -1358,28 +1321,29 @@ h6 {
   content: '';
   display: table;
   clear: both; }
-    .modeler-container .modeler__sample img {
-      width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
-      position: relative;
-      left: calc(99.9% * 1/8 - (30px - 30px * 1/8) + 30px);
+    .modeler-container .modeler__sample h1 {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 8rem;
+      font-weight: 700;
       margin-bottom: 11rem; }
+    .modeler-container .modeler__sample img {
+      width: calc(99.9% * 2/3 - (30px - 30px * 2/3));
+      margin-bottom: 11rem;
+      box-shadow: 10px 12px 8px 5px  #F9F8FF; }
     .modeler-container .modeler__sample img:nth-child(1n){
   float: left;
   margin-right: 30px;
   clear: none; }
     .modeler-container .modeler__sample img:last-child{
   margin-right: 0; }
-    .modeler-container .modeler__sample img:nth-child(2n){
+    .modeler-container .modeler__sample img:nth-child(3n){
   margin-right: 0;
   float: right; }
-    .modeler-container .modeler__sample img:nth-child(2n + 1){
+    .modeler-container .modeler__sample img:nth-child(3n + 1){
   clear: both; }
     .modeler-container .modeler__sample div {
-      width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
-      background-color: #F4F3F9;
-      border: solid #C8C3DF 0.1rem;
-      padding: 4rem 2rem 12rem 20rem;
-      margin-top: 5rem;
+      width: calc(99.9% * 1/3 - (30px - 30px * 1/3));
+      padding: 4rem 2rem 12rem 2rem;
       margin-bottom: 11rem; }
     .modeler-container .modeler__sample div:nth-child(1n){
   float: left;
@@ -1387,10 +1351,10 @@ h6 {
   clear: none; }
     .modeler-container .modeler__sample div:last-child{
   margin-right: 0; }
-    .modeler-container .modeler__sample div:nth-child(2n){
+    .modeler-container .modeler__sample div:nth-child(3n){
   margin-right: 0;
   float: right; }
-    .modeler-container .modeler__sample div:nth-child(2n + 1){
+    .modeler-container .modeler__sample div:nth-child(3n + 1){
   clear: both; }
     .modeler-container .modeler__sample h3 {
       font-family: "Atlas Typewriter", "Lucida Grande", monospace;
@@ -1402,28 +1366,20 @@ h6 {
       font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 400;
       font-size: 1.8rem; }
-    .modeler-container .modeler__sample .modeler__offset {
-      position: relative;
-      left: calc(99.9% * 1/8 - (30px - 30px * 1/8) + 30px);
-      padding: 4rem 15rem 6rem 6rem;
-      margin-bottom: 11rem; }
-    .modeler-container .modeler__sample .modeler__offsetpic {
-      position: relative;
-      left: calc(99.9% * 0 - (30px - 30px * 0) + 30px); }
 
 .creator h1 {
   font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 8rem;
   font-weight: 700;
   margin-bottom: 15rem;
-  text-align: center; }
+  text-align: left; }
 
 .creator h2 {
   font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 5.4rem;
+  font-size: 3.6rem;
   font-weight: 500;
   margin-bottom: 8rem;
-  text-align: center; }
+  text-align: left; }
 
 .creator .creator__container {
   margin-bottom: 12rem; }
@@ -1465,18 +1421,19 @@ h6 {
       font-weight: 400;
       padding-bottom: 3.8rem;
       line-height: 1.8; }
-    .creator .creator__container .creator__list img {
-      width: calc(99.9% * 2/3 - (30px - 30px * 2/3)); }
-    .creator .creator__container .creator__list img:nth-child(1n){
+  .creator .creator__container img {
+    width: calc(99.9% * 2/3 - (30px - 30px * 2/3));
+    box-shadow: 12px 12px 5px 0px #f5f4fb; }
+  .creator .creator__container img:nth-child(1n){
   float: left;
   margin-right: 30px;
   clear: none; }
-    .creator .creator__container .creator__list img:last-child{
+  .creator .creator__container img:last-child{
   margin-right: 0; }
-    .creator .creator__container .creator__list img:nth-child(3n){
+  .creator .creator__container img:nth-child(3n){
   margin-right: 0;
   float: right; }
-    .creator .creator__container .creator__list img:nth-child(3n + 1){
+  .creator .creator__container img:nth-child(3n + 1){
   clear: both; }
 
 .getstarted-container {
