@@ -506,18 +506,33 @@ h6 {
     .interface-display .product-box img {
       height: 40rem;
       width: 70rem;
-      width: calc(99.9% * 2/3 - (30px - 30px * 2/3)); }
-    .interface-display .product-box img:nth-child(1n){
-  float: left;
-  margin-right: 30px;
-  clear: none; }
-    .interface-display .product-box img:last-child{
-  margin-right: 0; }
-    .interface-display .product-box img:nth-child(3n){
+      opacity: 1;
+      -webkit-transition: opacity .25s ease-in-out;
+      transition: opacity .25s ease-in-out; }
+    .interface-display .product-box .shown {
+      opacity: 1;
+      -webkit-transition: opacity .5s ease-in-out;
+      transition: opacity .5s ease-in-out;
+      z-index: 2; }
+    .interface-display .product-box .hidden {
+      opacity: 0;
+      z-index: 1;
+      width: 0;
+      margin-right: 0; }
+
+.shown {
+  opacity: 1;
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  z-index: 2;
+  display: block; }
+
+.hidden {
+  opacity: 0;
+  z-index: 1;
+  width: 0;
   margin-right: 0;
-  float: right; }
-    .interface-display .product-box img:nth-child(3n + 1){
-  clear: both; }
+  display: none; }
 
 .interface2 {
   margin-bottom: 40rem; }
@@ -578,6 +593,16 @@ h6 {
   .interface2 img {
     height: 72rem;
     width: 116rem; }
+  .interface2 .shown {
+    opacity: 1;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+    z-index: 2; }
+  .interface2 .hidden {
+    opacity: 0;
+    z-index: 1;
+    width: 0;
+    margin-right: 0; }
 
 .interface3 {
   margin-bottom: 44rem; }
@@ -598,13 +623,22 @@ h6 {
     display: flex; }
     .interface3 .interface3__product-box img {
       width: 80rem;
-      height: 50rem;
-      padding-right: 5.5rem; }
+      height: 50rem; }
+    .interface3 .interface3__product-box .shown {
+      opacity: 1;
+      -webkit-transition: opacity .5s ease-in-out;
+      transition: opacity .5s ease-in-out;
+      z-index: 2; }
+    .interface3 .interface3__product-box .hidden {
+      opacity: 0;
+      z-index: 1;
+      width: 0;
+      margin-right: 0; }
     .interface3 .interface3__product-box .interface3__users-container {
       display: -webkit-box;
       display: flex;
       flex-flow: column;
-      padding: 2rem 0; }
+      padding: 2rem 4rem; }
       .interface3 .interface3__product-box .interface3__users-container .interface3__user {
         padding-left: 1rem;
         margin-bottom: 7rem;

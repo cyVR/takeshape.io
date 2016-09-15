@@ -2,9 +2,6 @@
 layout: default
 ---
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-
 
 <div class="doc__header">
   <h1>TakeShape Docs</h1>
@@ -12,19 +9,9 @@ layout: default
 </div>
 
 <div class="doc-container">
-  <div class="doc__menu">
-    <h3>Introduction</h3>
-    <h3 class="test-menu">For Developers</h3>
-      <div class="sub-menu">
-        <p>API Libraries and Integrations</p>
-        <p>API Libraries and Integrations</p>
-        <p>API Libraries and Integrations</p>
-        <p>API Libraries and Integrations</p>
-      </div>
-    <h3>For Clients</h3>
-    <h3>Getting Help</h3>
-    <h3>Pricing</h3>
-  </div>
+
+  {% include doc_menu.html %}
+
   <div class="doc__text">
     <p>TakeShape Docs > For Developers</p>
     <h2>API Libraries and Integrations</h2>

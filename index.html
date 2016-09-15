@@ -2,6 +2,7 @@
 layout: default
 ---
 
+
   <div class="hero">
     <div class="hero__inner">
       <div class="hero__content">
@@ -36,20 +37,27 @@ layout: default
       <img src="/assets/images/hp2.png" class="interface__img" alt="">
       <div class="interface__text-links">
         <h1>There is something for everyone.</h1>
-        <a href="#">Modeler</a>
-        <a href="#">Editor</a>
-        <a href="#">Developer</a>
+        <a href="#" data-bind="event: {mouseover: function(){switchImg(img1)}}">Modeler</a>
+        <a href="#" data-bind="event: {mouseover: function(){switchImg(img2)}}">Editor</a>
+        <a href="#" data-bind="event: {mouseover: function(){switchImg(img3)}}">Developer</a>
       </div>
 
       <div class="product-box">
         <div class="product-box__comments">
-          <h2>Modelers lorem ipsum</h2>
-          <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium aliquid amet aspernatur aut consequuntur delectus dolore dolores eligendi</h3>
+          <h2 data-bind="attr: {class: img1.class}">Modelers lorem ipsum</h2>
+          <h3 data-bind="attr: {class: img1.class}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium aliquid amet aspernatur aut consequuntur delectus dolore dolores eligendi</h3>
+          <h2 data-bind="attr: {class: img2.class}">Image Two!</h2>
+          <h3 data-bind="attr: {class: img2.class}">This is text for image two.</h3>
+          <h2 data-bind="attr: {class: img3.class}">Image Three!</h2>
+          <h3 data-bind="attr: {class: img3.class}">You Better believe that this is text for image three.</h3>
         </div>
-        <img src="contentpic1.png" alt="">
+
+        <img alt="" src="contentpic1.png"  data-bind="attr: {class: img1.class}">
+        <img alt="" src="contentpic2.png"  data-bind="attr: {class: img2.class}">
+        <img alt="" src="contentpic3.png"  data-bind="attr: {class: img3.class}">
+
       </div>
     </div>
-
 
     <div class="interface2">
       <img src="/assets/images/hp3.png" class="interface2__img" alt="">
@@ -58,21 +66,23 @@ layout: default
         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae cumque, delectus dolor esse.</h3>
       </div>
       <div class="interface2__feature-container">
-        <div class="interface2__feature">
+        <div class="interface2__feature" data-bind="event: {mouseover: function(){switchImg(img1)}}">
           <h2>Feature 1</h2>
           <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
         </div>
-        <div class="interface2__feature">
+        <div class="interface2__feature" data-bind="event: {mouseover: function(){switchImg(img2)}}">
           <h2>Feature 2</h2>
           <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
         </div>
-        <div class="interface2__feature">
+        <div class="interface2__feature" data-bind="event: {mouseover: function(){switchImg(img3)}}">
           <h2>Feature 3</h2>
           <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
         </div>
       </div>
 
-      <img src="contentpic2.png" alt="">
+      <img alt="" src="contentpic1.png"  data-bind="attr: {class: img1.class}">
+      <img alt="" src="contentpic2.png"  data-bind="attr: {class: img2.class}">
+      <img alt="" src="contentpic3.png"  data-bind="attr: {class: img3.class}">
 
     </div>
 
@@ -83,17 +93,19 @@ layout: default
         <h1>An intuitive interace- for ever user.</h1>
       </div>
       <div class="interface3__product-box">
-        <img src="contentpic3.png" alt="">
+        <img alt="" src="contentpic1.png"  data-bind="attr: {class: img1.class}">
+        <img alt="" src="contentpic2.png"  data-bind="attr: {class: img2.class}">
+        <img alt="" src="contentpic3.png"  data-bind="attr: {class: img3.class}">
         <div class="interface3__users-container">
-          <div class="interface3__user">
+          <div class="interface3__user" data-bind="event: {mouseover: function(){switchImg(img1)}}">
             <h2>User 1</h2>
             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
           </div>
-          <div class="interface3__user">
+          <div class="interface3__user" data-bind="event: {mouseover: function(){switchImg(img2)}}">
             <h2>User 2</h2>
             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
           </div>
-          <div class="interface3__user">
+          <div class="interface3__user" data-bind="event: {mouseover: function(){switchImg(img3)}}">
             <h2>User 3</h2>
             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
           </div>
