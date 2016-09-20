@@ -1,0 +1,61 @@
+.slide {
+
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  margin: 0 auto;
+  opacity: 0;
+  max-width: 124rem;
+  transition: opacity .5s ease-in-out;
+
+  .slide__text {
+    display: inline-block;
+    vertical-align: top;
+    background-color: #5539D2;
+    text-align: left;
+    max-width: 38rem;
+    padding: 4rem 4rem 7.7rem;
+
+
+    h2 {
+      font-family: $atlas;
+      font-weight: bold;
+      font-size: 2.4rem;
+      letter-spacing: 0.05rem;
+      color: -color(white);
+      margin-bottom: 1.4rem;
+      transition: opacity .5s ease-in-out;
+    }
+
+    h3 {
+      font-family: $atlas;
+      font-size: 1.8rem;
+      line-height: 1.6;
+      color: -color(white);
+      transition: opacity .5s ease-in-out;
+    }
+
+  }
+
+  img {
+    height: 0;
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+  }
+
+}
+
+
+.is-visible {
+  visibility: visible;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+  z-index: 2;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}

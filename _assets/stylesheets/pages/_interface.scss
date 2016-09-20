@@ -4,7 +4,7 @@
 
   text-align: center;
   margin-top: 20.5rem;
-  margin-bottom: 30rem;
+  margin-bottom: 10rem;
   lost-utility: clearfix;
 
   .interface__img {
@@ -40,78 +40,10 @@
     }
   }
 
-
-  .product-box {
-    @extend %container;
-
-    display: flex;
-    align-items: flex-start;
-    margin-top: 4rem;
-
-    .product-box__comments {
-
-      display: inline-block;
-      background-color: #5539D2;
-      text-align: left;
-      max-width: 38rem;
-      padding: 4rem 4rem 7.7rem;
-      lost-column: 1/3;
-
-      h2 {
-        font-family: $atlas;
-        font-weight: bold;
-        font-size: 2.4rem;
-        letter-spacing: 0.05rem;
-        color: -color(white);
-        margin-bottom: 1.4rem;
-
-      }
-
-      h3 {
-        font-family: $atlas;
-        font-size: 1.8rem;
-        line-height: 1.6;
-        color: -color(white);
-
-      }
-
-    }
-
-    img {
-      height: 40rem;
-      width: 70rem;
-      opacity: 1;
-      transition: opacity .25s ease-in-out;
-    }
-
-    .shown {
-      opacity: 1;
-      transition: opacity .5s ease-in-out;
-      z-index: 2;
-    }
-
-    .hidden {
-      opacity: 0;
-      z-index: 1;
-      width: 0;
-      margin-right: 0;
-    }
-
-  }
-
 }
 
-.shown {
-  opacity: 1;
-  transition: opacity .5s ease-in-out;
-  z-index: 2;
-  display: block;
-}
-
-.hidden {
-  opacity: 0;
-  z-index: 1;
-  width: 0;
-  margin-right: 0;
-  display: none;
+.interface__imgs {
+  display: inline-block;
+  height: 50rem;
+  width: 75rem;
 }

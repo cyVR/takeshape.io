@@ -2,7 +2,8 @@
   @extend %basic-block;
   @extend %container;
 
-  margin-bottom: 40rem;
+  margin-bottom: 6.5rem;
+  margin-top: 30rem;
 
   .interface2__img {
     position: absolute;
@@ -10,6 +11,7 @@
     margin-top: -30rem;
     width: 48rem;
     height: 48rem;
+    z-index: 1;
   }
 
   .interface2__text {
@@ -67,21 +69,12 @@
     }
   }
 
-  img {
-    height: 72rem;
-    width: 116rem;
-  }
-
-  .shown {
-    opacity: 1;
-    transition: opacity .5s ease-in-out;
-    z-index: 2;
-  }
-
-  .hidden {
-    opacity: 0;
-    z-index: 1;
-    width: 0;
-    margin-right: 0;
-  }
 }
+
+.interface2__imgs {
+  @extend %container;
+
+  height: 72rem;
+  width: 115rem;
+}
+

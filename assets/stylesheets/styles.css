@@ -371,16 +371,16 @@ h6 {
   .hero__img:nth-child(2n + 1){
   clear: both; }
 
-.header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .tech-stack, .tech-stack .tech__copy, .dev-features, .modeler-container .modeler__sample, .creator, .getstarted-container, .ftbox-container {
+.header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface2__imgs, .interface3, .interface3 .interface3__text, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .tech-stack, .tech-stack .tech__copy, .dev-features, .modeler-container .modeler__sample, .creator, .getstarted-container, .ftbox-container {
   margin: 0 auto;
   max-width: 124rem;
   width: 100%; }
   @media (max-width: 780px) {
-    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .tech-stack, .tech-stack .tech__copy, .dev-features, .modeler-container .modeler__sample, .creator, .getstarted-container, .ftbox-container {
+    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface2__imgs, .interface3, .interface3 .interface3__text, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .tech-stack, .tech-stack .tech__copy, .dev-features, .modeler-container .modeler__sample, .creator, .getstarted-container, .ftbox-container {
       padding-left: 4rem;
       padding-right: 4rem; } }
   @media (min-width: 780px) {
-    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface-display .product-box, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface3, .interface3 .interface3__text, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .tech-stack, .tech-stack .tech__copy, .dev-features, .modeler-container .modeler__sample, .creator, .getstarted-container, .ftbox-container {
+    .header__inner, .hero__inner, .body--homepage, .body--homepage .wrapper, .features-container, .interface-display .interface__text-links, .interface2, .interface2 .interface2__text, .interface2 .interface2__feature-container, .interface2__imgs, .interface3, .interface3 .interface3__text, .get-started, .why-container, .quote-block, .price-header, .plan-container, .checkout-features, .faq-container .faq__header, .faq-container .faq__text-container, .manifesto, .manifesto__footer, .doc__header, .doc-container, .tech-stack, .tech-stack .tech__copy, .dev-features, .modeler-container .modeler__sample, .creator, .getstarted-container, .ftbox-container {
       padding-left: 2rem;
       padding-right: 2rem; } }
 
@@ -438,7 +438,7 @@ h6 {
 .interface-display {
   text-align: center;
   margin-top: 20.5rem;
-  margin-bottom: 30rem; }
+  margin-bottom: 10rem; }
 
 .interface-display:before{
   content: '';
@@ -467,81 +467,22 @@ h6 {
       padding: 1rem 2rem; }
     .interface-display .interface__text-links a:hover {
       border-bottom: solid #bb07ff; }
-  .interface-display .product-box {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: start;
-            align-items: flex-start;
-    margin-top: 4rem; }
-    .interface-display .product-box .product-box__comments {
-      display: inline-block;
-      background-color: #5539D2;
-      text-align: left;
-      max-width: 38rem;
-      padding: 4rem 4rem 7.7rem;
-      width: calc(99.9% * 1/3 - (30px - 30px * 1/3)); }
-    .interface-display .product-box .product-box__comments:nth-child(1n){
-  float: left;
-  margin-right: 30px;
-  clear: none; }
-    .interface-display .product-box .product-box__comments:last-child{
-  margin-right: 0; }
-    .interface-display .product-box .product-box__comments:nth-child(3n){
-  margin-right: 0;
-  float: right; }
-    .interface-display .product-box .product-box__comments:nth-child(3n + 1){
-  clear: both; }
-      .interface-display .product-box .product-box__comments h2 {
-        font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: bold;
-        font-size: 2.4rem;
-        letter-spacing: 0.05rem;
-        color: #ffffff;
-        margin-bottom: 1.4rem; }
-      .interface-display .product-box .product-box__comments h3 {
-        font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 1.8rem;
-        line-height: 1.6;
-        color: #ffffff; }
-    .interface-display .product-box img {
-      height: 40rem;
-      width: 70rem;
-      opacity: 1;
-      -webkit-transition: opacity .25s ease-in-out;
-      transition: opacity .25s ease-in-out; }
-    .interface-display .product-box .shown {
-      opacity: 1;
-      -webkit-transition: opacity .5s ease-in-out;
-      transition: opacity .5s ease-in-out;
-      z-index: 2; }
-    .interface-display .product-box .hidden {
-      opacity: 0;
-      z-index: 1;
-      width: 0;
-      margin-right: 0; }
 
-.shown {
-  opacity: 1;
-  -webkit-transition: opacity .5s ease-in-out;
-  transition: opacity .5s ease-in-out;
-  z-index: 2;
-  display: block; }
-
-.hidden {
-  opacity: 0;
-  z-index: 1;
-  width: 0;
-  margin-right: 0;
-  display: none; }
+.interface__imgs {
+  display: inline-block;
+  height: 50rem;
+  width: 75rem; }
 
 .interface2 {
-  margin-bottom: 40rem; }
+  margin-bottom: 6.5rem;
+  margin-top: 30rem; }
   .interface2 .interface2__img {
     position: absolute;
     margin-left: -10rem;
     margin-top: -30rem;
     width: 48rem;
-    height: 48rem; }
+    height: 48rem;
+    z-index: 1; }
   .interface2 .interface2__text {
     max-width: 65rem;
     text-align: center;
@@ -590,22 +531,14 @@ h6 {
     .interface2 .interface2__feature-container .interface2__feature:hover {
       color: #ffffff;
       background-color: #5EDEB3; }
-  .interface2 img {
-    height: 72rem;
-    width: 116rem; }
-  .interface2 .shown {
-    opacity: 1;
-    -webkit-transition: opacity .5s ease-in-out;
-    transition: opacity .5s ease-in-out;
-    z-index: 2; }
-  .interface2 .hidden {
-    opacity: 0;
-    z-index: 1;
-    width: 0;
-    margin-right: 0; }
+
+.interface2__imgs {
+  height: 72rem;
+  width: 115rem; }
 
 .interface3 {
-  margin-bottom: 44rem; }
+  margin-bottom: 44rem;
+  margin-top: 40rem; }
   .interface3 .interface3__img {
     position: absolute;
     margin-left: 77rem;
@@ -618,43 +551,31 @@ h6 {
       font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 5.4rem;
       letter-spacing: 0.025rem; }
-  .interface3 .interface3__product-box {
-    display: -webkit-box;
-    display: flex; }
-    .interface3 .interface3__product-box img {
-      width: 80rem;
-      height: 50rem; }
-    .interface3 .interface3__product-box .shown {
-      opacity: 1;
-      -webkit-transition: opacity .5s ease-in-out;
-      transition: opacity .5s ease-in-out;
-      z-index: 2; }
-    .interface3 .interface3__product-box .hidden {
-      opacity: 0;
-      z-index: 1;
-      width: 0;
-      margin-right: 0; }
-    .interface3 .interface3__product-box .interface3__users-container {
-      display: -webkit-box;
-      display: flex;
-      flex-flow: column;
-      padding: 2rem 4rem; }
-      .interface3 .interface3__product-box .interface3__users-container .interface3__user {
-        padding-left: 1rem;
-        margin-bottom: 7rem;
-        border-left: solid #ffffff; }
-        .interface3 .interface3__product-box .interface3__users-container .interface3__user h2 {
-          font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
-          font-size: 2.4rem;
-          font-weight: bold;
-          margin-bottom: 1.2rem; }
-        .interface3 .interface3__product-box .interface3__users-container .interface3__user h3 {
-          font-family: "Atlas Typewriter", "Lucida Grande", monospace;
-          font-size: 1.6rem; }
-      .interface3 .interface3__product-box .interface3__users-container .interface3__user:hover {
-        border-left: solid #68D9BB; }
-        .interface3 .interface3__product-box .interface3__users-container .interface3__user:hover h2 {
-          color: #68D9BB; }
+  .interface3 .interface3__users-container {
+    display: inline-block;
+    vertical-align: top;
+    padding: 2rem 4rem; }
+    .interface3 .interface3__users-container .interface3__user {
+      padding-left: 1rem;
+      margin-bottom: 7rem;
+      border-left: solid #ffffff; }
+      .interface3 .interface3__users-container .interface3__user h2 {
+        font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin-bottom: 1.2rem; }
+      .interface3 .interface3__users-container .interface3__user h3 {
+        font-family: "Atlas Typewriter", "Lucida Grande", monospace;
+        font-size: 1.6rem;
+        max-width: 30rem; }
+    .interface3 .interface3__users-container .interface3__user:hover {
+      border-left: solid #68D9BB; }
+      .interface3 .interface3__users-container .interface3__user:hover h2 {
+        color: #68D9BB; }
+  .interface3 .interface3__imgs {
+    display: inline-block;
+    height: 50rem;
+    width: 80rem; }
 
 .get-started {
   text-align: center;
@@ -1489,4 +1410,54 @@ h6 {
       max-width: 30rem; }
   .ftbox-container .creator-ftbox:last-of-type {
     border-right: none; }
+
+.slide {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  margin: 0 auto;
+  opacity: 0;
+  max-width: 124rem;
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out; }
+  .slide .slide__text {
+    display: inline-block;
+    vertical-align: top;
+    background-color: #5539D2;
+    text-align: left;
+    max-width: 38rem;
+    padding: 4rem 4rem 7.7rem; }
+    .slide .slide__text h2 {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      font-size: 2.4rem;
+      letter-spacing: 0.05rem;
+      color: #ffffff;
+      margin-bottom: 1.4rem;
+      -webkit-transition: opacity .5s ease-in-out;
+      transition: opacity .5s ease-in-out; }
+    .slide .slide__text h3 {
+      font-family: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.8rem;
+      line-height: 1.6;
+      color: #ffffff;
+      -webkit-transition: opacity .5s ease-in-out;
+      transition: opacity .5s ease-in-out; }
+  .slide img {
+    height: 0;
+    opacity: 1;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out; }
+
+.is-visible {
+  visibility: visible;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  z-index: 2; }
+  .is-visible img {
+    height: 100%;
+    width: 100%; }
 /*# sourceMappingURL=styles.css.map */

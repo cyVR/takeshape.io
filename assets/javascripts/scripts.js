@@ -5995,32 +5995,48 @@ ko.exportSymbol('nativeTemplateEngine', ko.nativeTemplateEngine);
 
 var ko = interopDefault(knockoutLatest_debug);
 
-var viewModel = {
-
-  img1: {
-    class: ko.observable('shown')
-  },
-
-  img2: {
-    class: ko.observable('hidden')
-  },
-
-  img3: {
-    class: ko.observable('hidden')
-  },
-
-  switchImg: function switchImg(img) {
-    var arr = [viewModel.img1, viewModel.img2, viewModel.img3];
-
-    for (var i = 0; i < 3; i++) {
-      arr[i].class('hidden');
+var viewModel = function viewModel() {
+  var model = {
+    selected: ko.observable('modeler'),
+    setSelected: function setSelected(id) {
+      return function () {
+        model.selected(id);
+      };
+    },
+    className: function className(id) {
+      return ko.computed(function () {
+        return model.selected() === id ? 'slide is-visible' : 'slide';
+      });
     }
-    img.class('shown');
-  }
-
+  };
+  return model;
 };
 
-ko.applyBindings(viewModel);
+//var viewModel2 = function(){
+//
+//  self = this
+//
+//   this.selected = ko.observable();
+//
+//   this.setSelected = function(id) {
+//    return function() {
+//      self.selected(id)
+//    };
+//  };
+//
+//  this.className = function(id){
+//    console.log(this)
+//    return ko.computed(function() {
+//      return self.selected() === id ? 'slide is-visible' : 'slide';
+//    });
+//  };
+//
+//};
+
+
+ko.applyBindings(new viewModel(), document.getElementsByClassName('ko')[0]);
+ko.applyBindings(new viewModel(), document.getElementsByClassName('ko')[1]);
+ko.applyBindings(new viewModel(), document.getElementsByClassName('ko')[2]);
 
 ready(function () {
   return svg4everybody$1();
