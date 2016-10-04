@@ -19,3 +19,5 @@ _site
 .githubtoken
 .jekyll-metadata
 vendor
+
+.idea
