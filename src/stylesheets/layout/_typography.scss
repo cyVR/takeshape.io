@@ -30,6 +30,14 @@ $default-type-color: -color(shark);
   letter-spacing: 0.025em;
 }
 
+@mixin hd-b($color: $default-type-color) {
+  color: $color;
+  font-family: $atlas;
+  font-size: 3.6rem;
+  font-weight: -weight(regular);
+  line-height: 1.33;
+}
+
 // ex: Homepage hero copy
 @mixin copy-a($color: $default-type-color) {
   color: $color;
@@ -37,4 +45,12 @@ $default-type-color: -color(shark);
   font-size: 2.1rem;
   font-weight: -weight(regular);
   line-height: 1.667;
+}
+
+@mixin copy-b($color: $default-type-color) {
+  color: $color;
+  font-family: $atlas;
+  font-size: 1.8rem;
+  font-weight: -weight(regular);
+  line-height: 1.5;
 }

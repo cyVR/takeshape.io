@@ -1,0 +1,21 @@
+.section,
+[class*="section--"] {
+  @extend %basic-block;
+
+  &__inner {
+    @extend %container;
+
+    z-index: -z(content);
+  }
+}
+
+.section--home {
+  .section__background {
+    position: absolute;
+    z-index: -z(background);
+  }
+
+  & + & {
+    margin-top: 42rem;
+  }
+}
