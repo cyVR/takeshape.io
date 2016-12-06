@@ -1,0 +1,18 @@
+query {
+  settings: getSiteSettings {
+    contactEmail
+    googleAnalyticsId
+  }
+  social: getSocialSettings {
+    siteName
+    siteDescription
+    siteUrl
+    siteImage {
+      s3Key
+    }
+    twitterSite
+    twitterCreator
+    twitterVia
+    facebookAppId
+  }
+}

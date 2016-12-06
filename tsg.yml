@@ -1,0 +1,23 @@
+templatePath: src/templates
+buildPath: build
+
+context:
+  assets: ../../build/assets/manifest.json
+  site: data/site.graphql
+
+routes:
+  homepage:
+    path: /
+    template: pages/homepage.html
+    context: data/homepage.graphql
+
+  features:
+    path: /features
+    template: pages/features.html
+
+  manifesto:
+    path: /manifesto
+    template: pages/manifesto.html
+
+deploy:
+    - ${buildPath}/static

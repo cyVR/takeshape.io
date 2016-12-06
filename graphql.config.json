@@ -1,0 +1,30 @@
+{
+
+  "README_schema" : "Specifies how to load the GraphQL schema that completion, error highlighting, and documentation is based on in the IDE",
+  "schema": {
+
+    "README_request" : "To request the schema from a url instead, remove the 'file' JSON property above (and optionally delete the default graphql.schema.json file).",
+    "request": {
+      "url" : "https://api-dev.takeshape.io/graphql?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjU2ODExMmE4LWM5ZWMtNDZhNS1iODM4LTFiYTU4ZWE2ZTE5MCIsInNjb3BlIjpbInVzZXIiXSwicHJvamVjdElkIjoiMjgyMDE1M2EtZWVhYy00YzQxLTk0NDktNDU3OTlhODQ5NTAyIiwiaWF0IjoxNDc5NzQ0NTI0fQ.2G4yZiHqFHFL8XmrpY2b4huiuPuj-n86_tY92PM_SXo",
+      "method" : "POST",
+      "README_postIntrospectionQuery" : "Whether to POST an introspectionQuery to the url. If the url always returns the schema JSON, set to false and consider using GET",
+      "postIntrospectionQuery" : true,
+      "README_options" : "See the 'Options' section at https://github.com/then/then-request",
+      "options" : {
+        "headers": {
+          "user-agent" : "JS GraphQL"
+        }
+      }
+    }
+
+  },
+
+  "README_endpoints": "A list of GraphQL endpoints that can be queried from '.graphql' files in the IDE",
+  "endpoints" : [
+    {
+      "name": "TakeShape",
+      "url": "https://api-dev.takeshape.io/graphql?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjU2ODExMmE4LWM5ZWMtNDZhNS1iODM4LTFiYTU4ZWE2ZTE5MCIsInNjb3BlIjpbInVzZXIiXSwicHJvamVjdElkIjoiMmNjY2M4MjUtNzBiZS00MzFjLTliYTAtMTBhYjM4ZWNkM2E3IiwiaWF0IjoxNDgwNzExMTY5fQ.wE4mNVzJVVfhLqWbLKDnLgyhUoo35tdyIBytBZVzqUE"
+    }
+  ]
+
+}

@@ -1,0 +1,74 @@
+.footer {
+  @extend %basic-block;
+
+  lost-utility: clearfix;
+  margin-top: 18rem;
+  padding: 10rem 0 10rem 4rem;
+  background-color: -color(bunting);
+
+  .footer__section {
+    lost-column: 6/12;
+    padding: 0 13rem;
+
+    a {
+      color: white;
+      font-family: $atlas-typewriter;
+      font-size: 1.6rem;
+    }
+
+    ul {
+      lost-column: 1/3;
+    }
+
+    ul:last-of-type {
+      lost-move: -1/16;
+    }
+
+    form {
+      display: inline;
+    }
+
+    input {
+      font-family: $atlas-typewriter;
+      font-size: 1.4rem;
+      border-radius: 9px 3px 3px 9px;
+      padding: 2.9rem;
+      border: none;
+    }
+
+    ::-webkit-input-placeholder {
+      font-family: $atlas-typewriter;
+      font-size: 1.4rem;
+      color: #838495;
+      text-align: center;
+
+    }
+
+    h4 {
+      color: -color(white);
+      font-family: $atlas-typewriter;
+      font-size: 1.4rem;
+      margin-top: 4.5rem;
+    }
+  }
+}
+
+#footer__link--heading {
+  font-family: $atlas;
+  font-weight: bold;
+  font-size:   1.4rem;
+  color: #68D9BB;
+  margin-bottom: 2.2rem;
+}
+
+#footer__submit {
+  font-family: $atlas-typewriter;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: white;
+  text-transform: uppercase;
+  outline: 0 none !important;
+  border: none;
+  background-color: #503DA3;
+  border-radius: 3px 9px 9px 3px;
+}

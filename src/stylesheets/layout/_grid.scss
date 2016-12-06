@@ -1,0 +1,12 @@
+@lost gutter 3rem;
+@lost flexbox flex;
+@lost cycle auto;
+
+%container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 120rem;
+}

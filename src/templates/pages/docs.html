@@ -1,0 +1,27 @@
+{% extends "layouts/default.html" %}
+
+{% from "macros/image-url.html" import imageUrl %}
+
+{% set base_url = "/" %}
+
+{% block content %}
+<div class="doc__header">
+  <h1>TakeShape Docs</h1>
+  <input type="text" placeholder="Search docs" size="15">
+</div>
+
+<div class="doc-container">
+
+  {% include partials/doc_menu.html %}
+
+  <div class="doc__text">
+    <p>TakeShape Docs > For Developers</p>
+    <h2>API Libraries and Integrations</h2>
+    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam amet animi assumenda est fuga incidunt itaque labore maxime nesciunt obcaecati omnis perferendis quibusdam quis quo recusandae soluta, veniam voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consectetur cum, dolor eaque explicabo fugiat harum iste iure laboriosam modi molestias necessitatibus placeat quasi qui quod sunt suscipit totam voluptatem!</h4>
+    <h3>Praesent Mollis Gravida</h3>
+    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aut consequatur dolor et facilis, impedit inventore molestias, non odit praesentium quasi, quia voluptatem! Deleniti laudantium maiores molestiae porro quis voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum in minus neque nesciunt optio. Accusantium architecto, blanditiis, consectetur, dicta eos hic id maxime minus neque officiis praesentium saepe sapiente voluptates.</h4>
+    <h3>Praesent Mollis Gravida</h3>
+    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dolor eveniet magnam praesentium quam soluta? Dolores, eaque est excepturi nobis, officiis optio quidem rem rerum sed, sunt ut voluptatum. Repellendus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur blanditiis dolore ea eligendi, impedit laudantium magnam magni maxime modi, nemo nostrum omnis perferendis quia quos rem sint soluta, ut. Reprehenderit?</h4>
+  </div>
+</div>
+{% endblock %}

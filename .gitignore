@@ -7,7 +7,6 @@ lib-cov
 *.pid
 *.gz
 .DS_Store
-.idea
 
 pids
 logs
@@ -16,5 +15,11 @@ results
 npm-debug.log
 node_modules
 
-_site
+.graphqlrc
+.idea
 .githubtoken
+.jekyll-metadata
+.idea
+
+/vendor
+/build

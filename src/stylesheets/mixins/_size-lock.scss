@@ -1,0 +1,17 @@
+/* eslint-disable */
+
+// http://fvsch.com/code/css-locks/
+@mixin size-lock($breakpoint1, $breakpoint2, $size1, $size2) {
+  $slope: ($size2 - $size1) / (-bp($breakpoint2) - -bp($breakpoint1));
+  $mod: $size1 - ($slope) * -bp($breakpoint1);
+
+  font-size: $size1;
+
+  @include between($breakpoint1, $breakpoint2) {
+    font-size: calc(#{$slope} * 100vw + #{$mod});
+  }
+
+  @include above($breakpoint2) {
+    font-size: $size2;
+  }
+}

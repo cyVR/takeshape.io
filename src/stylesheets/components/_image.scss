@@ -1,0 +1,8 @@
+[data-image] {
+  opacity: 0;
+
+  &.is-loaded {
+    opacity: 1;
+    transition: opacity 0.5s $ease-in-out-quart;
+  }
+}

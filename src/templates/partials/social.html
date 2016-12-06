@@ -1,0 +1,57 @@
+{% from "macros/image-url.html" import imageUrl %}
+
+{% set socialGlobal = global.site.social %}
+
+{% if page.socialTitle %}
+  <title>{{ socialGlobal.siteName }} - {{ page.socialTitle }}</title>
+{% elif page.heroHeading %}
+  <title>{{ socialGlobal.siteName }} - {{ page.heroHeading }}</title>
+{% elif socialGlobal.siteName %}
+  <title>{{ socialGlobal.siteName }}</title>
+{% endif %}
+
+{% if page.socialDescription %}
+  <meta name="description" content="{{ page.socialDescription }}">
+  <meta property="og:description" content="{{ page.socialDescription }}">
+{% elif page.heroCopy %}
+  <meta name="description" content="{{ page.heroCopy }}">
+  <meta property="og:description" content="{{ page.heroCopy }}">
+{% elif socialGlobal.description %}
+  <meta name="description" content="{{ socialGlobal.description }}">
+  <meta property="og:description" content="{{ socialGlobal.description }}">
+{% endif %}
+
+{% if socialGlobal.siteUrl %}
+  <link rel="canonical" href="{{ socialGlobal.siteUrl }}">
+  <meta property="og:url" content="{{ socialGlobal.siteUrl }}">
+{% endif %}
+
+{% if socialGlobal.siteName %}
+  <meta property="og:site_name" content="{{ socialGlobal.siteName }}">
+{% endif %}
+
+{% if page.socialImage %}
+  <meta property="og:image" content="{{ imageUrl(page.socialImage.s3Key) }}">
+{% elif page.heroImage %}
+
+{% elif socialGlobal.siteImage %}
+  <meta property="og:image" content="{{ imageUrl(socialGlobal.siteImage.s3Key) }}">
+{% endif %}
+
+{% if page %}
+  <meta property="og:type" content="article">
+{% endif %}
+
+<meta name="twitter:card" content="summary_large_image">
+
+{% if socialGlobal.twitterSite %}
+  <meta name="twitter:site" content="{{ socialGlobal.twitterSite }}">
+{% endif %}
+
+{% if socialGlobal.twitterCreator %}
+  <meta name="twitter:site" content="{{ socialGlobal.twitterCreator }}">
+{% endif %}
+
+{% if socialGlobal.facebookAppId %}
+  <meta property="fb:app_id" content="{{ socialGlobal.facebookAppId }}">
+{% endif %}

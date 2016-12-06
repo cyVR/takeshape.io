@@ -1,0 +1,61 @@
+.why-container {
+  @extend %container;
+
+  display: flex;
+  lost-utility: clearfix;
+  margin-top: 18rem;
+
+  .why_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 5rem;
+    lost-column: 1/3;
+  }
+
+  .why_div:nth-of-type(1) {
+    border-right: solid #DEDEE9;
+  }
+
+  .why_div:nth-of-type(2){
+    border-right: solid #DEDEE9;
+  }
+
+  h1 {
+    font-family: $atlas;
+    font-size: 3.6rem;
+    margin-bottom: 1.7rem;
+  }
+
+  h2 {
+    font-family: $atlas-typewriter;
+    font-size: 1.6rem;
+    margin-bottom: 1.7rem;
+    max-width: 30rem;
+  }
+
+  #why_button {
+    outline: 0 none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-decoration: none;
+    text-align: center;
+    background: 0 0;
+    border: 2px solid red;
+    color: red;
+    text-transform: uppercase;
+    padding: 2rem 2.5rem;
+    letter-spacing: .13rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: .22s background-color cubic-bezier(0.165, .84, .44, 1);
+    max-width: 30rem;
+
+    a {
+      font-family: $atlas;
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+  }
+}

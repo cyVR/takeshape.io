@@ -1,0 +1,82 @@
+/* stylelint-disable */
+
+$atlas: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$atlas-typewriter: "Atlas Typewriter", "Lucida Grande", monospace;
+$font-size-base: 10px;
+$font-size: 1.6rem;
+$line-height: 1.5;
+
+$ease-in-out-quart: cubic-bezier(0.86, 0, 0.07, 1);
+$ease-out-quint: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+$colors: (
+  carnation: #f25f5c,
+  bittersweet: #ff6b6b,
+  persian-indigo: #2d126c,
+  governor-bay: #442ab9,
+  purple-heart: #5539d2,
+  viking: #5edeb3,
+  java: #1de9b6,
+  bright-sun: #f9cb40,
+  gold: #ffd600,
+  bunker: #11151c,
+  shark: #292f36,
+  geyser: #ccdbdc,
+  porcelain: #e4e8ea,
+  whisper: #f5f3f9,
+  athens-gray: #fcfcfd,
+  downriver: #0a2342,
+  ebony-clay: #282940,
+  salmon: #fe9066,
+  carribean: #00cc99,
+  cornflower-blue: #7858fc,
+  bunting: #1e114b,
+  black: #000000,
+  white: #ffffff
+);
+
+$font-weights: (
+  thin: 100,
+  extra-light: 200,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700,
+  extra-bold: 800,
+  black: 900
+);
+
+$breakpoints: (
+  mobile: 780px,
+  tablet: 900px,
+  desktop: 1024px,
+  large-desktop: 1160px,
+  hd: 1366px,
+  super-hd: 1600px
+);
+
+$grid-breakpoints: (
+  mobile: 780px,
+  tablet: 900px,
+  desktop: 1024px,
+  large-desktop: 1160px,
+  hd: 1366px,
+  super-hd: 1600px
+);
+
+$layers: (
+  background,
+  content,
+  dropdown,
+  subnav,
+  mobile-nav,
+  header,
+  overlay,
+  modal,
+  modal-background,
+  modal-content
+);
+
+// custom variables
+$header-height: 13.6rem;
