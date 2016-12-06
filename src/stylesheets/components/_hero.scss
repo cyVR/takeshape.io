@@ -1,44 +1,56 @@
 .hero {
   @extend %basic-block;
 
-  background-color: -color(bunting);
+  background-color: -color(persian-indigo);
   min-height: 60rem;
   height: calc(100vh - #{$header-height});
   max-height: 84rem;
   color: -color(white);
-  padding: 10rem 0 13.5rem;
+  padding: 4rem 0;
+  overflow: hidden;
+
+  &__background {
+    @extend %absolute-center;
+
+    z-index: -z(background);
+
+    > img {
+      position: absolute;
+      top: 50%;
+      right: 8%;
+      transform: translateY(-50%);
+    }
+  }
 
   &__inner {
     @extend %container;
 
     display: flex;
-    lost-utility: clearfix;
-
-    h1 {
-      font-family: $atlas;
-      font-size: 5.4rem;
-      line-height: 1.28;
-    }
-
-    p {
-      font-family: $atlas-typewriter;
-      font-size: 2.1rem;
-      line-height: 1.62;
-      margin-top: 3.1rem;
-    }
-
-    .button {
-      margin-top: 5.5rem;
-    }
+    align-items: center;
+    height: 100%;
   }
 
   &__content {
-    max-width: 73rem;
-    lost-column: 1/2;
+    max-width: 65rem;
+    z-index: -z(content);
+  }
+
+  &__heading {
+    @include hd-a(-color(white));
+  }
+
+  &__copy {
+    @include copy-a(-color(white));
+
+    margin-top: 2.8rem;
   }
 
   &__img {
     lost-column: 1/2;
     padding-left: 11rem;
+  }
+
+  .button {
+    margin-top: 4.4rem;
   }
 }
