@@ -13,9 +13,10 @@
   }
 
   &__copy {
-    @include copy-b($family: $atlas-typewriter);
+    @include copy-b($family: $atlas-typewriter, $line-height: 1.77);
 
-    margin-top: 2.2rem;
+    margin: 2.2rem auto 0;
+    max-width: 60rem;
 
     &:last-child {
       margin-top: 6.6rem;

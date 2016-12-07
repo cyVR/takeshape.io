@@ -65,6 +65,22 @@
     color: -color(white);
     font-family: $atlas-typewriter;
     font-size: 1.4rem;
+
+    a {
+      color: inherit;
+      font-weight: -weight(medium);
+      will-change: color;
+      transition: color 0.15s $ease-in-out-quart;
+
+      &:hover {
+        color: -color(viking);
+      }
+
+      &:active {
+        color: -color(bright-gold);
+        transition: color 0.08s $ease-in-out-quart;
+      }
+    }
   }
 }
 
