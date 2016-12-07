@@ -1,43 +1,38 @@
-{% set base_url = "/" %}
-
-{% from "macros/image-url.html" import imageUrl %}
-
 <footer class="footer">
-  <div class="container">
-    <div class="footer__section">
-      <ul>
-        <li><a href="#" id="footer__link--heading">About Takeshape</a></li>
-        <li><a href="/features" class="footer__link">Features</a></li>
-        <li><a href="/pricing" class="footer__link">Pricing</a></li>
-        <li><a href="/manifesto" class="footer__link">Manifesto</a></li>
-
+  <div class="footer__inner">
+    <div class="footer__block">
+      <ul class="footer__list">
+        <li><h3 class="footer__heading">About TakeShape</h3></li>
+        <li><a href="#" class="footer__link">Features</a></li>
+        <li><a href="#" class="footer__link">Pricing</a></li>
+        <li><a href="#" class="footer__link">Manifesto</a></li>
       </ul>
 
-      <ul>
-        <li><a href="#" id="footer__link--heading">For Users</a></li>
-        <li><a href="/docs" class="footer__link">Docs</a></li>
+      <ul class="footer__list">
+        <li><h3 class="footer__heading">For users</h3></li>
+        <li><a href="#" class="footer__link">Docs</a></li>
         <li><a href="#" class="footer__link">Login</a></li>
         <li><a href="#" class="footer__link">Git</a></li>
-
       </ul>
 
-      <ul>
-        <li><a href="#" id="footer__link--heading">Find Us On</a></li>
+      <ul class="footer__list">
+        <li><h3 class="footer__heading">Find Us On</h3></li>
         <li><a href="#" class="footer__link">Facebook</a></li>
         <li><a href="#" class="footer__link">Twitter</a></li>
         <li><a href="#" class="footer__link">ProductHunt</a></li>
-
       </ul>
-
     </div>
 
-    <div class="footer__section">
-      <form action="post" class="newsletter">
-        <input type="text" size="26" id="" placeholder="Sign up for our newsletter"/><input type="submit" value="Keep Me Updated" id="footer__submit"/>
+    <div class="footer__block">
+      <form class="newsletter">
+        <div class="newsletter__element">
+          <input type="email" name="email" id="email" class="newsletter__input" placeholder="Sign up for our newsletter"/>
+        </div>
+
+        <input type="submit" value="Keep Me Updated" class="newsletter__submit"/>
       </form>
 
-      <h4 class="credit">Made for developers at Ronik</h4>
-
+      <h4 class="footer__credit">Made for developers at Ronik</h4>
     </div>
   </div>
 </footer>

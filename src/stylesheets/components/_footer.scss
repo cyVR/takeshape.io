@@ -1,74 +1,122 @@
 .footer {
   @extend %basic-block;
 
-  lost-utility: clearfix;
-  margin-top: 18rem;
-  padding: 10rem 0 10rem 4rem;
-  background-color: -color(bunting);
+  margin-top: 14rem;
+  padding: 11rem 0;
+  background-color: -color(port-gore);
 
-  .footer__section {
-    lost-column: 6/12;
-    padding: 0 13rem;
+  &__inner {
+    @extend %container;
 
-    a {
-      color: white;
-      font-family: $atlas-typewriter;
-      font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__block {
+    &:first-child {
+      display: flex;
+    }
+  }
+
+  &__list {
+    & + * {
+      margin-left: 5.4rem;
     }
 
-    ul {
-      lost-column: 1/3;
+    li {
+      & + * {
+        margin-top: 1.4rem;
+      }
+
+      &:nth-child(2) {
+        margin-top: 2.4rem;
+      }
+    }
+  }
+
+  &__heading {
+    color: -color(viking);
+    font-family: $atlas;
+    font-size: 1.4rem;
+    font-weight: -weight(bold);
+    letter-spacing: 0.1em;
+    line-height: 1.33;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    color: -color(white);
+    font-family: $atlas-typewriter;
+    font-size: 1.6rem;
+    will-change: color;
+    transition: color 0.15s $ease-in-out-quart;
+
+    &:hover {
+      color: -color(medium-purple);
     }
 
-    ul:last-of-type {
-      lost-move: -1/16;
+    &:active {
+      color: -color(bright-sun);
+      transition: color 0.08s $ease-in-out-quart;
     }
+  }
 
-    form {
-      display: inline;
-    }
-
-    input {
-      font-family: $atlas-typewriter;
-      font-size: 1.4rem;
-      border-radius: 9px 3px 3px 9px;
-      padding: 2.9rem;
-      border: none;
-    }
-
-    ::-webkit-input-placeholder {
-      font-family: $atlas-typewriter;
-      font-size: 1.4rem;
-      color: #838495;
-      text-align: center;
-
-    }
-
-    h4 {
-      color: -color(white);
-      font-family: $atlas-typewriter;
-      font-size: 1.4rem;
-      margin-top: 4.5rem;
-    }
+  &__credit {
+    color: -color(white);
+    font-family: $atlas-typewriter;
+    font-size: 1.4rem;
   }
 }
 
-#footer__link--heading {
-  font-family: $atlas;
-  font-weight: bold;
-  font-size:   1.4rem;
-  color: #68D9BB;
-  margin-bottom: 2.2rem;
-}
+.newsletter {
+  display: flex;
+  margin-bottom: 4.4rem;
 
-#footer__submit {
-  font-family: $atlas-typewriter;
-  font-weight: bold;
-  font-size: 1.4rem;
-  color: white;
-  text-transform: uppercase;
-  outline: 0 none !important;
-  border: none;
-  background-color: #503DA3;
-  border-radius: 3px 9px 9px 3px;
+  &__element {
+    flex-grow: 1;
+    min-width: 28.8rem;
+  }
+
+  &__input {
+    @extend %strip-input-style;
+
+    background-color: -color(white);
+    width: 100%;
+    height: 5.5rem;
+    color: -color(shark);
+    font-family: $atlas-typewriter;
+    font-size: 1.4rem;
+    border-radius: 0.8rem 0 0 0.8rem;
+    padding: 2rem;
+  }
+
+  &__submit {
+    @extend %strip-input-style;
+
+    color: -color(white);
+    font-family: $atlas-typewriter;
+    font-weight: -weight(medium);
+    font-size: 1.4rem;
+    line-height: 5.5rem;
+    letter-spacing: .02em;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    width: 20rem;
+    height: 5.5rem;
+    border-radius: 0 0.8rem 0.8rem 0;
+    background-color: -color(purple-heart);
+    will-change: color, background;
+    transition: color 0.2s $ease-in-out-quart, background 0.2s $ease-in-out-quart;
+    cursor: pointer;
+
+    &:hover {
+      background-color: -color(viking);
+    }
+
+    &:active {
+      background-color: -color(bright-sun);
+      transition: color 0.08s $ease-in-out-quart, background 0.08s $ease-in-out-quart;
+    }
+  }
 }
