@@ -1,0 +1,17 @@
+[class*="compress--"] {
+  @extend %basic-block;
+
+  margin: 0 auto;
+}
+
+.compress--large {
+  max-width: 106rem;
+}
+
+.compress--medium {
+  max-width: 96rem;
+}
+
+.compress--small {
+  max-width: 64.4rem;
+}

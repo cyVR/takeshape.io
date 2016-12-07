@@ -1,21 +1,33 @@
 .section,
 [class*="section--"] {
   @extend %basic-block;
-}
 
-.section--home {
-  .section__background {
-    position: absolute;
-    z-index: -z(background);
-  }
+  margin-top: 18rem;
 
   .section__inner {
     text-align: center;
   }
+}
 
+.section--home {
   & + & {
     margin-top: 42rem;
   }
+}
+
+.section--features {
+  .section__inner {
+    text-align: left;
+  }
+
+  &:first-child {
+    margin-top: 12rem;
+  }
+}
+
+.section__background {
+  position: absolute;
+  z-index: -z(background);
 }
 
 .section__inner {
@@ -25,8 +37,7 @@
 }
 
 .section__header {
-  margin-bottom: 7.4rem;
-  text-align: center;
+  margin-bottom: 6.4rem;
 
   .section__copy {
     max-width: 46rem;
@@ -43,5 +54,5 @@
 }
 
 .section__copy {
-  @include copy-d($family: $atlas-typewriter);
+  @include copy-c($family: $atlas-typewriter);
 }
