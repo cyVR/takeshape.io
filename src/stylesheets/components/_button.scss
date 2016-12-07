@@ -9,7 +9,6 @@
   letter-spacing: .02em;
   vertical-align: middle;
   border-radius: 0.2rem;
-  padding: 2.2rem 2.8rem 2rem;
   will-change: color, background, border;
   transition: color 0.2s $ease-in-out-quart, background 0.2s $ease-in-out-quart, border 0.2s $ease-in-out-quart;
 
@@ -23,6 +22,7 @@
 
   color: -color(white);
   background-color: -color(viking);
+  padding: 2.2rem 2.8rem 2rem;
 
   &:hover {
     background-color: -color(purple-heart);
@@ -39,6 +39,7 @@
   color: -color(purple-heart);
   background-color: transparent;
   border: 0.2rem solid -color(purple-heart);
+  padding: 2rem 2.6rem 1.8rem;
 
   &:hover {
     color: -color(white);
