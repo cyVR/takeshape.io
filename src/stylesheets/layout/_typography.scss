@@ -21,12 +21,12 @@ h6 {
 $default-type-color: -color(shark);
 
 // ex: Homepage hero heading
-@mixin hd-a($color: $default-type-color) {
+@mixin hd-a($color: $default-type-color, $line-height: 1.39) {
   color: $color;
   font-family: $atlas;
   font-size: 4.4rem;
   font-weight: -weight(medium);
-  line-height: 1.39;
+  line-height: $line-height;
   letter-spacing: 0.025em;
 }
 

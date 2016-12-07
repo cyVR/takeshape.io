@@ -1,0 +1,41 @@
+.content {
+  text-align: left;
+
+  h1 {
+    @include hd-a($line-height: 1.25);
+
+    & + * {
+      margin-top: 4rem;
+    }
+  }
+
+  h2 {
+    @include hd-b();
+
+    & + * {
+      margin-top: 2.6rem;
+    }
+  }
+
+  h3 {
+    @include hd-f();
+
+    & + * {
+      margin-top: 1.6rem;
+    }
+  }
+
+  p {
+    @include copy-c();
+
+    & + h1,
+    & + h2,
+    & + h3 {
+      margin-top: 4rem;
+    }
+
+    & + p {
+      margin-top: 2.8rem;
+    }
+  }
+}
