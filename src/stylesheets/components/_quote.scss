@@ -37,7 +37,7 @@
     }
 
     p {
-      @include hd-b();
+      @include hd-d();
 
       &:before {
         content: "\201C";

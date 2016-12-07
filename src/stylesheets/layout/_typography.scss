@@ -30,12 +30,12 @@ $default-type-color: -color(shark);
   letter-spacing: 0.025em;
 }
 
-// ex: Quote text
+// ex: Homepage bottom nav heading
 @mixin hd-b($color: $default-type-color) {
   color: $color;
   font-family: $atlas;
   font-size: 3.6rem;
-  font-weight: -weight(regular);
+  font-weight: -weight(medium);
   line-height: 1.33;
 }
 
@@ -48,7 +48,15 @@ $default-type-color: -color(shark);
   line-height: 1.2;
 }
 
-// ex: Homepage hero copy
+// ex: Quote text
+@mixin hd-d($color: $default-type-color) {
+  color: $color;
+  font-family: $atlas-typewriter;
+  font-size: 3.6rem;
+  font-weight: -weight(regular);
+  line-height: 1.33;
+}
+
 @mixin copy-a($color: $default-type-color) {
   color: $color;
   font-family: $atlas;

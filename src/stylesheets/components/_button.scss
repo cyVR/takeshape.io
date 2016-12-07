@@ -1,10 +1,11 @@
 %button {
   display: inline-block;
   font-family: $atlas-typewriter;
-  font-weight: -weight(bold);
+  font-weight: -weight(medium);
   font-size: 1.6rem;
+  text-align: center;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 1.33;
   letter-spacing: .02em;
   vertical-align: middle;
   border-radius: 0.2rem;
@@ -29,5 +30,23 @@
 
   &:active {
     background-color: -color(bright-sun);
+  }
+}
+
+.button--border {
+  @extend %button;
+
+  color: -color(purple-heart);
+  background-color: transparent;
+  border: 0.2rem solid -color(purple-heart);
+
+  &:hover {
+    color: -color(white);
+    background-color: -color(purple-heart);
+  }
+
+  &:active {
+    background-color: -color(bright-sun);
+    border-color: -color(bright-sun);
   }
 }
