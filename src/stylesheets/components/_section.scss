@@ -1,12 +1,6 @@
 .section,
 [class*="section--"] {
   @extend %basic-block;
-
-  &__inner {
-    @extend %container;
-
-    z-index: -z(content);
-  }
 }
 
 .section--home {
@@ -15,7 +9,34 @@
     z-index: -z(background);
   }
 
+  .section__inner {
+    text-align: center;
+  }
+
   & + & {
     margin-top: 42rem;
   }
+}
+
+.section__inner {
+  @extend %container;
+
+  z-index: -z(content);
+}
+
+.section__header {
+  margin-bottom: 7.4rem;
+  text-align: center;
+}
+
+.section__heading {
+  @include hd-c();
+
+  & + .section__copy {
+    margin-top: 3.4rem;
+  }
+}
+
+.section__copy {
+  @include copy-c();
 }
