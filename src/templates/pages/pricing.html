@@ -1,0 +1,16 @@
+{% extends "layouts/default.html" %}
+
+{% from "macros/image-url.html" import imageUrl %}
+
+{% set base_url = "/" %}
+
+{% block body_class %}body--page{% endblock %}
+
+{% block content %}
+<header class="page-header">
+  <div class="page-header__inner">
+    <h1 class="page-header__heading">Have a __?<br/>We have a plan.</h1>
+    <p class="page-header__copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas est in elementum placerat.</p>
+  </div>
+</header>
+{% endblock %}

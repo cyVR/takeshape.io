@@ -5,14 +5,19 @@
 {% set base_url = "/" %}
 
 {% block content %}
-<div class="doc__header">
-  <h1>TakeShape Docs</h1>
-  <input type="text" placeholder="Search docs" size="15">
-</div>
+<header class="page-header">
+  <div class="page-header__inner">
+    <h1 class="page-header__heading">TakeShape Docs</h1>
+
+    <form class="search">
+      <div class="search__element">
+        <input type="search" placeholder="Search docs" name="search" id="search" class="search__input">
+      </div>
+    </form>
+  </div>
+</header>
 
 <div class="doc-container">
-
-  {% include partials/doc_menu.html %}
 
   <div class="doc__text">
     <p>TakeShape Docs > For Developers</p>

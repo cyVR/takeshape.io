@@ -36,7 +36,7 @@
   }
 
   &__copy {
-    @include copy-c();
+    @include copy-c($family: $atlas-typewriter);
   }
 
   &__footer {

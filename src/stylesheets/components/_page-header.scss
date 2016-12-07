@@ -1,0 +1,28 @@
+.page-header {
+  @extend %basic-block;
+
+  text-align: center;
+  margin: 16rem 0 12rem;
+
+  &__inner {
+    @extend %container;
+  }
+
+  &__heading {
+    @include hd-c();
+  }
+
+  &__copy {
+    @include copy-b($family: $atlas-typewriter);
+
+    margin-top: 2.2rem;
+
+    &:last-child {
+      margin-top: 6.6rem;
+    }
+  }
+
+  .button--border {
+    margin-top: 4.6rem;
+  }
+}

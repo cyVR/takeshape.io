@@ -39,6 +39,8 @@
     p {
       @include hd-d();
 
+      text-indent: -2.2rem;
+
       &:before {
         content: "\201C";
       }

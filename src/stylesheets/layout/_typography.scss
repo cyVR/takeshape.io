@@ -57,26 +57,35 @@ $default-type-color: -color(shark);
   line-height: 1.33;
 }
 
-@mixin copy-a($color: $default-type-color) {
+@mixin copy-a($color: $default-type-color, $family: $atlas) {
   color: $color;
-  font-family: $atlas;
+  font-family: $family;
   font-size: 2.1rem;
   font-weight: -weight(regular);
   line-height: 1.667;
 }
 
-@mixin copy-b($color: $default-type-color) {
+@mixin copy-b($color: $default-type-color, $family: $atlas) {
   color: $color;
-  font-family: $atlas;
+  font-family: $family;
   font-size: 1.8rem;
   font-weight: -weight(regular);
   line-height: 1.5;
 }
 
-@mixin copy-c($color: $default-type-color) {
+@mixin copy-c($color: $default-type-color, $family: $atlas) {
   color: $color;
-  font-family: $atlas;
+  font-family: $family;
   font-size: 1.6rem;
   font-weight: -weight(regular);
   line-height: 1.75;
 }
+
+@mixin copy-d($color: $default-type-color, $family: $atlas) {
+  color: $color;
+  font-family: $family;
+  font-size: 1.6rem;
+  font-weight: -weight(regular);
+  line-height: 1.75;
+}
+

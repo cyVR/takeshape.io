@@ -27,6 +27,11 @@
 .section__header {
   margin-bottom: 7.4rem;
   text-align: center;
+
+  .section__copy {
+    max-width: 46rem;
+    margin: 0 auto;
+  }
 }
 
 .section__heading {
@@ -38,5 +43,5 @@
 }
 
 .section__copy {
-  @include copy-c();
+  @include copy-d($family: $atlas-typewriter);
 }

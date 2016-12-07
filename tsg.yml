@@ -15,9 +15,17 @@ routes:
     path: /features
     template: pages/features.html
 
+  pricing:
+    path: /pricing
+    template: pages/pricing.html
+
   manifesto:
     path: /manifesto
     template: pages/manifesto.html
+
+  docs:
+    path: /docs
+    template: pages/docs.html
 
 deploy:
     - ${buildPath}/static

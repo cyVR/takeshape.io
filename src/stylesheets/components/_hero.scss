@@ -43,7 +43,7 @@
   }
 
   &__copy {
-    @include copy-a(-color(white));
+    @include copy-a(-color(white), $family: $atlas-typewriter);
 
     margin-top: 2.8rem;
   }

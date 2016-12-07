@@ -4,13 +4,16 @@
 
 {% set base_url = "/" %}
 
-{% block content %}
-<div class="features__hero">
-  <h1>TakeShape Features</h1>
-  <h2>Explore everything TakeShape has to offer.</h2>
-  <a href="" class="features__hero--button">View Our Features Index</a>
+{% block body_class %}body--page{% endblock %}
 
-</div>
+{% block content %}
+<header class="page-header">
+  <div class="page-header__inner">
+    <h1 class="page-header__heading">TakeShape Features</h1>
+    <p class="page-header__copy">Explore everything TakeShape has to offer.</p>
+    <a href="#" class="button--border">View Our Features Index</a>
+  </div>
+</header>
 
 <div class="dev-features">
   <h1>Developer</h1>
@@ -155,24 +158,40 @@
   <a href="" class="button">Install TakeShape Now</a>
 </div>
 
-<div class="ftbox-container">
-  <div class="creator-ftbox">
-    <h1>Documented</h1>
-    <h2>Our documentation includes common usage patterns and starter schemas.</h2>
-    <a href="">View Docs</a>
-  </div>
+<div class="bottom-nav">
+  <div class="bottom-nav__inner">
+    <div class="bottom-nav__block">
+      <div class="bottom-nav__content">
+        <h3 class="bottom-nav__heading">Documented</h3>
+        <p class="bottom-nav__copy">Our documentation includes common usage patterns and starter schemas.</p>
+      </div>
 
-  <div class="creator-ftbox">
-    <h1>Support</h1>
-    <h2>Can't find what you're looking for or need some help?</h2>
-    <a href="">Support Page</a>
-  </div>
+      <footer class="bottom-nav__footer">
+        <a href="#" class="button--border">View the Docs</a>
+      </footer>
+    </div>
 
-  <div class="creator-ftbox">
-    <h1>Pricing</h1>
-    <h2>We have flexible pricing to accomadate all types of projects- big and small</h2>
-    <a href="">View Pricing Options</a>
-  </div>
+    <div class="bottom-nav__block">
+      <div class="bottom-nav__content">
+        <h3 class="bottom-nav__heading">Support</h3>
+        <p class="bottom-nav__copy">Can't find what you're looking for or need some help? Look no further.</p>
+      </div>
 
+      <footer class="bottom-nav__footer">
+        <a href="#" class="button--border">Get Support</a>
+      </footer>
+    </div>
+
+    <div class="bottom-nav__block">
+      <div class="bottom-nav__content">
+        <h3 class="bottom-nav__heading">Pricing</h3>
+        <p class="bottom-nav__copy">We have flexible pricing to accomodate all types of projects- big or small.</p>
+      </div>
+
+      <footer class="bottom-nav__footer">
+        <a href="#" class="button--border">View Pricing Options</a>
+      </footer>
+    </div>
+  </div>
 </div>
 {% endblock %}
