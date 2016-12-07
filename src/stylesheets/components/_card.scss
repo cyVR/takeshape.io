@@ -24,6 +24,13 @@
   flex-grow: 1;
 }
 
+
+.card--tout {
+  @extend %purple-shadow;
+
+  text-align: left;
+}
+
 .card--get-started {
   box-shadow: 2.2rem 2.2rem 0 0 rgba(94,222,179,0.15);
 }
@@ -43,4 +50,8 @@
 
 .card__copy {
   @include copy-b($line-height: 1.77);
+}
+
+.card__link {
+  @include hd-a();
 }
