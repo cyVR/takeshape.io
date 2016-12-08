@@ -1,0 +1,32 @@
+[class*="layout--"] {
+  @extend %basic-block;
+
+  .layout__inner {
+    @extend %container;
+
+    display: flex;
+  }
+
+  .layout__column {
+    .section,
+    [class*="section--"] {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.layout--docs {
+  .layout__column {
+    &:first-child {
+      flex: 1 1 36rem;
+      width: 36rem;
+      margin-right: 6.6rem;
+    }
+
+    &:last-child {
+      flex: 1 4 100%;
+    }
+  }
+}
