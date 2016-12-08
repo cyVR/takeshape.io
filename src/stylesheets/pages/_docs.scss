@@ -3,7 +3,23 @@
     @extend %basic-block;
 
     max-width: 56rem;
-    margin: 0 auto;
+    margin: 6rem auto 0;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 2.2rem;
+    display: block;
+    width: 2.2rem;
+    height: 2.2rem;
+    transform: translateY(-50%);
+
+    svg {
+      @extend %absolute-center;
+
+      fill: -color(topaz);
+    }
   }
 
   &__input {
@@ -11,7 +27,6 @@
 
     width: 100%;
     height: 6rem;
-    margin-top: 6rem;
     padding-left: 6rem;
     padding-right: 2rem;
     color: -color(shark);
@@ -35,6 +50,15 @@
         margin-top: 2.2rem;
       }
 
+      &.is-open {
+        > ul {
+          opacity: 1;
+          visibility: visible;
+          max-height: 100%;
+          margin-top: 1.4rem;
+        }
+      }
+
       > ul {
         display: block;
         position: relative;
@@ -53,15 +77,8 @@
           left: 0;
           width: 0.3rem;
           height: 100%;
-          opacity: 0.05;
-          background-color: -color(purple-heart);
-        }
-
-        &.is-open {
-          opacity: 1;
-          visibility: visible;
-          max-height: 100%;
-          margin-top: 1.4rem;
+          opacity: 0.1;
+          background-color: -color(viking);
         }
 
         li {
@@ -90,7 +107,7 @@
           left: 0;
           width: 0.3rem;
           height: 100%;
-          background-color: -color(purple-heart);
+          background-color: -color(shamrock);
           opacity: 0;
           will-change: opacity;
           transition: opacity 0.15s $ease-in-out-quart, background 0.15s $ease-in-out-quart;
@@ -124,6 +141,14 @@
 
   &__heading {
     @include hd-g(-color(purple-heart));
+
+    will-change: color;
+    transition: color 0.15s $ease-in-out-quart;
+    cursor: pointer;
+
+    &:hover {
+      color: -color(shamrock);
+    }
   }
 }
 
@@ -133,25 +158,73 @@
   justify-content: space-between;
 
   &__link {
-    @include copy-c(-color(topaz));
-
+    display: flex;
+    align-items: center;
     flex: 1 1 50%;
 
     &:first-child {
       padding-right: 3rem;
 
       .pagination__icon {
-        padding-right: 1.6rem;
+        margin-right: 1.6rem;
       }
     }
 
     &:last-child {
       padding-left: 3rem;
-      text-align: right;
+      justify-content: flex-end;
 
       .pagination__icon {
-        padding-left: 1.6rem;
+        margin-left: 1.6rem;
       }
+    }
+
+    p {
+      @include copy-c(-color(topaz));
+
+      will-change: color;
+      transition: color 0.15s $ease-in-out-quart;
+    }
+
+    &:hover {
+      p {
+        color: -color(purple-heart);
+      }
+
+      .pagination__icon {
+        svg {
+          fill: -color(purple-heart);
+        }
+      }
+    }
+
+    &:active {
+      p {
+        color: -color(bright-sun);
+        transition: color 0.08s $ease-in-out-quart;
+      }
+
+      .pagination__icon {
+        svg {
+          fill: -color(bright-sun);
+          transition: fill 0.08s $ease-in-out-quart;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    position: relative;
+    width: 2rem;
+    height: 1.2rem;
+
+    svg {
+      @extend %absolute-center;
+
+      fill: -color(topaz);
+      will-change: fill;
+      transition: fill 0.15s $ease-in-out-quart;
     }
   }
 }

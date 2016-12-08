@@ -69,5 +69,26 @@
 }
 
 .card__link {
-  @include hd-a();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    @include hd-a();
+  }
+}
+
+.card__icon {
+  display: block;
+  position: relative;
+  width: 5.6rem;
+  height: 5.6rem;
+  margin-left: 4rem;
+  flex-shrink: 0;
+
+  svg {
+    @extend %absolute-center;
+
+    fill: -color(purple-heart);
+  }
 }

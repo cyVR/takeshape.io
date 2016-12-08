@@ -11,6 +11,12 @@
 
     <form class="search">
       <div class="search__element">
+        <span class="search__icon">
+            <svg role="img" title="search">
+              <use href="/assets/images/icons.svg#search"/>
+            </svg>
+        </span>
+
         <input type="search" placeholder="Search docs" name="search" id="search" class="search__input">
       </div>
     </form>
@@ -33,10 +39,10 @@
               </ul>
             </li>
 
-            <li>
+            <li class="is-open">
               <h3 class="docs-nav__heading">For Developers</h3>
 
-              <ul class="is-open">
+              <ul>
                 <li><a href="#" class="is-current">API Libraries and Integrations</a></li>
                 <li><a href="#">API Libraries and Integrations</a></li>
                 <li><a href="#">API Libraries and Integrations</a></li>
@@ -90,11 +96,23 @@
 
         <div class="pagination">
           <a href="#" class="pagination__link">
+            <span class="pagination__icon">
+              <svg role="img" title="arrow-left">
+                <use href="/assets/images/icons.svg#arrow-left"/>
+              </svg>
+            </span>
+
             <p>API Libraries and Integrations This is an Extra-long Title</p>
           </a>
 
           <a href="#" class="pagination__link">
             <p>API Libraries and Integrations</p>
+
+            <span class="pagination__icon">
+              <svg role="img" title="arrow-right">
+                <use href="/assets/images/icons.svg#arrow-right"/>
+              </svg>
+            </span>
           </a>
         </div>
       </section>
