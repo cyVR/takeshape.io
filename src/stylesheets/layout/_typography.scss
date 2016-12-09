@@ -88,6 +88,15 @@ $default-type-color: -color(shark);
   text-transform: uppercase;
 }
 
+// ex: Cycler heading
+@mixin hd-h($color: $default-type-color) {
+  color: $color;
+  font-family: $atlas;
+  font-size: 3.6rem;
+  font-weight: -weight(medium);
+  line-height: 1.33;
+}
+
 @mixin copy-a($color: $default-type-color, $family: $atlas) {
   color: $color;
   font-family: $family;
