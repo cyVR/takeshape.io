@@ -5,12 +5,12 @@ class Slider extends ViewModel {
   constructor() {
     super();
 
-    this.observable('quoteSlideNum', 1);
+    this.observable('slideNum', 1);
   }
 
   goToSlide(num) {
     return () => {
-      this.quoteSlideNum(num);
+      this.slideNum(num);
     };
   }
 

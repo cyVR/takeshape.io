@@ -181,6 +181,57 @@
   <img src="/assets/images/hp5.png" class="section__background" alt="" style="top: -29rem; left: 4rem;">
 
   <div class="section__inner">
+    <header class="section__header">
+      <h2 class="section__heading">An intuitive interface – for every user.</h2>
+    </header>
+
+    <!-- ko with: $root.components.slider -->
+    <div class="cycler" data-bind="attr: { 'data-slide': slideNum() }">
+      <div class="cycler__inner">
+        <div class="cycler__content">
+          <div class="cycler__slides">
+            <div class="cycler__slide">
+              <img src="/assets/images/contentpic1.png" alt="" />
+            </div>
+
+            <div class="cycler__slide">
+              <img src="/assets/images/contentpic2.png" alt="" />
+            </div>
+
+            <div class="cycler__slide">
+              <img src="/assets/images/contentpic2.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="cycler__nav">
+          <ul class="line-list--green">
+            <li data-bind="click: goToSlide(1)">
+              <h4 class="line-list__heading">User 1</h4>
+              <p class="line-list__copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </li>
+
+            <li data-bind="click: goToSlide(2)">
+              <h4 class="line-list__heading">User 2</h4>
+              <p class="line-list__copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </li>
+
+            <li data-bind="click: goToSlide(3)">
+              <h4 class="line-list__heading">User 3</h4>
+              <p class="line-list__copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /ko -->
+  </div>
+</section>
+
+<section class="section--home">
+  <img src="/assets/images/hp5.png" class="section__background" alt="" style="top: -29rem; left: 4rem;">
+
+  <div class="section__inner">
     <div class="compress--medium">
       <div class="quote">
         <div class="quote__image">

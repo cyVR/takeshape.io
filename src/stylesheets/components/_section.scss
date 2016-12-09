@@ -37,7 +37,7 @@
 }
 
 .section__header {
-  margin-bottom: 6.4rem;
+  margin-bottom: 8rem;
 
   .section__copy {
     max-width: 46rem;
@@ -47,6 +47,9 @@
 
 .section__heading {
   @include hd-c();
+
+  margin: 0 auto;
+  max-width: 66rem;
 
   & + .section__copy {
     margin-top: 3.4rem;
