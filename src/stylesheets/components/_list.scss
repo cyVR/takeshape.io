@@ -176,3 +176,38 @@
 .line-list__copy {
   @include copy-c();
 }
+
+.strip-list {
+  @extend %basic-block;
+
+  &__inner {
+    @extend %container;
+
+    display: flex;
+  }
+
+  &__block {
+    lost-column: 1/3 3 3rem flex;
+  }
+
+  &__image {
+    @include ratio-box(61.11%);
+
+    margin-bottom: 2.8rem;
+
+    img {
+      @extend %cover-image;
+    }
+  }
+
+  &__heading {
+    @include hd-h();
+
+    margin-bottom: 1.6rem;
+  }
+
+  &__copy {
+    @include copy-c();
+  }
+}
+
