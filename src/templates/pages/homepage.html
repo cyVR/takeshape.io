@@ -61,9 +61,8 @@
       <h2 class="section__heading">An intuitive interface – for every user.</h2>
     </header>
 
-    <!-- ko with: $root.components.slider -->
-    <div class="cycler" data-bind="attr: { 'data-slide': slideNum() }">
-      <div class="cycler__inner">
+    <div class="cycler" data-bind="component: 'slider'">
+      <div class="cycler__inner" data-bind="attr: {'data-slide': slideNum()}">
         <div class="cycler__content">
           <div class="cycler__slides">
             <div class="cycler__slide">
@@ -100,7 +99,6 @@
         </div>
       </div>
     </div>
-    <!-- /ko -->
   </div>
 </section>
 
