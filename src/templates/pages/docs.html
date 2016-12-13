@@ -29,54 +29,77 @@
       <nav class="docs-nav">
         <div class="docs-nav__inner">
           <ul class="docs-nav__list">
-            <li>
-              <h3 class="docs-nav__heading">Introduction</h3>
+            <li data-bind="component: 'accordionItem'">
+              <div class="docs-nav__wrapper" data-bind="css: {'is-open': isOpen}">
+                <h3 class="docs-nav__heading" data-bind="click: onClickToggle">Introduction</h3>
 
-              <ul class="line-list--green">
-                <li><a href="#">API Libraries and Integrations</a></li>
-                <li><a href="#">API Libraries and Integrations</a></li>
-                <li><a href="#">API Libraries and Integrations</a></li>
-              </ul>
+                <div class="docs-nav__content" data-bind="style: {height: currentHeightStyle}">
+                  <ul class="line-list--green" data-accordion-content>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
 
-            <li class="is-open">
-              <h3 class="docs-nav__heading">For Developers</h3>
+            <li data-bind="component: 'accordionItem'">
+              <div class="docs-nav__wrapper" data-bind="css: {'is-open': isOpen}">
+                <h3 class="docs-nav__heading" data-bind="click: onClickToggle">For Developers</h3>
 
-              <ul class="line-list--green">
-                <li class="is-current"><a href="#">API Libraries and Integrations</a></li>
-                <li><a href="#">API Libraries and Integrations</a></li>
-                <li><a href="#">API Libraries and Integrations</a></li>
-              </ul>
+                <div class="docs-nav__content" data-bind="style: {height: currentHeightStyle}">
+                  <ul class="line-list--green" data-accordion-content>
+                    <li data-bind="component: 'listItem'" class="is-current"><a href="/docs/list-item">API Libraries and Integrations</a></li>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
 
-            <li>
-              <h3 class="docs-nav__heading">For Clients</h3>
+            <li data-bind="component: 'accordionItem'">
+              <div class="docs-nav__wrapper" data-bind="css: {'is-open': isOpen}">
+                <h3 class="docs-nav__heading" data-bind="click: onClickToggle">For Clients</h3>
 
-              <ul class="line-list--green">
-                <li><a href="#">API Libraries and Integrations</a></li>
-                <li><a href="#">API Libraries and Integrations</a></li>
-                <li><a href="#">API Libraries and Integrations</a></li>
-              </ul>
+                <div class="docs-nav__content" data-bind="style: {height: currentHeightStyle}">
+                  <ul class="line-list--green" data-accordion-content>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
 
-            <li>
-              <h3 class="docs-nav__heading">Getting Help</h3>
+            <li data-bind="component: 'accordionItem'">
+              <div class="docs-nav__wrapper" data-bind="css: {'is-open': isOpen}">
+                <h3 class="docs-nav__heading" data-bind="click: onClickToggle">Getting Help</h3>
 
-              <ul class="line-list--green">
-                <li><a href="#">API Libraries and Integrations</a></li>
-                <li><a href="#">API Libraries and Integrations</a></li>
-                <li><a href="#">API Libraries and Integrations</a></li>
-              </ul>
+                <div class="docs-nav__content" data-bind="style: {height: currentHeightStyle}">
+                  <ul class="line-list--green" data-accordion-content>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
 
-            <li>
-              <h3 class="docs-nav__heading">Pricing</h3>
+            <li data-bind="component: 'accordionItem'">
+              <div class="docs-nav__wrapper" data-bind="css: {'is-open': isOpen}">
+                <h3 class="docs-nav__heading" data-bind="click: onClickToggle">Pricing</h3>
 
-              <ul class="line-list--green">
-                <li><a href="#">API Libraries and Integrations</a></li>
-                <li><a href="#">API Libraries and Integrations</a></li>
-                <li><a href="#">API Libraries and Integrations</a></li>
-              </ul>
+                <div class="docs-nav__content" data-bind="style: {height: currentHeightStyle}">
+                  <ul class="line-list--green" data-accordion-content>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                    <li><a href="#">API Libraries and Integrations</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
           </ul>
         </div>

@@ -49,23 +49,19 @@
       & + * {
         margin-top: 2.2rem;
       }
+    }
+  }
 
-      &.is-open {
-        .line-list--green {
-          opacity: 1;
-          visibility: visible;
-          max-height: 100%;
-          margin-top: 1.4rem;
-        }
+  &__wrapper {
+    &.is-open {
+      .docs-nav__heading {
+        margin-bottom: 1.2rem;
       }
 
       .line-list--green {
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        visibility: hidden;
-        margin-top: 0;
-        will-change: opacity, visibility, height, margin;
+        opacity: 1;
+        will-change: opacity;
+        transition: opacity 0.2s $ease-in-out-quart 0.1s;
       }
     }
   }
@@ -73,12 +69,25 @@
   &__heading {
     @include hd-g(-color(purple-heart));
 
-    will-change: color;
-    transition: color 0.15s $ease-in-out-quart;
+    will-change: color, margin;
+    transition: color 0.15s $ease-in-out-quart, margin 0.2s $ease-out-quint;
     cursor: pointer;
 
     &:hover {
       color: -color(shamrock);
+    }
+  }
+
+  &__content {
+    height: 0;
+    will-change: height;
+    transition: height 0.3s $ease-out-quint;
+    overflow: hidden;
+
+    .line-list--green {
+      opacity: 0;
+      will-change: opacity;
+      transition: opacity 0s;
     }
   }
 }

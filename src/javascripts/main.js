@@ -9,5 +9,6 @@ window.app = new App();
 
 ready(() => {
   objectFitImages();
+  svg4everybody();
   window.app.start();
 });
