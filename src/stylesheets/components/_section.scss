@@ -10,7 +10,7 @@
 }
 
 .section--home {
-  & + & {
+  * + & {
     margin-top: 42rem;
   }
 }
@@ -27,7 +27,7 @@
 
 .section__background {
   position: absolute;
-  z-index: -z(background);
+  z-index: -1;
 }
 
 .section__inner {

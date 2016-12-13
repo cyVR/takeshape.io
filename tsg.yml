@@ -24,8 +24,12 @@ routes:
     template: pages/manifesto.html
 
   docs:
-    path: /docs
-    template: pages/docs.html
+    path: /docs/:title
+    template: pages/doc.html
+    context: data/doc.graphql
+    paginate:
+      property: doc
+      itemName: doc
 
 deploy:
     - ${buildPath}/static

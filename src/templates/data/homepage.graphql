@@ -1,5 +1,52 @@
 query {
   homepage: getHomepage {
-    title
+    heroHeading
+    heroSubheading
+    heroCta
+    features {
+      featureTitle
+      featureCopy
+      featureImage {
+        s3Key
+      }
+    }
+    sliderHeading
+    sliderBackgroundImage {
+      s3Key
+    }
+    sliderBackgroundTop
+    sliderBackgroundLeft
+    slides {
+      slideImage {
+        s3Key
+      }
+      slideHeading
+      slideCopy
+    }
+    quoteBackgroundImage {
+      s3Key
+    }
+    quoteBackgroundTop
+    quoteBackgroundLeft
+    quoteImage {
+      s3Key
+    }
+    quoteCopy
+    quoteName
+    quotePosition
+    getStartedBackgroundImage {
+      s3Key
+    }
+    getStartedBackgroundTop
+    getStartedBackgroundLeft
+    getStartedHeading
+    getStartedCopy
+    getStartedCta
+    bottomNav {
+      bottomNavHeading
+      bottomNavCopy
+      bottomNavCta
+      bottomNavUrl
+    }
   }
 }

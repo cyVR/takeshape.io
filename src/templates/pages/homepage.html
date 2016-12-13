@@ -14,87 +14,57 @@
 
   <div class="hero__inner">
     <div class="hero__content">
-      <h1 class="hero__heading">Empowering creative teams to develop content managed websites.</h1>
-      <p class="hero__copy">The CMS, API, and static site generator you've been dreaming of.</p>
+      <h1 class="hero__heading">{{ homepage.heroHeading }}</h1>
+      <p class="hero__copy">{{ homepage.heroSubheading }}</p>
 
-      <a href="#" class="button">Try TakeShape for Free</a>
+      <a href="#" class="button">{{ homepage.heroCta }}</a>
     </div>
   </div>
 </div>
 
 <div class="strip-list">
   <div class="strip-list__inner">
+    {% for feature in homepage.features %}
     <div class="strip-list__block">
       <div class="strip-list__image">
-        <img src="/assets/images/contentpic1.png" alt="" />
+        <img src="{{ imageUrl(feature.featureImage.s3Key) }}" alt="" />
       </div>
 
-      <h3 class="strip-list__heading">Feature 1</h3>
-      <p class="strip-list__copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h3 class="strip-list__heading">{{ feature.featureTitle }}</h3>
+      <p class="strip-list__copy">{{ feature.featureCopy }}</p>
     </div>
-
-    <div class="strip-list__block">
-      <div class="strip-list__image">
-        <img src="/assets/images/contentpic1.png" alt="" />
-      </div>
-
-      <h3 class="strip-list__heading">Feature 2</h3>
-      <p class="strip-list__copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-
-    <div class="strip-list__block">
-      <div class="strip-list__image">
-        <img src="/assets/images/contentpic1.png" alt="" />
-      </div>
-
-      <h3 class="strip-list__heading">Feature 3</h3>
-      <p class="strip-list__copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
+    {% endfor %}
   </div>
 </div>
 
 <section class="section--home">
-  <img src="/assets/images/hp5.png" class="section__background" alt="" style="top: -29rem; left: 4rem;">
+  <img src="{{ imageUrl(homepage.sliderBackgroundImage.s3Key) }}" class="section__background" alt="" style="top: {{ homepage.sliderBackgroundTop }}rem; left: {{ homepage.sliderBackgroundLeft }}rem;">
 
   <div class="section__inner">
     <header class="section__header">
-      <h2 class="section__heading">An intuitive interface – for every user.</h2>
+      <h2 class="section__heading">{{ homepage.sliderHeading }}</h2>
     </header>
 
     <div class="cycler" data-bind="component: 'slider'">
       <div class="cycler__inner" data-bind="attr: {'data-slide': slideNum()}">
         <div class="cycler__content">
           <div class="cycler__slides">
+            {% for slide in homepage.slides %}
             <div class="cycler__slide">
-              <img src="/assets/images/contentpic1.png" alt="" />
+              <img src="{{ imageUrl(slide.slideImage.s3Key) }}" alt="" />
             </div>
-
-            <div class="cycler__slide">
-              <img src="/assets/images/contentpic2.png" alt="" />
-            </div>
-
-            <div class="cycler__slide">
-              <img src="/assets/images/contentpic2.png" alt="" />
-            </div>
+            {% endfor %}
           </div>
         </div>
 
         <div class="cycler__nav">
           <ul class="line-list--green">
-            <li data-bind="click: goToSlide(1)">
-              <h4 class="line-list__heading">User 1</h4>
-              <p class="line-list__copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            {% for slide in homepage.slides %}
+            <li data-bind="click: goToSlide({{ loop.index }})">
+              <h4 class="line-list__heading">{{ slide.slideHeading }}</h4>
+              <p class="line-list__copy">{{ slide.slideCopy }}</p>
             </li>
-
-            <li data-bind="click: goToSlide(2)">
-              <h4 class="line-list__heading">User 2</h4>
-              <p class="line-list__copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-
-            <li data-bind="click: goToSlide(3)">
-              <h4 class="line-list__heading">User 3</h4>
-              <p class="line-list__copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
+            {% endfor %}
           </ul>
         </div>
       </div>
@@ -103,21 +73,21 @@
 </section>
 
 <section class="section--home">
-  <img src="/assets/images/hp5.png" class="section__background" alt="" style="top: -29rem; left: 4rem;">
+  <img src="{{ imageUrl(homepage.quoteBackgroundImage.s3Key) }}" class="section__background" alt="" style="top: {{ homepage.quoteBackgroundTop }}rem; left: {{ homepage.quoteBackgroundLeft }}rem;">
 
   <div class="section__inner">
     <div class="compress--medium">
       <div class="quote">
         <div class="quote__image">
-          <img src="/assets/images/image02.png" alt="" />
+          <img src="{{ imageUrl(homepage.quoteImage.s3Key) }}" alt="" />
         </div>
 
         <blockquote class="quote__content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas est in elementum placerat.</p>
+          <p>{{ homepage.quoteCopy }}</p>
 
           <cite>
-            <span>Frances Morgan</span>
-            <span>Vice President of Sales @ SalesPenny</span>
+            <span>{{ homepage.quoteName }}</span>
+            <span>{{ homepage.quotePosition }}</span>
           </cite>
         </blockquote>
       </div>
@@ -126,52 +96,32 @@
 </section>
 
 <section class="section--home">
-  <img src="/assets/images/hp6.png" class="section__background" alt="" style="top: -35rem; right: 3rem;">
+  <img src="{{ imageUrl(homepage.getStartedBackgroundImage.s3Key) }}" class="section__background" alt="" style="top: {{ homepage.getStartedBackgroundTop }}rem; right: {{ homepage.getStartedBackgroundLeft }}rem;">
 
   <div class="section__inner">
     <header class="section__header">
-      <h2 class="section__heading">Ready to get started?</h2>
-      <p class="section__copy">Start your 14-day free trial today. No credit card required.</p>
+      <h2 class="section__heading">{{ homepage.getStartedHeading }}</h2>
+      <p class="section__copy">{{ homepage.getStartedCopy }}</p>
     </header>
 
-    <a href="#" class="button">Install TakeShape now</a>
+    <a href="#" class="button">{{ homepage.getStartedCta }}</a>
   </div>
 </section>
 
 <div class="bottom-nav">
   <div class="bottom-nav__inner">
+    {% for item in homepage.bottomNav %}
     <div class="bottom-nav__block">
       <div class="bottom-nav__content">
-        <h3 class="bottom-nav__heading">About TakeShape</h3>
-        <p class="bottom-nav__copy">Read our story and how Takeshape came to be.</p>
+        <h3 class="bottom-nav__heading">{{ item.bottomNavHeading }}</h3>
+        <p class="bottom-nav__copy">{{ item.bottomNavCopy }}</p>
       </div>
 
       <footer class="bottom-nav__footer">
-        <a href="#" class="button--border">Read our Manifesto</a>
+        <a href="{{ item.bottomNavUrl }}" class="button--border">{{ item.bottomNavCta }}</a>
       </footer>
     </div>
-
-    <div class="bottom-nav__block">
-      <div class="bottom-nav__content">
-        <h3 class="bottom-nav__heading">Features</h3>
-        <p class="bottom-nav__copy">Learn more about what features TakeShape has to offer.</p>
-      </div>
-
-      <footer class="bottom-nav__footer">
-        <a href="#" class="button--border">Explore features</a>
-      </footer>
-    </div>
-
-    <div class="bottom-nav__block">
-      <div class="bottom-nav__content">
-        <h3 class="bottom-nav__heading">Pricing</h3>
-        <p class="bottom-nav__copy">We have flexible pricing to accomodate all types of projects- big or small.</p>
-      </div>
-
-      <footer class="bottom-nav__footer">
-        <a href="#" class="button--border">View Pricing Options</a>
-      </footer>
-    </div>
+    {% endfor %}
   </div>
 </div>
 {% endblock %}
