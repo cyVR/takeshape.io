@@ -2,16 +2,14 @@
 
 {% from "macros/image-url.html" import imageUrl %}
 
-{% set base_url = "/" %}
-
 {% block body_class %}body--page{% endblock %}
 
 {% block content %}
 <header class="page-header">
   <div class="page-header__inner">
-    <h1 class="page-header__heading">TakeShape Features</h1>
-    <p class="page-header__copy">Explore everything TakeShape has to offer.</p>
-    <a href="#" class="button--border">View Our Features Index</a>
+    <h1 class="page-header__heading">{{ features.pageHeaderHeading }}</h1>
+    <p class="page-header__copy">{{ features.pageHeaderCopy }}</p>
+    <a href="{{ features.pageHeaderUrl }}" class="button--border">{{ features.pageHeaderCta }}</a>
   </div>
 </header>
 
@@ -26,51 +24,18 @@
     <div class="section__content">
       <div class="compress--medium">
         <div class="card--feature">
-          <span class="card__rubric">Tech Stack</span>
-          <h3 class="card__heading">TakeShape is built on rock solid technologies to keep you up and running for the long term.</h3>
-          <p class="card__copy">We run on an AWS serverless architecture. We use triple-redundant DynamoDB and S3 to store your content and assets. We want your content to be available lickey quick so we front everything with a CDN. Our current unit test code coverage is 65% and rising.</p>
+          <span class="card__rubric">{{ features.developersRubric }}</span>
+          <h3 class="card__heading">{{ features.developersHeading }}</h3>
+          <p class="card__copy">{{ features.developersCopy }}</p>
         </div>
 
         <ul class="column-list">
+          {% for feature in features.developerFeatures %}
           <li>
-            <h4 class="column-list__heading">Multiple Environments</h4>
-            <p class="column-list__copy">Separate environments for developer, staging, and production. Move seamlessly between them with automatic migrations.</p>
+            <h4 class="column-list__heading">{{ feature.developerFeatureHeading }}</h4>
+            <p class="column-list__copy">{{ feature.developerFeatureCopy }}</p>
           </li>
-
-          <li>
-            <h4 class="column-list__heading">Multiple Projects</h4>
-            <p class="column-list__copy">A single login for all of your TakeShape projects.</p>
-          </li>
-
-          <li>
-            <h4 class="column-list__heading">API</h4>
-            <p class="column-list__copy">Supports both high-throughput reads and writes. REST and GraphQL endpoints.</p>
-          </li>
-
-          <li>
-            <h4 class="column-list__heading">Hosting</h4>
-            <p class="column-list__copy">We host your site with options for: custom domains, HTTPS, case-insensitive paths, URL redirects, and atomic deploys.</p>
-          </li>
-
-          <li>
-            <h4 class="column-list__heading">Internationalization (I18N)</h4>
-            <p class="column-list__copy">Add support for any language you wish.</p>
-          </li>
-
-          <li>
-            <h4 class="column-list__heading">Search</h4>
-            <p class="column-list__copy">Faceted search, geo search, full text search.</p>
-          </li>
-
-          <li>
-            <h4 class="column-list__heading">CLI</h4>
-            <p class="column-list__copy">Use the ```ts``` command line tool to create and deploy project.</p>
-          </li>
-
-          <li>
-            <h4 class="column-list__heading">Static Site Generator</h4>
-            <p class="column-list__copy">Built-in static site generator with a flexible asset pipeline, local image proxy, and easy-to-use templating language (Nunjucks).</p>
-          </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
@@ -86,41 +51,19 @@
     <div class="section__content">
       <div class="compress--medium">
         <ul class="thumb-list">
+          {% for feature in features.modelerFeatures %}
           <li>
             <div class="thumb-list__image">
-              <img src="/assets/images/contentpic1.png" class="thumb-list__image" alt="" />
+              <img src="{{ imageUrl(feature.modelerFeatureImage.s3Key) }}" class="thumb-list__image" alt="" />
             </div>
 
             <div class="thumb-list__content">
-              <span class="thumb-list__rubric">Content Agnostic</span>
-              <h3 class="thumb-list__heading">It's your content, there's no single right way to model it.</h3>
-              <p class="thumb-list__copy">TakeShape allows you to build your content model to fit anything the designers throw at you.</p>
+              <span class="thumb-list__rubric">{{ feature.modelerFeatureRubric }}</span>
+              <h3 class="thumb-list__heading">{{ feature.modelerFeatureHeading }}</h3>
+              <p class="thumb-list__copy">{{ feature.modelerFeatureCopy }}</p>
             </div>
           </li>
-
-          <li>
-            <div class="thumb-list__image">
-              <img src="/assets/images/contentpic1.png" class="thumb-list__image" alt="" />
-            </div>
-
-            <div class="thumb-list__content">
-              <span class="thumb-list__rubric">Content Modeling GUI</span>
-              <h3 class="thumb-list__heading">We’ve made modeling a drag and drop experience.</h3>
-              <p class="thumb-list__copy">We want it to be as easy as possible for technical and non-technical users to model content in TakeShape. If you’re a product manager we want you to be able to model.</p>
-            </div>
-          </li>
-
-          <li>
-            <div class="thumb-list__image">
-              <img src="/assets/images/contentpic1.png" class="thumb-list__image" alt="" />
-            </div>
-
-            <div class="thumb-list__content">
-              <span class="thumb-list__rubric">Schemas</span>
-              <h3 class="thumb-list__heading">Schemas are independent of form definitions</h3>
-              <p class="thumb-list__copy">They also have the ability to validate and hold defaults. You can import and export them too!</p>
-            </div>
-          </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
@@ -134,123 +77,34 @@
     </header>
 
     <div class="section__content">
+      {% for feature in features.creatorFeatures %}
       <div class="cycler" data-bind="component: 'slider'">
-        <h3 class="cycler__heading">Feel in control</h3>
+        <h3 class="cycler__heading">{{ feature.creatorFeatureHeading }}</h3>
 
         <div class="cycler__inner" data-bind="attr: {'data-slide': slideNum()}">
           <div class="cycler__nav">
             <ul class="line-list--purple">
-              <li data-bind="click: goToSlide(1)">
-                <h4 class="line-list__heading">Drafts</h4>
-                <p class="line-list__copy">Draft your content before publishing it to the world</p>
+              {% for slide in feature.creatorFeatureCycler %}
+              <li data-bind="click: goToSlide({{ loop.index }})">
+                <h4 class="line-list__heading">{{ slide.cyclerHeading }}</h4>
+                <p class="line-list__copy">{{ slide.cyclerCopy }}</p>
               </li>
-
-              <li data-bind="click: goToSlide(2)">
-                <h4 class="line-list__heading">Content Preview</h4>
-                <p class="line-list__copy">Preview your changes before they get updated on the live site</p>
-              </li>
-
-              <li data-bind="click: goToSlide(3)">
-                <h4 class="line-list__heading">Timed Publishing</h4>
-                <p class="line-list__copy">Publish your content at a specific time in the future. Set a time for your content to expire.</p>
-              </li>
+              {% endfor %}
             </ul>
           </div>
 
           <div class="cycler__content">
             <div class="cycler__slides">
+              {% for slide in feature.creatorFeatureCycler %}
               <div class="cycler__slide">
-                <img src="/assets/images/contentpic1.png" alt="" />
+                <img src="{{ imageUrl(slide.cyclerImage.s3Key) }}" alt="" />
               </div>
-
-              <div class="cycler__slide">
-                <img src="/assets/images/contentpic2.png" alt="" />
-              </div>
-
-              <div class="cycler__slide">
-                <img src="/assets/images/contentpic2.png" alt="" />
-              </div>
+              {% endfor %}
             </div>
           </div>
         </div>
       </div>
-
-      <div class="cycler" data-bind="component: 'slider'">
-        <h3 class="cycler__heading">Made for Collaboration</h3>
-
-        <div class="cycler__inner" data-bind="attr: {'data-slide': slideNum()}">
-          <div class="cycler__content">
-            <div class="cycler__slides">
-              <div class="cycler__slide">
-                <img src="/assets/images/contentpic1.png" alt="" />
-              </div>
-
-              <div class="cycler__slide">
-                <img src="/assets/images/contentpic2.png" alt="" />
-              </div>
-
-              <div class="cycler__slide">
-                <img src="/assets/images/contentpic2.png" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <div class="cycler__nav">
-            <ul class="line-list--purple">
-              <li data-bind="click: goToSlide(1)">
-                <h4 class="line-list__heading">User accounts</h4>
-                <p class="line-list__copy">Invite, collaborate, and set permissions for other users.</p>
-              </li>
-
-              <li data-bind="click: goToSlide(2)">
-                <h4 class="line-list__heading">See who else is editing</h4>
-                <p class="line-list__copy">View who is online at the same time as you.</p>
-              </li>
-
-              <li data-bind="click: goToSlide(3)">
-                <h4 class="line-list__heading">Content locking</h4>
-                <p class="line-list__copy">Prevent others from changing certain content. Unlock and view who locked the page.</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="cycler" data-bind="component: 'slider'">
-        <h3 class="cycler__heading">Delightful Creation</h3>
-
-        <div class="cycler__inner" data-bind="attr: {'data-slide': slideNum()}">
-          <div class="cycler__nav">
-            <ul class="line-list--purple">
-              <li data-bind="click: goToSlide(1)">
-                <h4 class="line-list__heading">Asset Library</h4>
-                <p class="line-list__copy">The asset library holds all the files for your project. It is searchable, sortable, and has the ability to attach metadata to files.</p>
-              </li>
-
-              <li data-bind="click: goToSlide(2)">
-                <h4 class="line-list__heading">Forms</h4>
-                <p class="line-list__copy">WYSIWYG rich text editing based on draft.js with deterministic output, infinitely nestable repeaters, and over 20 (and growing) form types.</p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="cycler__content">
-            <div class="cycler__slides">
-              <div class="cycler__slide">
-                <img src="/assets/images/contentpic1.png" alt="" />
-              </div>
-
-              <div class="cycler__slide">
-                <img src="/assets/images/contentpic2.png" alt="" />
-              </div>
-
-              <div class="cycler__slide">
-                <img src="/assets/images/contentpic2.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -260,11 +114,11 @@
     <div class="compress--large">
       <div class="card--get-started">
         <header class="section__header">
-          <h2 class="section__heading">Ready to get started?</h2>
-          <p class="section__copy">Start your 14-day free trial today. No credit card required.</p>
+          <h2 class="section__heading">{{ features.getStartedHeading }}</h2>
+          <p class="section__copy">{{ features.getStartedCopy }}</p>
         </header>
 
-        <a href="#" class="button">Install TakeShape now</a>
+        <a href="#" class="button">{{ features.getStartedCta }}</a>
       </div>
     </div>
   </div>
@@ -272,38 +126,18 @@
 
 <div class="bottom-nav">
   <div class="bottom-nav__inner">
+    {% for item in features.bottomNav %}
     <div class="bottom-nav__block">
       <div class="bottom-nav__content">
-        <h3 class="bottom-nav__heading">Documented</h3>
-        <p class="bottom-nav__copy">Our documentation includes common usage patterns and starter schemas.</p>
+        <h3 class="bottom-nav__heading">{{ item.bottomNavHeading }}</h3>
+        <p class="bottom-nav__copy">{{ item.bottomNavCopy }}</p>
       </div>
 
       <footer class="bottom-nav__footer">
-        <a href="#" class="button--border">View the Docs</a>
+        <a href="{{ item.bottomNavUrl }}" class="button--border">{{ item.bottomNavCta }}</a>
       </footer>
     </div>
-
-    <div class="bottom-nav__block">
-      <div class="bottom-nav__content">
-        <h3 class="bottom-nav__heading">Support</h3>
-        <p class="bottom-nav__copy">Can't find what you're looking for or need some help? Look no further.</p>
-      </div>
-
-      <footer class="bottom-nav__footer">
-        <a href="#" class="button--border">Get Support</a>
-      </footer>
-    </div>
-
-    <div class="bottom-nav__block">
-      <div class="bottom-nav__content">
-        <h3 class="bottom-nav__heading">Pricing</h3>
-        <p class="bottom-nav__copy">We have flexible pricing to accomodate all types of projects- big or small.</p>
-      </div>
-
-      <footer class="bottom-nav__footer">
-        <a href="#" class="button--border">View Pricing Options</a>
-      </footer>
-    </div>
+    {% endfor %}
   </div>
 </div>
 {% endblock %}

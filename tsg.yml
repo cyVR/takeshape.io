@@ -14,6 +14,7 @@ routes:
   features:
     path: /features
     template: pages/features.html
+    context: data/features.graphql
 
   pricing:
     path: /pricing

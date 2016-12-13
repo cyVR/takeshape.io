@@ -1,0 +1,42 @@
+query {
+  features: getFeatures {
+    pageHeaderHeading
+    pageHeaderCopy
+    pageHeaderCta
+    pageHeaderUrl
+    developersRubric
+    developersHeading
+    developersCopy
+    developerFeatures {
+      developerFeatureHeading
+      developerFeatureCopy
+    }
+    modelerFeatures {
+      modelerFeatureImage {
+        s3Key
+      }
+      modelerFeatureRubric
+      modelerFeatureHeading
+      modelerFeatureCopy
+    }
+    creatorFeatures {
+      creatorFeatureHeading
+      creatorFeatureCycler {
+        cyclerImage {
+          s3Key
+        }
+        cyclerHeading
+        cyclerCopy
+      }
+    }
+    getStartedHeading
+    getStartedCopy
+    getStartedCta
+    bottomNav {
+      bottomNavHeading
+      bottomNavCopy
+      bottomNavCta
+      bottomNavUrl
+    }
+  }
+}

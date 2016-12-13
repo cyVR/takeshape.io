@@ -49,7 +49,7 @@
   }
 
   &__rubric {
-    @include hd-g();
+    @include hd-g(-color(purple-heart));
 
     display: block;
     margin-bottom: 1.2rem;
@@ -151,6 +151,10 @@
       background-color: -color(shamrock);
     }
   }
+
+  .line-list__heading {
+    color: -color(viking);
+  }
 }
 
 .line-list--purple {
@@ -164,6 +168,10 @@
     &:before {
       background-color: -color(purple-heart);
     }
+  }
+
+  .line-list__heading {
+    color: -color(purple-heart);
   }
 }
 

@@ -5,6 +5,14 @@
     margin-top: 16rem;
   }
 
+  & + &:nth-child(even) {
+    .cycler__nav {
+      order: 2;
+      margin-left: 6rem;
+      margin-right: 0;
+    }
+  }
+
   &__inner {
     display: flex;
 
@@ -91,13 +99,7 @@
     width: 36rem;
     flex-shrink: 0;
 
-    &:first-child {
-      margin-right: 6rem;
-    }
-
-    &:last-child {
-      margin-left: 6rem;
-    }
+    margin-right: 6rem;
   }
 
   &__content {
