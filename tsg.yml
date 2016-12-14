@@ -19,6 +19,7 @@ routes:
   pricing:
     path: /pricing
     template: pages/pricing.html
+    context: data/pricing.graphql
 
   manifesto:
     path: /manifesto
