@@ -16,6 +16,14 @@ h5,
 h6 {
   @include font-smoothing(on);
   text-rendering: optimizeLegibility;
+
+  &::selection {
+    background-color: -color(gold) !important;
+  }
+
+  &::-moz-selection {
+    background-color: -color(gold) !important;
+  }
 }
 
 $default-type-color: -color(shark);
