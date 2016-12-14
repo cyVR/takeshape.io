@@ -56,9 +56,15 @@
     }
 
     span {
-      @include copy-b();
-
       display: block;
+
+      &:first-child {
+        @include hd-g(-color(purple-heart));
+      }
+
+      &:last-child {
+        @include copy-b();
+      }
     }
   }
 }

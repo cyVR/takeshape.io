@@ -111,11 +111,7 @@
         <div class="content">
           <h2>{{ doc.title }}</h2>
 
-          <p>Praesent mollis gravida cursus. Sed venenatis est non egestas scelerisque. Pellentesque facilisis nulla tincidunt metus pellentesque, sit amet egestas arcu gravida. In hac habitasse platea dictumst. Curabitur at nisl ac ex sodales malesuada. Etiam eget quam mollis, vestibulum elit ultrices, pellentesque turpis. Donec molestie nibh nisi, ac mollis orci congue vel. Praesent malesuada augue mauris, in efficitur tellus mattis sed. Maecenas tempor dui felis, ac vehicula dui dignissim sed. Morbi at eros mi. Etiam vitae rhoncus est, ultricies porttitor tellus. Sed iaculis massa at suscipit molestie.</p>
-          <h3>Praesent Mollis Gravida</h3>
-          <p>Praesent mollis gravida cursus. Sed venenatis est non egestas scelerisque. Pellentesque facilisis nulla tincidunt metus pellentesque, sit amet egestas arcu gravida. In hac habitasse platea dictumst. Curabitur at nisl ac ex sodales malesuada. Etiam eget quam mollis, vestibulum elit ultrices, pellentesque turpis. Donec molestie nibh nisi, ac mollis orci congue vel. Praesent malesuada augue mauris, in efficitur tellus mattis sed. Maecenas tempor dui felis, ac vehicula dui dignissim sed. Morbi at eros mi. Etiam vitae rhoncus est, ultricies porttitor tellus. Sed iaculis massa at suscipit molestie.</p>
-          <h3>Praesent Mollis Gravida</h3>
-          <p>Praesent mollis gravida cursus. Sed venenatis est non egestas scelerisque. Pellentesque facilisis nulla tincidunt metus pellentesque, sit amet egestas arcu gravida. In hac habitasse platea dictumst. Curabitur at nisl ac ex sodales malesuada. Etiam eget quam mollis, vestibulum elit ultrices, pellentesque turpis. Donec molestie nibh nisi, ac mollis orci congue vel. Praesent malesuada augue mauris, in efficitur tellus mattis sed. Maecenas tempor dui felis, ac vehicula dui dignissim sed. Morbi at eros mi. Etiam vitae rhoncus est, ultricies porttitor tellus. Sed iaculis massa at suscipit molestie.</p>
+          {{ doc.content | md | safe }}
         </div>
 
         <div class="pagination">

@@ -1,0 +1,6 @@
+query {
+  manifesto: getManifesto {
+    pageHeaderHeading
+    content
+  }
+}

@@ -24,6 +24,7 @@ routes:
   manifesto:
     path: /manifesto
     template: pages/manifesto.html
+    context: data/manifesto.graphql
 
   docs:
     path: /docs/:title
