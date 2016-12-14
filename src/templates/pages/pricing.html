@@ -9,8 +9,8 @@
 {% block content %}
 <header class="page-header">
   <div class="page-header__inner">
-    <h1 class="page-header__heading">Have a ____?<br/>We have a plan.</h1>
-    <p class="page-header__copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas est in elementum placerat.</p>
+    <h1 class="page-header__heading">{{ pricing.pageHeaderHeading | safe }}</h1>
+    <p class="page-header__copy">{{ pricing.pageHeaderCopy }}</p>
   </div>
 </header>
 
@@ -18,79 +18,41 @@
   <div class="section__inner">
     <div class="pricing">
       <div class="pricing__content">
+        {% for plan in pricing.plans %}
         <div class="pricing__block">
           <div class="card--pricing">
-            <h3 class="pricing__heading">Personal</h3>
+            <h3 class="pricing__heading">{{ plan.planName }}</h3>
 
             <div class="pricing__price">
-              <h2 class="pricing__amount">30</h2>
+              {% if plan.planPrefix %}<span class="pricing__info">{{ plan.planPrefix }}</span>{% endif %}
+              <h2 class="pricing__amount">{{ plan.planCost }}</h2>
               <span class="pricing__info">per month</span>
             </div>
 
             <ul class="pricing__list">
-              <li>Five wombats per dollar</li>
-              <li>You can drink all the bowls of soup you can buy</li>
-              <li>Won't kill you</li>
+              {% for feature in plan.planFeatures %}
+              <li>{{ feature.featureCopy }}</li>
+              {% endfor %}
             </ul>
           </div>
         </div>
-
-        <div class="pricing__block">
-          <div class="card--pricing">
-            <h3 class="pricing__heading">Business</h3>
-
-            <div class="pricing__price">
-              <h2 class="pricing__amount">99</h2>
-              <span class="pricing__info">per month</span>
-            </div>
-
-            <ul class="pricing__list">
-              <li>We'll drown one of your enemies</li>
-              <li>You'll get satisfaction</li>
-              <li>Lions will respect you</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="pricing__block">
-          <div class="card--pricing">
-            <h3 class="pricing__heading">Dedicated</h3>
-
-            <div class="pricing__price">
-              <span class="pricing__info">starting at</span>
-              <h2 class="pricing__amount">1200</h2>
-              <span class="pricing__info">per month</span>
-            </div>
-
-            <ul class="pricing__list">
-              <li>The best a man can get</li>
-              <li>It's gonna be yuge</li>
-              <li>You'll be king of France</li>
-            </ul>
-          </div>
-        </div>
+        {% endfor %}
       </div>
 
       <div class="pricing__footer">
+        {% for plan in pricing.plans %}
         <div class="pricing__block">
-          <a href="#" class="button">Get Started</a>
+          {% if plan.planDetailsUrl and plan.planUrl %}
+          <a href="{{ plan.planUrl }}" class="button">Get Started</a>
 
           <div class="pricing__details">
-            <a href="#">Read plan details</a>
+            <a href="{{ plan.planDetailsUrl }}">Read plan details</a>
           </div>
+          {% else %}
+          <a href="mailto:hello@takeshape.com" class="button--border">Contact us</a>
+          {% endif %}
         </div>
-
-        <div class="pricing__block">
-          <a href="#" class="button">Get Started</a>
-
-          <div class="pricing__details">
-            <a href="#">Read plan details</a>
-          </div>
-        </div>
-
-        <div class="pricing__block">
-          <a href="#" class="button--border">Contact us</a>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -101,15 +63,15 @@
     <div class="compress--medium">
       <div class="quote">
         <div class="quote__image">
-          <img src="/assets/images/image02.png" alt="" />
+          <img src="{{ imageUrl(pricing.quoteImage.s3Key) }}" alt="" />
         </div>
 
         <blockquote class="quote__content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas est in elementum placerat.</p>
+          <p>{{ pricing.quoteCopy }}</p>
 
           <cite>
-            <span>Frances Morgan</span>
-            <span>Vice President of Sales @ SalesPenny</span>
+            <span>{{ pricing.quoteName }}</span>
+            <span>{{ pricing.quotePosition }}</span>
           </cite>
         </blockquote>
       </div>
@@ -121,8 +83,8 @@
   <div class="section__inner">
     <div class="compress-large">
       <div class="card--tout">
-        <a href="#" class="card__link">
-          <p>Check out TakeShape's full feature list</p>
+        <a href="{{ pricing.toutUrl }}" class="card__link">
+          <p>{{ pricing.toutCta }}</p>
           <span class="card__icon">
             <svg role="img" title="caret-circle">
               <use href="/assets/images/icons.svg#caret-circle"/>
@@ -142,53 +104,20 @@
 
     <div class="section__content">
       <div class="faq">
+        {% for faq in pricing.faQs %}
         <div class="faq__block">
-          <h3 class="faq__heading">Changes to Plan</h3>
+          <h3 class="faq__heading">{{ faq.faqHeading }}</h3>
 
           <ul class="faq__list">
+            {% for question in faq.questions %}
             <li>
-              <h4 class="faq__question">What if I need more bandwidth?</h4>
-              <p class="faq__answer">We’ll bill you for $1B for every 1GB over the X GB/monthly limit.</p>
+              <h4 class="faq__question">{{ question.questionCopy }}</h4>
+              <p class="faq__answer">{{ question.questionAnswer }}</p>
             </li>
-
-            <li>
-              <h4 class="faq__question">What is your cancellation policy?</h4>
-              <p class="faq__answer">Cancel at any time for no additional cost. Your membership will expire at the end of your last pay cycle.</p>
-            </li>
+            {% endfor %}
           </ul>
         </div>
-
-        <div class="faq__block">
-          <h3 class="faq__heading">Payment Methods</h3>
-
-          <ul class="faq__list">
-            <li>
-              <h4 class="faq__question">What payment methods do you accept?</h4>
-              <p class="faq__answer">Quisque vitae hendrerit nulla. Curabitur posuere vel neque ut accumsan. Nulla convallis lacinia lectus eget lobortis. Sed viverra vitae turpis eget tincidunt. Etiam at tristique diam, et malesuada turpis. Suspendisse justo elit.</p>
-            </li>
-
-            <li>
-              <h4 class="faq__question">Can I pay yearly?</h4>
-              <p class="faq__answer">Probably.</p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="faq__block">
-          <h3 class="faq__heading">Plans and Features</h3>
-
-          <ul class="faq__list">
-            <li>
-              <h4 class="faq__question">Question lorem ipsum dolor sit amet?</h4>
-              <p class="faq__answer">Maecenas commodo ante in arcu cursus dapibus. Duis placerat, tellus at gravida porttitor, lectus augue auctor quam.</p>
-            </li>
-
-            <li>
-              <h4 class="faq__question">Question lorem ipsum dolor sit amet?</h4>
-              <p class="faq__answer">Quisque vitae hendrerit nulla. Curabitur posuere vel neque ut accumsan. Nulla convallis lacinia lectus eget lobortis. Sed viverra vitae turpis eget tincidunt. Etiam at tristique diam, et malesuada turpis. Suspendisse justo elit.</p>
-            </li>
-          </ul>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
