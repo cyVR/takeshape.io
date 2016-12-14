@@ -3,8 +3,7 @@
 
   background-color: -color(persian-indigo);
   min-height: 60rem;
-  height: calc(100vh - #{$header-height});
-  max-height: 84rem;
+  height: calc(100vh - #{$header-height-small});
   color: -color(white);
   padding: 4rem 0;
   overflow: hidden;
@@ -53,5 +52,10 @@
 
   .button {
     margin-top: 4.4rem;
+  }
+
+  @include above(desktop) {
+    height: calc(100vh - #{$header-height});
+    max-height: 84rem;
   }
 }

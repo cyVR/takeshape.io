@@ -20,5 +20,9 @@ body {
 }
 
 .main {
-  margin-top: $header-height;
+  margin-top: $header-height-small;
+
+  @include above(desktop) {
+    margin-top: $header-height;
+  }
 }

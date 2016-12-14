@@ -9,18 +9,31 @@
     @extend %container;
 
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    @include above(desktop) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
   }
 
   &__block {
-    &:first-child {
-      display: flex;
+    @include below(tablet) {
+      & + * {
+        margin-top: 8rem;
+      }
+    }
+
+    @include above(mobile) {
+      &:first-child {
+        display: flex;
+      }
     }
   }
 
   &__list {
     & + * {
-      margin-left: 5.4rem;
+      margin-top: 5.4rem;
     }
 
     li {
@@ -30,6 +43,13 @@
 
       &:nth-child(2) {
         margin-top: 2.4rem;
+      }
+    }
+
+    @include above(mobile) {
+      & + * {
+        margin-top: 0;
+        margin-left: 5.4rem;
       }
     }
   }
@@ -65,6 +85,7 @@
     color: -color(white);
     font-family: $atlas-typewriter;
     font-size: 1.4rem;
+    line-height: 1.5;
 
     a {
       color: inherit;
@@ -87,10 +108,14 @@
 .newsletter {
   display: flex;
   margin-bottom: 4.4rem;
+  max-width: 70rem;
 
   &__element {
     flex-grow: 1;
-    min-width: 28.8rem;
+
+    @include above(desktop) {
+      min-width: 28.8rem;
+    }
   }
 
   &__input {

@@ -2,7 +2,6 @@
   position: fixed;
   display: block;
   width: 100%;
-  height: $header-height;
   background-color: -color(white);
   border-bottom: 0.1rem solid -color(porcelain);
   z-index: -z(header);
@@ -28,7 +27,7 @@
     }
   }
 
-  .header__nav {
+  &__nav {
     ul {
       display: inline-block;
       margin-right: 4.8rem;
@@ -58,5 +57,21 @@
         }
       }
     }
+  }
+
+  @include below(tablet) {
+    height: $header-height-small;
+
+    &__nav {
+      display: none;
+    }
+
+    &__toggle {
+      display: block;
+    }
+  }
+
+  @include above(desktop) {
+    height: $header-height;
   }
 }

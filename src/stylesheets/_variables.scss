@@ -1,17 +1,24 @@
 /* stylelint-disable */
 
+// fonts
 $atlas: "Atlas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $atlas-typewriter: "Atlas Typewriter", "Lucida Grande", monospace;
+
+// font defaults
 $font-size-base: 10px;
 $font-size: 1.6rem;
 $line-height: 1.5;
 
+// easing curves
 $ease-in-out-quart: cubic-bezier(0.86, 0, 0.07, 1);
 $ease-out-quint: cubic-bezier(0.075, 0.82, 0.165, 1);
 
+// colors
 $colors: (
   carnation: #f25f5c,
   bittersweet: #ff6b6b,
+  shark: #292f36,
+  ebony-clay: #282940,
   port-gore: #28214a,
   persian-indigo: #2d126c,
   governor-bay: #442ab9,
@@ -24,23 +31,14 @@ $colors: (
   java: #1de9b6,
   bright-sun: #f9cb40,
   gold: #ffd600,
-  bunker: #11151c,
-  shark: #292f36,
-  geyser: #ccdbdc,
   mishka: #dedee9,
   porcelain: #e4e8ea,
   whisper: #f5f3f9,
-  athens-gray: #fcfcfd,
-  downriver: #0a2342,
-  ebony-clay: #282940,
-  salmon: #fe9066,
-  carribean: #00cc99,
-  cornflower-blue: #7858fc,
-  bunting: #1e114b,
   black: #000000,
   white: #ffffff
 );
 
+// weights
 $font-weights: (
   thin: 100,
   extra-light: 200,
@@ -53,24 +51,15 @@ $font-weights: (
   black: 900
 );
 
-$breakpoints: (
-  mobile: 780px,
-  tablet: 900px,
-  desktop: 1024px,
-  large-desktop: 1160px,
-  hd: 1366px,
-  super-hd: 1600px
-);
-
+// breakpoints
 $grid-breakpoints: (
-  mobile: 780px,
+  mobile: 600px,
   tablet: 900px,
-  desktop: 1024px,
-  large-desktop: 1160px,
-  hd: 1366px,
-  super-hd: 1600px
+  desktop: 1200px,
+  hd: 1800px
 );
 
+// z-indez layers
 $layers: (
   background,
   content,
@@ -86,3 +75,4 @@ $layers: (
 
 // custom variables
 $header-height: 13.6rem;
+$header-height-small: 8rem;
