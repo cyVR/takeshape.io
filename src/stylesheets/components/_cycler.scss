@@ -5,11 +5,14 @@
     margin-top: 16rem;
   }
 
-  & + &:nth-child(even) {
-    .cycler__nav {
+  &:nth-child(odd) {
+    .cycler__content {
       order: 2;
-      margin-left: 6rem;
-      margin-right: 0;
+    }
+
+    .cycler__nav {
+      margin-left: 0;
+      margin-right: 6rem;
     }
   }
 
@@ -98,8 +101,7 @@
   &__nav {
     width: 36rem;
     flex-shrink: 0;
-
-    margin-right: 6rem;
+    margin-left: 6rem;
   }
 
   &__content {
@@ -139,9 +141,15 @@
   }
 
   [class*="line-list--"] {
-    li {
-      padding-top: 1.6rem;
-      padding-bottom: 1.6rem;
+    display: none;
+
+    @include above(tablet) {
+      display: block;
+
+      li {
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+      }
     }
   }
 }

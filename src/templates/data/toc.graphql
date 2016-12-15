@@ -1,0 +1,13 @@
+query {
+  toc: getTableOfContents {
+    sections {
+      title
+      precendence
+      docs {
+        _id
+        title
+        precendence
+      }
+    }
+  }
+}

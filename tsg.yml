@@ -4,6 +4,7 @@ buildPath: build
 context:
   assets: ../../build/assets/manifest.json
   site: data/site.graphql
+  docs: data/toc.graphql
 
 routes:
   homepage:

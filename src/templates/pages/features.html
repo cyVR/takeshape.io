@@ -82,6 +82,16 @@
         <h3 class="cycler__heading">{{ feature.creatorFeatureHeading }}</h3>
 
         <div class="cycler__inner" data-bind="attr: {'data-slide': slideNum()}">
+          <div class="cycler__content">
+            <div class="cycler__slides">
+              {% for slide in feature.creatorFeatureCycler %}
+              <div class="cycler__slide">
+                <img src="{{ imageUrl(slide.cyclerImage.s3Key) }}" alt="" />
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
           <div class="cycler__nav">
             <ul class="line-list--purple">
               {% for slide in feature.creatorFeatureCycler %}
@@ -91,16 +101,6 @@
               </li>
               {% endfor %}
             </ul>
-          </div>
-
-          <div class="cycler__content">
-            <div class="cycler__slides">
-              {% for slide in feature.creatorFeatureCycler %}
-              <div class="cycler__slide">
-                <img src="{{ imageUrl(slide.cyclerImage.s3Key) }}" alt="" />
-              </div>
-              {% endfor %}
-            </div>
           </div>
         </div>
       </div>
