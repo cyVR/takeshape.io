@@ -29,4 +29,12 @@
       flex: 1 4 100%;
     }
   }
+
+  @include below(mobile) {
+    .layout__column {
+      &:first-child {
+        display: none;
+      }
+    }
+  }
 }
