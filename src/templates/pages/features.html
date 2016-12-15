@@ -66,6 +66,39 @@
           {% endfor %}
         </ul>
       </div>
+
+      <div class="cycler--mobile" data-bind="component: 'slider'">
+        <div class="cycler__inner" data-bind="attr: {'data-slide': slideNum()}">
+          <div class="cycler__content">
+            <div class="cycler__slides">
+              {% for slide in features.modelerFeatures %}
+              <div class="cycler__slide">
+                <img src="{{ imageUrl(slide.modelerFeatureImage.s3Key) }}" alt="" />
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <ul class="cycler__pagination">
+            {% for slide in features.modelerFeatures %}
+            <li data-bind="click: goToSlide({{ loop.index }})">
+              {% endfor %}
+          </ul>
+
+          <div class="cycler__description">
+            <div class="cycler__content">
+              <div class="cycler__slides">
+                {% for slide in features.modelerFeatures %}
+                <div class="cycler__slide">
+                  <h4 class="cycler__heading">{{ slide.modelerFeatureHeading }}</h4>
+                  <p class="cycler__copy">{{ slide.modelerFeatureCopy }}</p>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -78,9 +111,9 @@
 
     <div class="section__content">
       {% for feature in features.creatorFeatures %}
-      <div class="cycler" data-bind="component: 'slider'">
-        <h3 class="cycler__heading">{{ feature.creatorFeatureHeading }}</h3>
+      <h3 class="section__subheading">{{ feature.creatorFeatureHeading }}</h3>
 
+      <div class="cycler" data-bind="component: 'slider'">
         <div class="cycler__inner" data-bind="attr: {'data-slide': slideNum()}">
           <div class="cycler__content">
             <div class="cycler__slides">
@@ -108,6 +141,19 @@
             <li data-bind="click: goToSlide({{ loop.index }})">
             {% endfor %}
           </ul>
+
+          <div class="cycler__description">
+            <div class="cycler__content">
+              <div class="cycler__slides">
+                {% for slide in feature.creatorFeatureCycler %}
+                <div class="cycler__slide">
+                  <h4 class="cycler__heading">{{ slide.cyclerHeading }}</h4>
+                  <p class="cycler__copy">{{ slide.cyclerCopy }}</p>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       {% endfor %}
