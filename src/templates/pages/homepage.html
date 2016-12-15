@@ -67,6 +67,12 @@
             {% endfor %}
           </ul>
         </div>
+
+        <ul class="cycler__pagination">
+          {% for slide in homepage.slides %}
+          <li data-bind="click: goToSlide({{ loop.index }})">
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </div>

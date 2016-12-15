@@ -36,7 +36,7 @@
 
                 <div class="docs-nav__content" data-bind="style: {height: currentHeightStyle}">
                   <ul class="line-list--green" data-accordion-content>
-                    {% for doc in section.docs %}
+                    {% for doc in section.docs | sort %}
                       {% set path = doc | route('docs') %}
 
                       <li {% if currentPath === path %}class="is-current"{% endif %}><a href="{{ path }}">{{ doc.title }}</a></li>

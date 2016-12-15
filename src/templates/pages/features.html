@@ -102,6 +102,12 @@
               {% endfor %}
             </ul>
           </div>
+
+          <ul class="cycler__pagination">
+            {% for slide in feature.creatorFeatureCycler %}
+            <li data-bind="click: goToSlide({{ loop.index }})">
+            {% endfor %}
+          </ul>
         </div>
       </div>
       {% endfor %}
