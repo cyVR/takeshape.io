@@ -90,6 +90,7 @@
     "instafeed.js": "^1.4.1",
     "knockout": "^3.3.0",
     "knockout-inview": "^2.5.0",
+    "knockout-postbox": "^0.5.2",
     "knockout-railway": "^0.3.2",
     "object-fit-images": "^2.3.1",
     "raf-ready": "^1.0.1",

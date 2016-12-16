@@ -1,5 +1,6 @@
 import 'core-js/es6';
 import svg4everybody from 'svg4everybody';
+import 'knockout-postbox';
 import objectFitImages from 'object-fit-images';
 import ready from 'raf-ready';
 

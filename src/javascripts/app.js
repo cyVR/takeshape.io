@@ -8,6 +8,8 @@ class App {
   constructor() {
     this.rootEl = null;
     this.config = {};
+
+    this.isNavOpen = ko.observable().subscribeTo('navIsOpen', true);
   }
 
   setConfig() {

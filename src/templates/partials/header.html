@@ -1,4 +1,5 @@
-<header class="header">
+<!-- ko component: "header" -->
+<header class="header" data-bind="css: {'is-open': isOpen}">
   <div class="header__inner">
     <a href="/" class="header__logo">
       <img src="/assets/images/tslogo.png" alt="">
@@ -15,5 +16,36 @@
 
       <a class="button" href="#">Try TakeShape</a>
     </nav>
+
+    <button class="header__burger" data-bind="click: onClickToggle">
+      <span></span>
+    </button>
   </div>
 </header>
+
+<div class="mobile-nav" data-bind="css: {'is-visible': isOpen}">
+  <div class="mobile-nav__inner">
+    <ul class="mobile-nav__list">
+      <li class="mobile-nav__item">
+        <a href="/about" class="mobile-nav__link">Home</a>
+      </li>
+
+      <li class="mobile-nav__item">
+        <a href="/press" class="mobile-nav__link">Features</a>
+      </li>
+
+      <li class="mobile-nav__item">
+        <a href="/screenings" class="mobile-nav__link">Pricing</a>
+      </li>
+
+      <li class="mobile-nav__item">
+        <a href="/explore" class="mobile-nav__link">Docs</a>
+      </li>
+
+      <li class="mobile-nav__item">
+        <a href="/act" class="mobile-nav__link">Login</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- /ko -->

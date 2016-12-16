@@ -20,7 +20,7 @@ body {
 }
 
 .main {
-  margin-top: $header-height-small;
+  margin-top: $mobile-header-height;
 
   @include above(desktop) {
     margin-top: $header-height;

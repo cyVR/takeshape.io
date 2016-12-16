@@ -59,15 +59,90 @@
     }
   }
 
+  &__burger {
+    align-items: center;
+    appearance: none;
+    background: transparent;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    display: none;
+    width: 3rem;
+    height: 100%;
+
+    &:hover {
+      span {
+        background-color: -color(purple-heart);
+
+        &:before,
+        &:after {
+          background-color: -color(purple-heart);
+        }
+      }
+    }
+
+    span {
+      display: block;
+      width: 3rem;
+      min-width: 0;
+      height: 3px;
+      background: -color(shark);
+      position: relative;
+      margin: auto;
+      transition: background-color 0.15s linear 0.2s;
+
+      &:before,
+      &:after {
+        content: "";
+        width: 3rem;
+        height: 3px;
+        position: absolute;
+        left: 0;
+        background: -color(shark);
+        will-change: transform, opacity;
+        transition: all 0.5s $ease-in-out-quart;
+      }
+
+      &:before {
+        transform: translateY(-0.8rem);
+      }
+
+      &:after {
+        transform: translateY(0.8rem);
+      }
+    }
+  }
+
   @include below(tablet) {
-    height: $header-height-small;
+    height: $mobile-header-height;
 
     &__nav {
       display: none;
     }
 
-    &__toggle {
-      display: block;
+    &__burger {
+      display: flex;
+    }
+
+
+    &.is-open {
+      .header__burger {
+        span {
+          background-color: transparent;
+          transition: background-color 0.1s linear;
+
+          &:before {
+            transform: translateY(0) rotate(135deg);
+            top: 0;
+          }
+
+          &:after {
+            transform: translateY(0) rotate(-135deg);
+            top: 0;
+          }
+        }
+      }
     }
   }
 
