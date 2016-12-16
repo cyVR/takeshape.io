@@ -1,8 +1,9 @@
 templatePath: src/templates
+staticPath: static
 buildPath: build
 
 context:
-  assets: ../../build/assets/manifest.json
+  assets: ../../static/assets/manifest.json
   site: data/site.graphql
   docs: data/toc.graphql
 
