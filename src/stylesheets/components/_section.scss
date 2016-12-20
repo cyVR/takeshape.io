@@ -10,8 +10,12 @@
 }
 
 .section--home {
-  * + & {
-    margin-top: 42rem;
+  margin-top: 28rem;
+
+  @include above(tablet) {
+    * + & {
+      margin-top: 42rem;
+    }
   }
 }
 

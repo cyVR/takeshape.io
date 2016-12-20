@@ -32,10 +32,14 @@ $default-type-color: -color(shark);
 @mixin hd-a($color: $default-type-color, $line-height: 1.39) {
   color: $color;
   font-family: $atlas;
-  font-size: 4.4rem;
+  font-size: 3rem;
   font-weight: -weight(medium);
   line-height: $line-height;
   letter-spacing: 0.025em;
+
+  @include above(tablet) {
+    font-size: 4.4rem;
+  }
 }
 
 // ex: Homepage bottom nav heading
@@ -51,18 +55,27 @@ $default-type-color: -color(shark);
 @mixin hd-c($color: $default-type-color) {
   color: $color;
   font-family: $atlas;
-  font-size: 5.4rem;
+  font-size: 4.2rem;
   font-weight: -weight(medium);
   line-height: 1.2;
+
+  @include above(mobile) {
+    font-size: 5.4rem;
+  }
 }
 
 // ex: Quote text
 @mixin hd-d($color: $default-type-color) {
   color: $color;
   font-family: $atlas-typewriter;
-  font-size: 3.6rem;
+  font-size: 2.2rem;
   font-weight: -weight(regular);
-  line-height: 1.33;
+  line-height: 1.6;
+
+  @include above(mobile) {
+    font-size: 3.6rem;
+    line-height: 1.33;
+  }
 }
 
 // ex: Card rubric
@@ -70,7 +83,7 @@ $default-type-color: -color(shark);
   color: $color;
   font-family: $atlas-typewriter;
   font-size: 1.8rem;
-  font-weight: -weight(medium);
+  font-weight: -weight(bold);
   line-height: 1.5;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -90,7 +103,7 @@ $default-type-color: -color(shark);
   color: $color;
   font-family: $atlas-typewriter;
   font-size: 1.6rem;
-  font-weight: -weight(medium);
+  font-weight: -weight(bold);
   line-height: 1.5;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -100,9 +113,13 @@ $default-type-color: -color(shark);
 @mixin hd-h($color: $default-type-color) {
   color: $color;
   font-family: $atlas;
-  font-size: 3.6rem;
+  font-size: 3rem;
   font-weight: -weight(medium);
   line-height: 1.33;
+
+  @include above(tablet) {
+    font-size: 3.6rem;
+  }
 }
 
 @mixin copy-a($color: $default-type-color, $family: $atlas) {

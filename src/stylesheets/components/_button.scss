@@ -2,18 +2,25 @@
   display: inline-block;
   font-family: $atlas-typewriter;
   font-weight: -weight(medium);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-align: center;
   text-transform: uppercase;
   line-height: 1.33;
   letter-spacing: .02em;
   vertical-align: middle;
   border-radius: 0.2rem;
+  word-break: break-all;
+  word-break: break-word;
+  max-width: 100%;
   will-change: color, background, border;
   transition: color 0.2s $ease-in-out-quart, background 0.2s $ease-in-out-quart, border 0.2s $ease-in-out-quart;
 
   &:active {
     transition: color 0.08s $ease-in-out-quart, background 0.08s $ease-in-out-quart, border 0.08s $ease-in-out-quart;
+  }
+
+  @include above(mobile) {
+    font-size: 1.6rem;
   }
 }
 

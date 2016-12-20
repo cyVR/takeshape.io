@@ -39,7 +39,7 @@
     p {
       @include hd-d();
 
-      text-indent: -2.2rem;
+      text-indent: -1.4rem;
 
       &:before {
         content: "\201C";
@@ -70,6 +70,10 @@
     @include below(mobile) {
       margin-top: 4rem;
       padding-top: 4rem;
+    }
+
+    @include above(mobile) {
+      text-indent: -2.2rem;
     }
 
     @include above(tablet) {

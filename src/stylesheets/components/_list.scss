@@ -1,5 +1,4 @@
 .column-list {
-  padding: 0 6rem;
   column-count: 2;
   column-gap: 12rem;
   column-width: 32rem;
@@ -18,6 +17,10 @@
 
   &__copy {
     @include copy-b($line-height: 1.77);
+  }
+
+  @include above(mobile) {
+    padding: 0 6rem;
   }
 }
 

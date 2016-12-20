@@ -2,8 +2,12 @@
   @extend %basic-block;
 
   background-color: -color(white);
-  padding: 6rem;
+  padding: 5.4rem 3.2rem;
   z-index: -z(content);
+
+  @include above(mobile) {
+    padding: 6rem;
+  }
 }
 
 %purple-shadow {
@@ -49,6 +53,16 @@
 
 .card--get-started {
   box-shadow: $green-shadow;
+
+  @include below(mobile) {
+    .section__header {
+      margin-bottom: 4.4rem;
+    }
+
+    .section__heading {
+      font-size: 3.2rem;
+    }
+  }
 }
 
 .card__rubric {

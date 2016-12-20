@@ -18,12 +18,16 @@
   &__logo {
     display: block;
     flex-shrink: 0;
-    width: 24.3rem;
+    width: 20rem;
 
     img {
       display: block;
       width: 100%;
       height: auto;
+    }
+
+    @include above(tablet) {
+      width: 24.3rem;
     }
   }
 
