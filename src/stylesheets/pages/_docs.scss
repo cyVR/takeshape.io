@@ -101,14 +101,17 @@
 }
 
 .pagination {
-  margin-top: 12rem;
-  display: flex;
   justify-content: space-between;
+  margin-top: 8rem;
+
+  @include above(tablet) {
+    display: flex;
+    margin-top: 12rem;
+  }
 
   &__link {
     display: flex;
     align-items: center;
-    flex: 1 1 50%;
 
     &:first-child {
       padding-right: 3rem;
@@ -119,17 +122,36 @@
     }
 
     &:last-child {
-      padding-left: 3rem;
-      justify-content: flex-end;
+      &:first-child {
+        flex-grow: 2;
+      }
 
       .pagination__icon {
         margin-left: 1.6rem;
       }
     }
 
+    @include below(mobile) {
+      &:last-child {
+        margin-top: 3rem;
+        padding-top: 3.2rem;
+        border-top: 1px solid -color(mishka);
+      }
+    }
+
+    @include above(tablet) {
+      flex: 1 1 50%;
+
+      &:last-child {
+        padding-left: 3rem;
+        justify-content: flex-end;
+      }
+    }
+
     p {
       @include copy-c(-color(topaz));
 
+      flex-grow: 1;
       will-change: color;
       transition: color 0.15s $ease-in-out-quart;
     }
@@ -166,6 +188,7 @@
     position: relative;
     width: 2rem;
     height: 1.2rem;
+    flex-shrink: 0;
 
     svg {
       @extend %absolute-center;
