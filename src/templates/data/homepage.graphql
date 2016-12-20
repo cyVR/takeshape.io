@@ -15,7 +15,7 @@ query {
       s3Key
     }
     sliderBackgroundTop
-    sliderBackgroundLeft
+    sliderBackgroundRight
     slides {
       slideImage {
         s3Key
