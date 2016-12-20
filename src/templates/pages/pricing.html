@@ -34,6 +34,18 @@
               <li>{{ feature.featureCopy }}</li>
               {% endfor %}
             </ul>
+
+            <footer class="pricing__footer--mobile">
+              {% if plan.planDetailsUrl and plan.planUrl %}
+              <a href="{{ plan.planUrl }}" class="button">Get Started</a>
+
+              <div class="pricing__details">
+                <a href="{{ plan.planDetailsUrl }}">Read plan details</a>
+              </div>
+              {% else %}
+              <a href="mailto:contact@takeshape.com" class="button--border">Contact us</a>
+              {% endif %}
+            </footer>
           </div>
         </div>
         {% endfor %}

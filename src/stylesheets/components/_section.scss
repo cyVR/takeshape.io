@@ -57,6 +57,10 @@
   & + .section__copy {
     margin-top: 3.4rem;
   }
+
+  @include below(tablet) {
+    text-align: center;
+  }
 }
 
 .section__subheading {

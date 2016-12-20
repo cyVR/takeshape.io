@@ -73,6 +73,19 @@
           <li data-bind="click: goToSlide({{ loop.index }})">
           {% endfor %}
         </ul>
+
+        <div class="cycler__description">
+          <div class="cycler__content">
+            <div class="cycler__slides">
+              {% for slide in homepage.slides %}
+              <div class="cycler__slide">
+                <h4 class="cycler__heading">{{ slide.slideHeading }}</h4>
+                <p class="cycler__copy">{{ slide.slideCopy }}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
