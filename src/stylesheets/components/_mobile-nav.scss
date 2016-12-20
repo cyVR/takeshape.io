@@ -41,43 +41,59 @@ $mobile-nav-speed: 0.25s;
 
       .mobile-nav__item,
       [class*="mobile-nav__item--"] {
-        opacity: 1;
-        animation: pulse;
-        animation-duration: 0.4s;
-
         &:nth-child(2) {
-          transition-delay: 0.06s;
-          animation-delay: 0.06s;
+          a {
+            transition-delay: 0.06s;
+            animation-delay: 0.06s;
+          }
         }
 
         &:nth-child(3) {
-          transition-delay: 0.12s;
-          animation-delay: 0.12s;
+          a {
+            transition-delay: 0.12s;
+            animation-delay: 0.12s;
+          }
         }
 
         &:nth-child(4) {
-          transition-delay: 0.18s;
-          animation-delay: 0.18s;
+          a {
+            transition-delay: 0.18s;
+            animation-delay: 0.18s;
+          }
         }
 
         &:nth-child(5) {
-          transition-delay: 0.24s;
-          animation-delay: 0.24s;
+          a {
+            transition-delay: 0.24s;
+            animation-delay: 0.24s;
+          }
         }
 
         &:nth-child(6) {
-          transition-delay: 0.3s;
-          animation-delay: 0.3s;
+          a {
+            transition-delay: 0.3s;
+            animation-delay: 0.3s;
+          }
         }
 
         &:nth-child(7) {
-          transition-delay: 0.36s;
-          animation-delay: 0.36s;
+          a {
+            transition-delay: 0.36s;
+            animation-delay: 0.36s;
+          }
         }
 
         &:nth-child(8) {
-          transition-delay: 0.42s;
-          animation-delay: 0.42s;
+          a {
+            transition-delay: 0.42s;
+            animation-delay: 0.42s;
+          }
+        }
+
+        a {
+          opacity: 1;
+          animation: pulse;
+          animation-duration: 0.4s;
         }
       }
     }
@@ -109,6 +125,12 @@ $mobile-nav-speed: 0.25s;
     flex: 1 1 100%;
     align-items: stretch;
   }
+
+  @include above(tablet) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 100%;
+  }
 }
 
 .mobile-nav__item,
@@ -116,14 +138,26 @@ $mobile-nav-speed: 0.25s;
   width: 100%;
   will-change: transform, opacity;
   transition: transform 0.5s $ease-in-out-quart, opacity $mobile-nav-speed $ease-in-out-quart;
-  opacity: 0;
 
-  @include below(mobile) {
+  @include above(initial) {
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
     align-items: center;
+  }
 
+  @include above(tablet) {
+    flex-basis: 50%;
+    width: 50%;
+
+    &:nth-child(2n) {
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  @include below(mobile) {
     & + * {
       border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
@@ -131,7 +165,7 @@ $mobile-nav-speed: 0.25s;
 }
 
 .mobile-nav__link {
-  @include hd-b($color: -color(white));
+  @include hd-e($color: -color(white));
 
   text-align: center;
   width: 100%;
@@ -140,21 +174,12 @@ $mobile-nav-speed: 0.25s;
   transition: color 0.1s ease-in-out, background 0.15s ease-in-out;
   cursor: pointer;
   display: block;
-
-  svg {
-    fill: -color(white);
-    width: 2rem;
-    height: 2rem;
-  }
+  opacity: 0;
 
   &:hover {
     background-color: -color(white);
-    color: -color(governor-bay);
+    color: -color(persian-indigo);
     transition: color 0.15s ease-in-out, background 0.25s ease-in-out;
-
-    svg {
-      fill: -color(governor-bay);
-    }
   }
 
   @include below(tablet) {
@@ -166,7 +191,8 @@ $mobile-nav-speed: 0.25s;
   }
 
   @include above(tablet) {
-    display: block;
+    display: flex;
+    justify-content: center;
     padding: 1.4rem 4rem;
   }
 }
