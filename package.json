@@ -27,10 +27,13 @@
     "lint:css": "stylelint src/stylesheets/**/*.scss --syntax scss",
     "lint": "npm-run-all -p lint:*",
     "imagemin": "imagemin src/images/* -o static/assets/images",
+    "images:dev": "cp -R src/images static/assets/images",
     "icons": "svgo -f src/images/icons && mkdir -p static/assets/images && svg-sprite-generate -d src/images/icons -o static/assets/images/icons.svg && svgo static/assets/images/icons.svg",
+    "icons:dev": "mkdir -p static/assets/images && svg-sprite-generate -d src/images/icons -o static/assets/images/icons.svg && svgo static/assets/images/icons.svg",
     "serve": "node -e 'setTimeout(function() {}, 2000)' && browser-sync start --https --server build --port 5000 --files 'build/**/*, !build/sitemap.xml, !build/feed.xml' --reload-debounce",
     "tsg:build": "tsg build",
     "build:images": "npm run imagemin && npm run icons",
+    "build:images:dev": "npm run images:dev && npm run icons:dev",
     "build:webpack": "NODE_ENV=production webpack --display-error-details -p",
     "build:webpack:dev": "webpack --display-error-details -d",
     "build": "npm-run-all --serial clean build:images build:webpack",
@@ -38,7 +41,7 @@
     "watch:js": "webpack --watch",
     "watch:images": "chokidar 'src/images/**/*' -d -c 'npm run build:images'",
     "watch:tsg": "tsg watch",
-    "watch": "npm-run-all --serial clean build:images build:webpack:dev tsg:build && npm-run-all --continue-on-error --parallel watch:* serve",
+    "watch": "npm-run-all --serial clean build:images:dev build:webpack:dev tsg:build && npm-run-all --continue-on-error --parallel watch:* serve",
     "start": "npm run watch"
   },
   "devDependencies": {
@@ -80,7 +83,7 @@
     "stylelint": "^7.2.0",
     "stylelint-config-standard": "^13.0.0",
     "svg-sprite-generator": "0.0.7",
-    "svgo": "^0.7.0",
+    "svgo": "0.7.0",
     "takeshape-cli": "^1.2.1",
     "webpack": "2.1.0-beta.25",
     "webpack-manifest-plugin": "^1.1.0"
@@ -94,7 +97,7 @@
     "knockout-railway": "^0.3.2",
     "object-fit-images": "^2.3.1",
     "raf-ready": "^1.0.1",
-    "svg4everybody": "^2.1.0",
+    "svg4everybody": "2.1.0",
     "youtube-player": "^3.0.4"
   }
 }
