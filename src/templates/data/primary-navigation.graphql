@@ -1,0 +1,8 @@
+query {
+  nav: getPrimaryNavigation {
+    links {
+      text
+      path
+    }
+  }
+}

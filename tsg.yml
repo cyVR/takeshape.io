@@ -6,6 +6,7 @@ context:
   assets: ../../static/assets/manifest.json
   site: data/site.graphql
   docs: data/toc.graphql
+  primaryNav: data/primary-navigation.graphql
 
 routes:
   homepage:
