@@ -32,9 +32,8 @@
     color: -color(shark);
     font-family: $atlas;
     font-size: 2.4rem;
-    line-height: 6rem;
     border-radius: 0.8rem;
-    border: 1px solid -color(mishka);
+    border: 1px solid -color(ghost);
     box-shadow: 0 0 0 0 rgba(113,91,210,0.05);
     will-change: background, box-shadow;
     transition: background 0.15s $ease-in-out-quart, box-shadow 0.15s $ease-in-out-quart;
