@@ -16,9 +16,9 @@
 {% elif page.heroCopy %}
   <meta name="description" content="{{ page.heroCopy }}">
   <meta property="og:description" content="{{ page.heroCopy }}">
-{% elif socialGlobal.description %}
-  <meta name="description" content="{{ socialGlobal.description }}">
-  <meta property="og:description" content="{{ socialGlobal.description }}">
+{% elif socialGlobal.siteDescription %}
+  <meta name="description" content="{{ socialGlobal.siteDescription }}">
+  <meta property="og:description" content="{{ socialGlobal.siteDescription }}">
 {% endif %}
 
 {% if socialGlobal.siteUrl %}
