@@ -1,0 +1,49 @@
+{% extends "layouts/default.html" %}
+
+{% from "macros/image-url.html" import imageUrl %}
+
+{% block body_class %}body--page{% endblock %}
+
+{% block content %}
+<header class="page-header">
+  <div class="page-header__inner">
+    <h1 class="page-header__heading">{{ changelog.heading }}</h1>
+    <p class="page-header__copy">{{ changelog.copy }}</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="section__inner">
+    <header class="section__header">
+      <h2 class="section__heading">Upcoming Changes</h2>
+    </header>
+
+    <div class="section__content">
+      <div class="compress--medium">
+        <div class="upcoming-changes">
+          <h2 class="upcoming-changes__heading">{{ changelog.upcomingHeading }}</h2>
+          <p class="upcoming-changes__copy">{{ changelog.upcomingBodyHtml | safe }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section__inner">
+    <div class="changelog">
+      <ul class="changelog__list">
+        {% for change in changelog.changes %}
+        <li class="change">
+          <span class="change__rubric">{{ change.category }}</span>
+          <h3 class="change__heading">{{ change.heading }}</h3>
+
+          <p class="upcoming-changes__copy">{{ change.bodyHtml | safe }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

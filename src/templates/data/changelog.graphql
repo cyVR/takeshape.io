@@ -1,0 +1,17 @@
+query {
+  changelog: getChangelog {
+    heading
+    copy
+    upcomingHeading
+    upcomingBody
+    upcomingBodyHtml
+    changes {
+      heading
+      category
+      body
+      bodyHtml
+      _createdAt
+    }
+    _updatedAt
+  }
+}

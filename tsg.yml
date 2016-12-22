@@ -37,5 +37,10 @@ routes:
       property: doc
       itemName: doc
 
+  changelog:
+    path: /changelog
+    template: pages/changelog.html
+    context: data/changelog.graphql
+
 deploy:
     - ${buildPath}/static
