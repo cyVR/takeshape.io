@@ -14,7 +14,7 @@
 </header>
 
 <section class="section--features">
-  <img src="/assets/images/hp2.png" class="section__background" alt="" style="top: -22rem; left: -10rem;">
+  <img src="/assets/images/hp2.png" class="section__background" alt="" style="top: -22rem; left: -10rem;" data-image data-bind="imageLoaded">
 
   <div class="section__inner">
     <header class="section__header">
@@ -54,7 +54,7 @@
           {% for feature in features.modelerFeatures %}
           <li>
             <div class="thumb-list__image">
-              <img src="{{ imageUrl(feature.modelerFeatureImage.s3Key) }}" class="thumb-list__image" alt="" />
+              <img src="{{ imageUrl(feature.modelerFeatureImage.s3Key) }}" class="thumb-list__image" alt="" data-image data-bind="imageLoaded"/>
             </div>
 
             <div class="thumb-list__content">
@@ -73,7 +73,7 @@
             <div class="cycler__slides">
               {% for slide in features.modelerFeatures %}
               <div class="cycler__slide">
-                <img src="{{ imageUrl(slide.modelerFeatureImage.s3Key) }}" alt="" />
+                <img src="{{ imageUrl(slide.modelerFeatureImage.s3Key) }}" alt="" data-image data-bind="imageLoaded"/>
               </div>
               {% endfor %}
             </div>
@@ -119,7 +119,7 @@
             <div class="cycler__slides">
               {% for slide in feature.creatorFeatureCycler %}
               <div class="cycler__slide">
-                <img src="{{ imageUrl(slide.cyclerImage.s3Key) }}" alt="" />
+                <img src="{{ imageUrl(slide.cyclerImage.s3Key) }}" alt="" data-image data-bind="imageLoaded"/>
               </div>
               {% endfor %}
             </div>

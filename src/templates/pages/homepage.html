@@ -9,7 +9,7 @@
 {% block content %}
 <div class="hero">
   <div class="hero__background">
-    <img src="/assets/images/hp1.png" class="hero__image" alt="">
+    <img src="/assets/images/hp1.png" class="hero__image" alt="{{ homepage.heroHeading }}" data-image data-bind="imageLoaded">
   </div>
 
   <div class="hero__inner">
@@ -27,7 +27,7 @@
     {% for feature in homepage.features %}
     <div class="strip-list__block">
       <div class="strip-list__image">
-        <img src="{{ imageUrl(feature.featureImage.s3Key) }}" alt="" />
+        <img src="{{ imageUrl(feature.featureImage.s3Key) }}" alt="{{ feature.featureTitle }}" data-image data-bind="imageLoaded"/>
       </div>
 
       <h3 class="strip-list__heading">{{ feature.featureTitle }}</h3>
@@ -38,7 +38,7 @@
 </div>
 
 <section class="section--home">
-  <img src="{{ imageUrl(homepage.sliderBackgroundImage.s3Key) }}" class="section__background" alt="" style="top: {{ homepage.sliderBackgroundTop }}rem; right: {{ homepage.sliderBackgroundRight }}rem;">
+  <img src="{{ imageUrl(homepage.sliderBackgroundImage.s3Key) }}" class="section__background" alt="" style="top: {{ homepage.sliderBackgroundTop }}rem; right: {{ homepage.sliderBackgroundRight }}rem;" data-image data-bind="imageLoaded">
 
   <div class="section__inner">
     <header class="section__header">
@@ -51,7 +51,7 @@
           <div class="cycler__slides">
             {% for slide in homepage.slides %}
             <div class="cycler__slide">
-              <img src="{{ imageUrl(slide.slideImage.s3Key) }}" alt="" />
+              <img src="{{ imageUrl(slide.slideImage.s3Key) }}" alt="{{ slide.slideHeading }}" data-image data-bind="imageLoaded"/>
             </div>
             {% endfor %}
           </div>
@@ -92,13 +92,13 @@
 </section>
 
 <section class="section--home">
-  <img src="{{ imageUrl(homepage.quoteBackgroundImage.s3Key) }}" class="section__background" alt="" style="top: {{ homepage.quoteBackgroundTop }}rem; left: {{ homepage.quoteBackgroundLeft }}rem;">
+  <img src="{{ imageUrl(homepage.quoteBackgroundImage.s3Key) }}" class="section__background" alt="" style="top: {{ homepage.quoteBackgroundTop }}rem; left: {{ homepage.quoteBackgroundLeft }}rem;" data-image data-bind="imageLoaded">
 
   <div class="section__inner">
     <div class="compress--medium">
       <div class="quote">
         <div class="quote__image">
-          <img src="{{ imageUrl(homepage.quoteImage.s3Key) }}" alt="" />
+          <img src="{{ imageUrl(homepage.quoteImage.s3Key) }}" alt="" data-image data-bind="imageLoaded"/>
         </div>
 
         <blockquote class="quote__content">

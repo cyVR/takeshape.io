@@ -9,10 +9,6 @@
   overflow: hidden;
   margin-bottom: 5.4rem;
 
-  @include above(tablet) {
-
-  }
-
   &__background {
     @extend %absolute-center;
 

@@ -37,6 +37,7 @@
     display: block;
     flex-grow: 1;
     margin-right: 4.4rem;
+    background-color: -color(mishka);
 
     img {
       display: block;
@@ -219,6 +220,7 @@
     @include ratio-box(61.11%);
 
     margin-bottom: 2.8rem;
+    background-color: -color(mishka);
 
     img {
       @extend %cover-image;

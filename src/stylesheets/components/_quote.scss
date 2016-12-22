@@ -10,6 +10,8 @@
     height: 12.4rem;
     border-radius: 50%;
     overflow: hidden;
+    background-color: -color(purple-heart);
+    z-index: -z(content);
 
     img {
       @extend %cover-image;
