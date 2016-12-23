@@ -1,0 +1,50 @@
+.changelog {
+  border-left: 1px solid -color(mishka);
+}
+
+.change {
+  position: relative;
+  padding: 4rem 0 4rem 3.2rem;
+  text-align: left;
+
+  &:before {
+    @include copy-c(-color(chatelle));
+
+    content: attr(data-date);
+  }
+
+  & + & {
+    border-top: 1px solid -color(mishka);
+  }
+
+  &__rubric {
+    @include hd-g(-color(purple-heart));
+  }
+
+  &__heading {
+    @include hd-d();
+
+    margin-bottom: 1.6rem;
+  }
+
+  &__content {
+    @extend .content;
+  }
+
+  @include below(mobile) {
+    &:before {
+      display: block;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  @include above(tablet) {
+    &:before {
+      position: absolute;
+      top: 6.8rem;
+      right: 100%;
+      padding-right: 3.2rem;
+      white-space: nowrap;
+    }
+  }
+}

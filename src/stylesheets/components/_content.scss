@@ -1,4 +1,6 @@
 .content {
+  @include copy-c();
+
   text-align: left;
 
   h1 {
@@ -26,16 +28,26 @@
   }
 
   p {
-    @include copy-c();
-
     & + h1,
     & + h2,
     & + h3 {
       margin-top: 4rem;
     }
+  }
 
-    & + p {
-      margin-top: 2.8rem;
-    }
+  ul {
+   list-style: circle;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ol, ul {
+    padding-left: 1.6rem;
+  }
+
+  > * + * {
+    margin-top: 2.4rem;
   }
 }

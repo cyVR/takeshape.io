@@ -12,36 +12,42 @@
   </div>
 </header>
 
+{% if changelog.upcomingHeading %}
 <section class="section">
-  <div class="section__inner">
-    <header class="section__header">
-      <h2 class="section__heading">Upcoming Changes</h2>
-    </header>
+  <img src="{{ imageUrl(changelog.upcomingBackgroundImage.s3Key) }}" class="section__background" alt="" style="top: {{ changelog.upcomingBackgroundTop }}rem; right: {{ changelog.upcomingBackgroundRight }}rem;" data-image data-bind="imageLoaded">
 
+  <div class="section__inner">
     <div class="section__content">
-      <div class="compress--medium">
-        <div class="upcoming-changes">
-          <h2 class="upcoming-changes__heading">{{ changelog.upcomingHeading }}</h2>
-          <p class="upcoming-changes__copy">{{ changelog.upcomingBodyHtml | safe }}</p>
+      <div class="compress--large">
+        <div class="card--upcoming">
+          <span class="card__rubric">Coming soon</span>
+          <h3 class="card__heading">{{ changelog.upcomingHeading }}</h3>
+
+          <div class="card__content">
+            {{ changelog.upcomingBodyHtml | safe }}
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+{% endif %}
 
 <section class="section">
   <div class="section__inner">
-    <div class="changelog">
-      <ul class="changelog__list">
-        {% for change in changelog.changes %}
-        <li class="change">
-          <span class="change__rubric">{{ change.category }}</span>
-          <h3 class="change__heading">{{ change.heading }}</h3>
+    <div class="compress--small">
+      <div class="changelog">
+        <ul class="changelog__list">
+          {% for change in changelog.changes %}
+          <li class="change" data-date="2 weeks ago">
+            <span class="change__rubric">{{ change.category }}</span>
+            <h3 class="change__heading">{{ change.heading }}</h3>
 
-          <p class="upcoming-changes__copy">{{ change.bodyHtml | safe }}</p>
-        </li>
-        {% endfor %}
-      </ul>
+            <div class="change__content">{{ change.bodyHtml | safe }}</div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </div>
 </section>

@@ -65,6 +65,19 @@
   }
 }
 
+.card--feature,
+.card--upcoming {
+  @extend %purple-shadow;
+
+  max-width: 66rem;
+  margin-bottom: 7.2rem;
+  text-align: left;
+}
+
+.card__content {
+  @extend .content;
+}
+
 .card__rubric {
   @include hd-e(-color(purple-heart));
 
