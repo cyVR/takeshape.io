@@ -17,10 +17,6 @@
   }
 
   &__inner {
-    > .cycler__content {
-      box-shadow: $purple-shadow;
-    }
-
     &[data-slide="1"] {
       .cycler__slide:first-child {
         margin-left: 0;
