@@ -50,4 +50,19 @@
   > * + * {
     margin-top: 2.4rem;
   }
+
+  a {
+    color: -color(silver-tree);
+    font-weight: -weight(medium);
+    will-change: color;
+    transition: color 0.1s $ease-in-out-quart;
+
+    &:hover {
+      color: -color(medium-purple);
+    }
+
+    &:active {
+      color: -color(bright-sun);
+    }
+  }
 }
