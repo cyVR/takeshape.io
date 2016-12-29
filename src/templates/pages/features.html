@@ -5,191 +5,197 @@
 {% block body_class %}body--page{% endblock %}
 
 {% block content %}
-<header class="page-header">
-  <div class="page-header__inner">
-    {% if features.pageHeaderHeading | length > 1 %}<h1 class="page-header__heading">{{ features.pageHeaderHeading }}</h1>{% endif %}
-    {% if features.pageHeaderCopy | length > 1 %}<p class="page-header__copy">{{ features.pageHeaderCopy }}</p>{% endif %}
-    {% if features.pageHeaderCta | length > 1 %}<a href="{{ features.pageHeaderUrl }}" class="button--border">{{ features.pageHeaderCta }}</a>{% endif %}
-  </div>
-</header>
-
-<section class="section--features">
-  <img src="/assets/images/hp2.png" class="section__background" alt="" style="top: -22rem; left: -10rem;" data-image data-bind="imageLoaded">
-
-  <div class="section__inner">
-    <header class="section__header">
-      <h2 class="section__heading">Developers</h2>
-    </header>
-
-    <div class="section__content">
-      <div class="compress--medium">
-        <div class="card--feature">
-          <span class="card__rubric">{{ features.developersRubric }}</span>
-          <h3 class="card__heading">{{ features.developersHeading }}</h3>
-          <p class="card__copy">{{ features.developersCopy }}</p>
-        </div>
-
-        <ul class="column-list">
-          {% for feature in features.developerFeatures %}
-          <li>
-            <h4 class="column-list__heading">{{ feature.developerFeatureHeading }}</h4>
-            <p class="column-list__copy">{{ feature.developerFeatureCopy }}</p>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+  <header class="page-header">
+    <div class="page-header__inner">
+      {% if features.pageHeaderHeading | length > 1 %}<h1
+        class="page-header__heading">{{ features.pageHeaderHeading }}</h1>{% endif %}
+      {% if features.pageHeaderCopy | length > 1 %}<p
+        class="page-header__copy">{{ features.pageHeaderCopy }}</p>{% endif %}
+      {% if features.pageHeaderCta | length > 1 %}<a href="{{ features.pageHeaderUrl }}"
+                                                     class="button--border">{{ features.pageHeaderCta }}</a>{% endif %}
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section--features">
-  <div class="section__inner">
-    <header class="section__header">
-      <h2 class="section__heading">Modelers</h2>
-    </header>
+  <section class="section--features">
+    <img src="/assets/images/hp2.png" class="section__background" alt="" style="top: -22rem; left: -10rem;" data-image
+         data-bind="imageLoaded">
 
-    <div class="section__content">
-      <div class="compress--medium">
-        <ul class="thumb-list">
-          {% for feature in features.modelerFeatures %}
-          <li>
-            <div class="thumb-list__image">
-              <img src="{{ imageUrl(feature.modelerFeatureImage.s3Key) }}" class="thumb-list__image" alt="" data-image data-bind="imageLoaded"/>
-            </div>
+    <div class="section__inner">
+      <header class="section__header">
+        <h2 class="section__heading">Developers</h2>
+      </header>
 
-            <div class="thumb-list__content">
-              <span class="thumb-list__rubric">{{ feature.modelerFeatureRubric }}</span>
-              <h3 class="thumb-list__heading">{{ feature.modelerFeatureHeading }}</h3>
-              <p class="thumb-list__copy">{{ feature.modelerFeatureCopy }}</p>
-            </div>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-
-      <div class="cycler--mobile" data-bind="component: 'slider'">
-        <div class="cycler__inner" data-bind="attr: {'data-slide': slideNum()}">
-          <div class="cycler__content">
-            <div class="cycler__slides">
-              {% for slide in features.modelerFeatures %}
-              <div class="cycler__slide">
-                <img src="{{ imageUrl(slide.modelerFeatureImage.s3Key) }}" alt="" data-image data-bind="imageLoaded"/>
-              </div>
-              {% endfor %}
-            </div>
+      <div class="section__content">
+        <div class="compress--medium">
+          <div class="card--feature">
+            <span class="card__rubric">{{ features.developersRubric }}</span>
+            <h3 class="card__heading">{{ features.developersHeading }}</h3>
+            <p class="card__copy">{{ features.developersCopy }}</p>
           </div>
 
-          <ul class="cycler__pagination">
-            {% for slide in features.modelerFeatures %}
-            <li data-bind="click: goToSlide({{ loop.index }})">
-              {% endfor %}
+          <ul class="column-list">
+            {% for feature in features.developerFeatures %}
+              <li>
+                <h4 class="column-list__heading">{{ feature.developerFeatureHeading }}</h4>
+                {{ feature.developerFeatureCopy | md | safe }}
+              </li>
+            {% endfor %}
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <div class="cycler__description">
+  <section class="section--features">
+    <div class="section__inner">
+      <header class="section__header">
+        <h2 class="section__heading">Modelers</h2>
+      </header>
+
+      <div class="section__content">
+        <div class="compress--medium">
+          <ul class="thumb-list">
+            {% for feature in features.modelerFeatures %}
+              <li>
+                <div class="thumb-list__image">
+                  <img src="{{ imageUrl(feature.modelerFeatureImage.s3Key) }}" class="thumb-list__image" alt=""
+                       data-image data-bind="imageLoaded"/>
+                </div>
+
+                <div class="thumb-list__content">
+                  <span class="thumb-list__rubric">{{ feature.modelerFeatureRubric }}</span>
+                  <h3 class="thumb-list__heading">{{ feature.modelerFeatureHeading }}</h3>
+                  <p class="thumb-list__copy">{{ feature.modelerFeatureCopy }}</p>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="cycler--mobile" data-bind="component: 'slider'">
+          <div class="cycler__inner" data-bind="attr: {'data-slide': slideNum()}">
             <div class="cycler__content">
               <div class="cycler__slides">
                 {% for slide in features.modelerFeatures %}
-                <div class="cycler__slide">
-                  <h4 class="cycler__heading">{{ slide.modelerFeatureHeading }}</h4>
-                  <p class="cycler__copy">{{ slide.modelerFeatureCopy }}</p>
-                </div>
+                  <div class="cycler__slide">
+                    <img src="{{ imageUrl(slide.modelerFeatureImage.s3Key) }}" alt="" data-image
+                         data-bind="imageLoaded"/>
+                  </div>
                 {% endfor %}
+              </div>
+            </div>
+
+            <ul class="cycler__pagination">
+              {% for slide in features.modelerFeatures %}
+              <li data-bind="click: goToSlide({{ loop.index }})">
+                {% endfor %}
+            </ul>
+
+            <div class="cycler__description">
+              <div class="cycler__content">
+                <div class="cycler__slides">
+                  {% for slide in features.modelerFeatures %}
+                    <div class="cycler__slide">
+                      <h4 class="cycler__heading">{{ slide.modelerFeatureHeading }}</h4>
+                      <p class="cycler__copy">{{ slide.modelerFeatureCopy }}</p>
+                    </div>
+                  {% endfor %}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section--features">
-  <div class="section__inner">
-    <header class="section__header">
-      <h2 class="section__heading">Creators</h2>
-    </header>
+  <section class="section--features">
+    <div class="section__inner">
+      <header class="section__header">
+        <h2 class="section__heading">Creators</h2>
+      </header>
 
-    <div class="section__content">
-      {% for feature in features.creatorFeatures %}
-      <h3 class="section__subheading">{{ feature.creatorFeatureHeading }}</h3>
+      <div class="section__content">
+        {% for feature in features.creatorFeatures %}
+          <h3 class="section__subheading">{{ feature.creatorFeatureHeading }}</h3>
 
-      <div class="cycler" data-bind="component: 'slider'">
-        <div class="cycler__inner" data-bind="attr: {'data-slide': slideNum()}">
-          <div class="cycler__content">
-            <div class="cycler__slides">
-              {% for slide in feature.creatorFeatureCycler %}
-              <div class="cycler__slide">
-                <img src="{{ imageUrl(slide.cyclerImage.s3Key) }}" alt="" data-image data-bind="imageLoaded"/>
-              </div>
-              {% endfor %}
-            </div>
-          </div>
-
-          <div class="cycler__nav">
-            <ul class="line-list--purple">
-              {% for slide in feature.creatorFeatureCycler %}
-              <li data-bind="click: goToSlide({{ loop.index }})">
-                <h4 class="line-list__heading">{{ slide.cyclerHeading }}</h4>
-                <p class="line-list__copy">{{ slide.cyclerCopy }}</p>
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-
-          <ul class="cycler__pagination">
-            {% for slide in feature.creatorFeatureCycler %}
-            <li data-bind="click: goToSlide({{ loop.index }})">
-            {% endfor %}
-          </ul>
-
-          <div class="cycler__description">
-            <div class="cycler__content">
-              <div class="cycler__slides">
-                {% for slide in feature.creatorFeatureCycler %}
-                <div class="cycler__slide">
-                  <h4 class="cycler__heading">{{ slide.cyclerHeading }}</h4>
-                  <p class="cycler__copy">{{ slide.cyclerCopy }}</p>
+          <div class="cycler" data-bind="component: 'slider'">
+            <div class="cycler__inner" data-bind="attr: {'data-slide': slideNum()}">
+              <div class="cycler__content">
+                <div class="cycler__slides">
+                  {% for slide in feature.creatorFeatureCycler %}
+                    <div class="cycler__slide">
+                      <img src="{{ imageUrl(slide.cyclerImage.s3Key) }}" alt="" data-image data-bind="imageLoaded"/>
+                    </div>
+                  {% endfor %}
                 </div>
-                {% endfor %}
+              </div>
+
+              <div class="cycler__nav">
+                <ul class="line-list--purple">
+                  {% for slide in feature.creatorFeatureCycler %}
+                    <li data-bind="click: goToSlide({{ loop.index }})">
+                      <h4 class="line-list__heading">{{ slide.cyclerHeading }}</h4>
+                      <p class="line-list__copy">{{ slide.cyclerCopy }}</p>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+
+              <ul class="cycler__pagination">
+                {% for slide in feature.creatorFeatureCycler %}
+                <li data-bind="click: goToSlide({{ loop.index }})">
+                  {% endfor %}
+              </ul>
+
+              <div class="cycler__description">
+                <div class="cycler__content">
+                  <div class="cycler__slides">
+                    {% for slide in feature.creatorFeatureCycler %}
+                      <div class="cycler__slide">
+                        <h4 class="cycler__heading">{{ slide.cyclerHeading }}</h4>
+                        <p class="cycler__copy">{{ slide.cyclerCopy }}</p>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__inner">
+      <div class="compress--large">
+        <div class="card--get-started">
+          <header class="section__header">
+            <h2 class="section__heading">{{ features.getStartedHeading }}</h2>
+            <p class="section__copy">{{ features.getStartedCopy }}</p>
+          </header>
+
+          <a href="#" class="button">{{ features.getStartedCta }}</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <div class="bottom-nav">
+    <div class="bottom-nav__inner">
+      {% for item in features.bottomNav %}
+        <div class="bottom-nav__block">
+          <div class="bottom-nav__content">
+            <h3 class="bottom-nav__heading">{{ item.bottomNavHeading }}</h3>
+            <p class="bottom-nav__copy">{{ item.bottomNavCopy }}</p>
+          </div>
+
+          <footer class="bottom-nav__footer">
+            <a href="{{ item.bottomNavUrl }}" class="button--border">{{ item.bottomNavCta }}</a>
+          </footer>
+        </div>
       {% endfor %}
     </div>
   </div>
-</section>
-
-<section class="section">
-  <div class="section__inner">
-    <div class="compress--large">
-      <div class="card--get-started">
-        <header class="section__header">
-          <h2 class="section__heading">{{ features.getStartedHeading }}</h2>
-          <p class="section__copy">{{ features.getStartedCopy }}</p>
-        </header>
-
-        <a href="#" class="button">{{ features.getStartedCta }}</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="bottom-nav">
-  <div class="bottom-nav__inner">
-    {% for item in features.bottomNav %}
-    <div class="bottom-nav__block">
-      <div class="bottom-nav__content">
-        <h3 class="bottom-nav__heading">{{ item.bottomNavHeading }}</h3>
-        <p class="bottom-nav__copy">{{ item.bottomNavCopy }}</p>
-      </div>
-
-      <footer class="bottom-nav__footer">
-        <a href="{{ item.bottomNavUrl }}" class="button--border">{{ item.bottomNavCta }}</a>
-      </footer>
-    </div>
-    {% endfor %}
-  </div>
-</div>
 {% endblock %}

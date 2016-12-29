@@ -9,6 +9,7 @@ query {
       planFeatures {
         featureCopy
       }
+      planButtonCopy
       planUrl
       planDetailsUrl
     }

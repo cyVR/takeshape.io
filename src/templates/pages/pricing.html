@@ -7,131 +7,136 @@
 {% block body_class %}body--page{% endblock %}
 
 {% block content %}
-<header class="page-header">
-  <div class="page-header__inner">
-    <h1 class="page-header__heading">{{ pricing.pageHeaderHeading | safe }}</h1>
-    <p class="page-header__copy">{{ pricing.pageHeaderCopy }}</p>
-  </div>
-</header>
+  <header class="page-header">
+    <div class="page-header__inner">
+      <h1 class="page-header__heading">{{ pricing.pageHeaderHeading | safe }}</h1>
+      {% if pricing.pageHeaderCopy | length > 1 %}<p
+        class="page-header__copy">{{ pricing.pageHeaderCopy }}</p>{% endif %}
+    </div>
+  </header>
 
-<section class="section">
-  <div class="section__inner">
-    <div class="pricing">
-      <div class="pricing__content">
-        {% for plan in pricing.plans %}
-        <div class="pricing__block">
-          <div class="card--pricing">
-            <h3 class="pricing__heading">{{ plan.planName }}</h3>
+  <section class="section">
+    <div class="section__inner">
+      <div class="pricing">
+        <div class="pricing__content">
+          {% for plan in pricing.plans %}
+            <div class="pricing__block">
+              <div class="card--pricing">
+                <h3 class="pricing__heading">{{ plan.planName }}</h3>
 
-            <div class="pricing__price">
-              {% if plan.planPrefix %}<span class="pricing__info">{{ plan.planPrefix }}</span>{% endif %}
-              <h2 class="pricing__amount">{{ plan.planCost }}</h2>
-              <span class="pricing__info">per month</span>
-            </div>
+                <div class="pricing__price">
+                  {% if plan.planPrefix %}<span class="pricing__info">{{ plan.planPrefix }}</span>{% endif %}
+                  <h2 class="pricing__amount">{{ plan.planCost }}</h2>
+                  <span class="pricing__info">per month</span>
+                </div>
 
-            <ul class="pricing__list">
-              {% for feature in plan.planFeatures %}
-              <li>{{ feature.featureCopy }}</li>
-              {% endfor %}
-            </ul>
+                <ul class="pricing__list">
+                  {% for feature in plan.planFeatures %}
+                    <li>{{ feature.featureCopy }}</li>
+                  {% endfor %}
+                </ul>
 
-            <footer class="pricing__footer--mobile">
-              {% if plan.planDetailsUrl and plan.planUrl %}
-              <a href="{{ plan.planUrl }}" class="button">Get Started</a>
+                <footer class="pricing__footer--mobile">
+                  {% if plan.planDetailsUrl and plan.planUrl %}
+                    <a href="{{ plan.planUrl }}" class="button">{{ plan.planButtonCopy }}</a>
 
-              <div class="pricing__details">
-                <a href="{{ plan.planDetailsUrl }}">Read plan details</a>
+                    <div class="pricing__details">
+                      <a href="{{ plan.planDetailsUrl }}">Read plan details</a>
+
+                    </div>
+                  {% else %}
+                    <a href="mailto:contact@takeshape.com" class="button--border">Contact us</a>
+                  {% endif %}
+                </footer>
               </div>
-              {% else %}
-              <a href="mailto:contact@takeshape.com" class="button--border">Contact us</a>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="pricing__footer">
+          {% for plan in pricing.plans %}
+            <div class="pricing__block">
+              {% set planUrl = plan.planUrl %}
+              {% if planUrl %}
+                {% if 'mailto:' in planUrl %}
+                  {% set classDecorator = '--border' %}
+                {% endif %}
+                <a href="{{ planUrl }}" class="button{{ classDecorator }}">{{ plan.planButtonCopy }}</a>
               {% endif %}
-            </footer>
-          </div>
+              {% if plan.planDetailsUrl %}
+                <div class="pricing__details">
+                  <a href="{{ plan.planDetailsUrl }}">Read plan details</a>
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
         </div>
-        {% endfor %}
-      </div>
-
-      <div class="pricing__footer">
-        {% for plan in pricing.plans %}
-        <div class="pricing__block">
-          {% if plan.planDetailsUrl and plan.planUrl %}
-          <a href="{{ plan.planUrl }}" class="button">Get Started</a>
-
-          <div class="pricing__details">
-            <a href="{{ plan.planDetailsUrl }}">Read plan details</a>
-          </div>
-          {% else %}
-          <a href="mailto:contact@takeshape.com" class="button--border">Contact us</a>
-          {% endif %}
-        </div>
-        {% endfor %}
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="section__inner">
-    <div class="compress--medium">
-      <div class="quote">
-        <div class="quote__image">
-          <img src="{{ imageUrl(pricing.quoteImage.s3Key) }}" alt="" data-image data-bind="imageLoaded"/>
+  <section class="section">
+    <div class="section__inner">
+      <div class="compress--medium">
+        <div class="quote">
+          <div class="quote__image">
+            <img src="{{ imageUrl(pricing.quoteImage.s3Key) }}" alt="" data-image data-bind="imageLoaded"/>
+          </div>
+
+          <blockquote class="quote__content">
+            <p>{{ pricing.quoteCopy }}</p>
+
+            <cite>
+              <span>{{ pricing.quoteName }}</span>
+              <span>{{ pricing.quotePosition }}</span>
+            </cite>
+          </blockquote>
         </div>
-
-        <blockquote class="quote__content">
-          <p>{{ pricing.quoteCopy }}</p>
-
-          <cite>
-            <span>{{ pricing.quoteName }}</span>
-            <span>{{ pricing.quotePosition }}</span>
-          </cite>
-        </blockquote>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="section__inner">
-    <div class="compress-large">
-      <div class="card--tout">
-        <a href="{{ pricing.toutUrl }}" class="card__link">
-          <p>{{ pricing.toutCta }}</p>
-          <span class="card__icon">
+  <section class="section">
+    <div class="section__inner">
+      <div class="compress-large">
+        <div class="card--tout">
+          <a href="{{ pricing.toutUrl }}" class="card__link">
+            <p>{{ pricing.toutCta }}</p>
+            <span class="card__icon">
             <svg role="img" title="caret-circle">
               <use xlink:href="/assets/images/icons.svg#caret-circle"/>
             </svg>
           </span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section__inner">
-    <header class="section__header">
-      <h2 class="section__heading">Pricing FAQs</h2>
-    </header>
-
-    <div class="section__content">
-      <div class="faq">
-        {% for faq in pricing.faQs %}
-        <div class="faq__block">
-          <h3 class="faq__heading">{{ faq.faqHeading }}</h3>
-
-          <ul class="faq__list">
-            {% for question in faq.questions %}
-            <li>
-              <h4 class="faq__question">{{ question.questionCopy }}</h4>
-              <p class="faq__answer">{{ question.questionAnswer }}</p>
-            </li>
-            {% endfor %}
-          </ul>
+          </a>
         </div>
-        {% endfor %}
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="section">
+    <div class="section__inner">
+      <header class="section__header">
+        <h2 class="section__heading">Pricing FAQs</h2>
+      </header>
+
+      <div class="section__content">
+        <div class="faq">
+          {% for faq in pricing.faQs %}
+            <div class="faq__block">
+              <h3 class="faq__heading">{{ faq.faqHeading }}</h3>
+
+              <ul class="faq__list">
+                {% for question in faq.questions %}
+                  <li>
+                    <h4 class="faq__question">{{ question.questionCopy }}</h4>
+                    <div class="faq__answer">{{ question.questionAnswer | md | safe }}</div>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock %}

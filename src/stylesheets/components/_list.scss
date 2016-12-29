@@ -15,12 +15,24 @@
     margin-bottom: 1.2rem;
   }
 
-  &__copy {
+  p,
+  pre {
     @include copy-b($line-height: 1.77);
   }
 
   @include above(mobile) {
     padding: 0 6rem;
+  }
+
+  pre,
+  code {
+    font-family: $atlas-typewriter;
+    background-color: #FFF;
+    padding: 0 .5rem;
+
+    code {
+      padding: 0;
+    }
   }
 }
 
