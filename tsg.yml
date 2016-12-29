@@ -37,6 +37,10 @@ routes:
       property: doc
       itemName: doc
 
+  search:
+    path: /search
+    template: pages/search.html
+
   changelog:
     path: /changelog
     template: pages/changelog.html

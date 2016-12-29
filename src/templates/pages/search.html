@@ -1,0 +1,66 @@
+{% extends "layouts/default.html" %}
+
+{% from "macros/image-url.html" import imageUrl %}
+
+{% block body_class %}body--search{% endblock %}
+
+{% block content %}
+<header class="page-header">
+  <div class="page-header__inner">
+    <form class="search">
+      <div class="search__element">
+        <span class="search__icon">
+            <svg role="img" title="search">
+              <use xlink:href="/assets/images/icons.svg#search"/>
+            </svg>
+        </span>
+
+        <input type="search" placeholder="Search docs" name="search" id="search" class="search__input">
+      </div>
+
+      <h1 class="search__current">3 Results for <strong>installation</strong></h1>
+    </form>
+  </div>
+</header>
+
+<section class="section">
+  <div class="section__inner">
+    <div class="compress--small">
+      <div class="search-results">
+        <ul class="search-results__list">
+          <li class="result">
+            <a href="#" class="result__link">
+              <span class="result__heading">Installing and Updating</span>
+
+              <div class="result__content">
+                <p>&hellip; Proin ac <strong>installation</strong> duis. &hellip;</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="result">
+            <a href="#" class="result__link">
+              <span class="result__heading">Full Templating Reference</span>
+
+              <div class="result__content">
+                <p>&hellip; aptent taciti sociosqu <strong>installation</strong> per inceptos &hellip;</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="result">
+            <a href="#" class="result__link">
+              <span class="result__heading">Configuration</span>
+
+              <div class="result__content">
+                <p>&hellip; <strong>Installation</strong> tristique pharetra magna bibendum consectetur &hellip;</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -2,7 +2,10 @@
 [class*="section--"] {
   @extend %basic-block;
 
-  margin-top: 18rem;
+  & + .section,
+  & + [class*="section--"] {
+    margin-top: 18rem;
+  }
 
   .section__inner {
     text-align: center;
