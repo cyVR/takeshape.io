@@ -4,9 +4,8 @@
   column-width: 32rem;
 
   li {
-    & + * {
-      margin-top: 4.8rem;
-    }
+    break-inside: avoid;
+    padding-bottom: 4.8rem;
   }
 
   &__heading {
