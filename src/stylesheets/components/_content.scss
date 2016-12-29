@@ -51,6 +51,14 @@
     margin-top: 2.4rem;
   }
 
+  strong {
+    font-weight: -weight(medium);
+  }
+
+  em {
+    font-style: italic;
+  }
+
   a {
     color: -color(silver-tree);
     font-weight: -weight(medium);
