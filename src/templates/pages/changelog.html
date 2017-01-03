@@ -39,7 +39,7 @@
       <div class="changelog">
         <ul class="changelog__list">
           {% for change in changelog.changes %}
-          <li class="change" data-date="2 weeks ago">
+          <li class="change" data-bind="dateFromNow" data-date="{{ change._createdAt }}">
             <span class="change__rubric">{{ change.category }}</span>
             <h3 class="change__heading">{{ change.heading }}</h3>
 

@@ -10,7 +10,7 @@
   &:before {
     @include copy-c(-color(chatelle));
 
-    content: attr(data-date);
+    content: attr(data-from-now);
   }
 
   & + & {

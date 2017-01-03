@@ -17,6 +17,4 @@ const init = function (el) {
   }
 };
 
-export default {
-  init
-};
+export default {init};
