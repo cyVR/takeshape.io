@@ -1,3 +1,5 @@
+{% set footer = global.site.footer %}
+
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__block">
@@ -25,12 +27,19 @@
     </div>
 
     <div class="footer__block">
-      <form class="newsletter">
+      <form action="{{ footer.formEndpoint }}" method="post" class="newsletter validate" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
         <div class="newsletter__element">
-          <input type="email" name="email" id="email" class="newsletter__input" placeholder="Sign up for our newsletter"/>
+          <input type="email" value="" name="EMAIL" class="newsletter__input required email" id="mce-EMAIL" placeholder="Sign up for our newsletter"/>
         </div>
 
-        <input type="submit" value="Sign up" class="newsletter__submit"/>
+        <input type="submit" name="subscribe" id="mc-embedded-subscribe" value="Sign up" class="newsletter__submit"/>
+
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b98ffb95799b26d50c42d8be2_4378789333" tabindex="-1" value=""></div>
       </form>
 
       <h4 class="footer__credit">Made for developers by the folks at <a href="http://www.ronikdesign.com" target="_blank">Ronik</a></h4>

@@ -5,34 +5,34 @@
 {% set base_url = "/" %}
 
 {% block content %}
-<header class="page-header">
-  <div class="page-header__inner">
-    <h1 class="page-header__heading">Join TakeShape</h1>
-    <p class="page-header__copy">Be part of something amazing.</p>
-  </div>
-</header>
-
 <section class="section">
   <img src="{{ imageUrl(signup.backgroundImage.s3Key) }}" class="section__background" alt="" style="top: {{ signup.backgroundTop }}rem; right: {{ signup.backgroundRight }}rem;" data-image data-bind="imageLoaded">
 
   <div class="section__inner">
     <div class="compress--small">
       <div class="card--sign-up">
-        <h3 class="card__rubric">{{ signup.formHeading }}</h3>
+        <h3 class="card__heading">{{ signup.formHeading }}</h3>
         <p class="card__copy">{{ signup.formCopy }}</p>
 
-        <form class="form" action="{{ signup.formEndpoint }}">
+        <form action="{{ signup.formEndpoint }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form validate" target="_blank" novalidate >
           <div class="form__element">
-            <input type="text" class="form__input" id="signup-email" required />
+            <input type="text" value="" name="EMAIL" class="form__input required email" id="mce-EMAIL" required/>
 
-            <label class="form__label" for="signup-email">
+            <label for="mce-EMAIL" class="form__label">
               <span>Email</span>
             </label>
           </div>
 
-          <input type="submit"class="button--border" value="Sign up"/>
+          <input type="submit" value="Sign up" name="subscribe" id="mc-embedded-subscribe" class="button--border">
 
           <small>{{ signup.formDisclaimer }}</small>
+
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>
+
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b98ffb95799b26d50c42d8be2_4378789333" tabindex="-1" value=""></div>
         </form>
       </div>
     </div>

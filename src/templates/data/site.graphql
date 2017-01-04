@@ -15,4 +15,7 @@ query {
     twitterVia
     facebookAppId
   }
+  footer: getFooter {
+    formEndpoint
+  }
 }

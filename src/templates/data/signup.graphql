@@ -1,7 +1,5 @@
 query {
   signup: getSignup {
-    pageHeaderHeading
-    pageHeaderCopy
     backgroundImage {
       s3Key
     }
