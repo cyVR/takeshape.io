@@ -24,7 +24,7 @@
     color: -color(ebony-clay);
     font-family: $atlas;
     font-weight: -weight(light);
-    font-size: 2.6rem;
+    font-size: 2rem;
 
     &:focus,
     &:valid {
@@ -58,13 +58,17 @@
         border-bottom: 0.3rem solid -color(purple-heart);
       }
     }
+
+    @include above(mobile) {
+      font-size: 2.6rem;
+    }
   }
 
   &__label {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: calc(100% - 2.5rem);
+    height: calc(100% - 2rem);
     text-align: left;
     pointer-events: none;
     display: inline-block;
@@ -107,6 +111,10 @@
       display: block;
       padding: 4rem 0;
       width: 100%;
+    }
+
+    @include above(mobile) {
+      height: calc(100% - 2.4rem);
     }
   }
 
