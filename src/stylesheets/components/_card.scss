@@ -21,6 +21,14 @@
   margin-bottom: 7.2rem;
 }
 
+.card--sign-up {
+  @extend %purple-shadow;
+
+  .form {
+    margin-top: 3.2rem;
+  }
+}
+
 .card--pricing {
   @extend %purple-shadow;
 

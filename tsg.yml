@@ -46,5 +46,10 @@ routes:
     template: pages/changelog.html
     context: data/changelog.graphql
 
+  signup:
+    path: /signup
+    template: pages/signup.html
+    context: data/signup.graphql
+
 deploy:
     - ${buildPath}/static

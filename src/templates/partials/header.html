@@ -12,7 +12,7 @@
         {% endfor %}
       </ul>
 
-      <a class="button" href="#">Try TakeShape</a>
+      <a class="button" href="/signup">Try TakeShape</a>
     </nav>
 
     <button class="header__burger" data-bind="click: onClickToggle">
@@ -28,24 +28,14 @@
         <a href="/" class="mobile-nav__link">Home</a>
       </li>
 
-      <li class="mobile-nav__item{% if currentPath === path %} is-current"{% endif %}">
-        <a href="/features" class="mobile-nav__link">Features</a>
+      {% for link in global.primaryNav.nav.links %}
+      <li class="mobile-nav__item">
+        <a href="{{ link.path }}" class="mobile-nav__link">{{ link.text }}</a>
       </li>
-
-      <li class="mobile-nav__item{% if currentPath === path %} is-current"{% endif %}">
-        <a href="/pricing" class="mobile-nav__link">Pricing</a>
-      </li>
+      {% endfor %}
 
       <li class="mobile-nav__item">
-        <a href="/manifesto" class="mobile-nav__link">Manifesto</a>
-      </li>
-
-      <li class="mobile-nav__item">
-        <a href="/docs/introduction-to-takeshape" class="mobile-nav__link">Docs</a>
-      </li>
-
-      <li class="mobile-nav__item">
-        <a href="/login" class="mobile-nav__link">Login</a>
+        <a href="/signup" class="mobile-nav__link">Signup</a>
       </li>
     </ul>
   </div>

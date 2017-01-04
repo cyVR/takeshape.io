@@ -1,0 +1,15 @@
+query {
+  signup: getSignup {
+    pageHeaderHeading
+    pageHeaderCopy
+    backgroundImage {
+      s3Key
+    }
+    backgroundTop
+    backgroundRight
+    formEndpoint
+    formHeading
+    formCopy
+    formDisclaimer
+  }
+}

@@ -14,6 +14,7 @@
   max-width: 100%;
   will-change: color, background, border, box-shadow;
   transition: color 0.2s $ease-in-out-quart, background 0.2s $ease-in-out-quart, border 0.2s $ease-in-out-quart, box-shadow 0.15s $ease-in-out-quart;
+  cursor: pointer;
 
   &:hover {
     box-shadow: $purple-shadow-dark;

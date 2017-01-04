@@ -1,0 +1,41 @@
+{% extends "layouts/default.html" %}
+
+{% from "macros/image-url.html" import imageUrl %}
+
+{% set base_url = "/" %}
+
+{% block content %}
+<header class="page-header">
+  <div class="page-header__inner">
+    <h1 class="page-header__heading">Join TakeShape</h1>
+    <p class="page-header__copy">Be part of something amazing.</p>
+  </div>
+</header>
+
+<section class="section">
+  <img src="{{ imageUrl(signup.backgroundImage.s3Key) }}" class="section__background" alt="" style="top: {{ signup.backgroundTop }}rem; right: {{ signup.backgroundRight }}rem;" data-image data-bind="imageLoaded">
+
+  <div class="section__inner">
+    <div class="compress--small">
+      <div class="card--sign-up">
+        <h3 class="card__rubric">{{ signup.formHeading }}</h3>
+        <p class="card__copy">{{ signup.formCopy }}</p>
+
+        <form class="form" action="{{ signup.formEndpoint }}">
+          <div class="form__element">
+            <input type="text" class="form__input" id="signup-email" required />
+
+            <label class="form__label" for="signup-email">
+              <span>Email</span>
+            </label>
+          </div>
+
+          <input type="submit"class="button--border" value="Sign up"/>
+
+          <small>{{ signup.formDisclaimer }}</small>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
