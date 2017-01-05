@@ -9,7 +9,11 @@
 {% block content %}
 <div class="hero">
   <div class="hero__background">
-    <img src="/assets/images/hp1.png" class="hero__image" alt="{{ homepage.heroHeading }}" data-image data-bind="imageLoaded">
+    <div class="illustration" data-reps="22" data-bind="illustration">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 202 202" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0;">
+        <path fill="#fff" d="M200.5,0.5v200H0.5V0.5h200m1-1H-0.5v202h202V-0.5h0Z"/>
+      </svg>
+    </div>
   </div>
 
   <div class="hero__inner">

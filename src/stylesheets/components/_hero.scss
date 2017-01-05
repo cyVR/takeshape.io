@@ -14,10 +14,13 @@
 
     z-index: -z(background);
 
-    > img {
+    > .illustration {
+      opacity: 0.5;
       position: absolute;
       top: 50%;
       right: 8%;
+      width: 40rem;
+      height: 40rem;
       transform: translateY(-50%);
     }
   }

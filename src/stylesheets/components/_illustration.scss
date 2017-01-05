@@ -1,0 +1,9 @@
+.illustration {
+  @extend %absolute-center;
+
+  > svg {
+    @extend %absolute-center;
+
+    opacity: 0;
+  }
+}

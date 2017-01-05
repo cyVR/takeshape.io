@@ -10,3 +10,4 @@ export {default as parallax} from './parallax';
 export {default as imageLoaded} from './image-loaded';
 export {default as ticker} from './ticker';
 export {default as dateFromNow} from './date-from-now';
+export {default as illustration} from './illustration';
