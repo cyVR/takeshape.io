@@ -2,11 +2,6 @@
 [class*="section--"] {
   @extend %basic-block;
 
-  & + .section,
-  & + [class*="section--"] {
-    margin-top: 18rem;
-  }
-
   &:first-child {
     margin-top: 12rem;
   }
@@ -16,12 +11,20 @@
   }
 }
 
+.section,
+.section--features {
+  & + .section,
+  & + [class*="section--"] {
+    margin-top: 18rem;
+  }
+}
+
 .section--home {
   margin-top: 28rem;
 
   @include above(tablet) {
     * + & {
-      margin-top: 42rem;
+      margin-top: 36rem;
     }
   }
 }
@@ -45,6 +48,9 @@
 .section__background {
   position: absolute;
   z-index: -1;
+  pointer-events: none;
+  width: 50rem;
+  height: 50rem;
 }
 
 .section__inner {
