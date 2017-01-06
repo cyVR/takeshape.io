@@ -16,6 +16,14 @@ query {
     facebookAppId
   }
   footer: getFooter {
+    links {
+      linksHeading
+      link {
+        linkPath
+        linkText
+      }
+    }
+    colophon
     formEndpoint
   }
 }

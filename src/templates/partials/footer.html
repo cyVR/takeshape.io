@@ -3,27 +3,15 @@
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__block">
+      {% for list in footer.links %}
       <ul class="footer__list">
-        <li><h3 class="footer__heading">About TakeShape</h3></li>
-        <li><a href="/features" class="footer__link">Features</a></li>
-        <li><a href="/pricing" class="footer__link">Pricing</a></li>
-        <li><a href="/manifesto" class="footer__link">Manifesto</a></li>
-      </ul>
+        <li><h3 class="footer__heading">{{ list.linksHeading }}</h3></li>
 
-      <ul class="footer__list">
-        <li><h3 class="footer__heading">For users</h3></li>
-        <li><a href="/docs/introduction-to-takeshape" class="footer__link">Docs</a></li>
-        <li><a href="/changelog" class="footer__link">Changelog</a></li>
-        <li><a href="#" class="footer__link">Login</a></li>
-        <li><a href="https://github.com/takeshape" class="footer__link" target="_blank">Github</a></li>
+        {% for link in list.link %}
+        <li><a href="{{ link.linkPath }}" class="footer__link">{{ link.linkText }}</a></li>
+        {% endfor %}
       </ul>
-
-      <ul class="footer__list">
-        <li><h3 class="footer__heading">Find Us On</h3></li>
-        <li><a href="#" class="footer__link">Facebook</a></li>
-        <li><a href="#" class="footer__link">Twitter</a></li>
-        <li><a href="#" class="footer__link">ProductHunt</a></li>
-      </ul>
+      {% endfor %}
     </div>
 
     <div class="footer__block">
@@ -42,7 +30,7 @@
         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b98ffb95799b26d50c42d8be2_4378789333" tabindex="-1" value=""></div>
       </form>
 
-      <h4 class="footer__credit">Made for developers by the folks at <a href="http://www.ronikdesign.com" target="_blank">Ronik</a></h4>
+      <h4 class="footer__credit">{{ footer.colophon | md | safe }}</h4>
     </div>
   </div>
 </footer>
