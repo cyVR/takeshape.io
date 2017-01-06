@@ -14,7 +14,13 @@
 
 {% if changelog.upcomingHeading %}
 <section class="section">
-  <img src="{{ imageUrl(changelog.upcomingBackgroundImage.s3Key) }}" class="section__background" alt="" style="top: {{ changelog.upcomingBackgroundTop }}rem; right: {{ changelog.upcomingBackgroundRight }}rem;" data-image data-bind="imageLoaded">
+  <div class="section__background" style="top: {{ changelog.upcomingBackgroundTop }}rem; right: {{ changelog.upcomingBackgroundRight }}rem;">
+    <div class="illustration" data-anim-type="morph" data-anim-reps="22"  data-anim-duration="14000" data-anim-translate-x="1" data-anim-translate-y="0.4" data-anim-path="M12.384,116.954l55.559,-48.172l-33.127,-52.045l131.923,47.183l12.384,106.34l-64.476,-80.222l-102.263,26.916Z" data-bind="illustration">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+        <path stroke="#1de9b6" stroke-opacity="0.5" fill="transparent" d="M2.327,171.216l65.616,-102.434l-15.428,-37.224l145.139,-15.011l-85.672,53.494l11.861,54.395l-121.516,46.78Z"/>
+      </svg>
+    </div>
+  </div>
 
   <div class="section__inner">
     <div class="section__content">
