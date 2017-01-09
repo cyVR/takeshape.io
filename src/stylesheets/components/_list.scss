@@ -258,6 +258,10 @@
     @include hd-h();
 
     margin-bottom: 1.6rem;
+
+    @include above(tablet) {
+      font-size: 3rem;
+    }
   }
 
   &__copy {
