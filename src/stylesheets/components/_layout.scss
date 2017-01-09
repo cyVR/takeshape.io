@@ -33,7 +33,43 @@
   @include below(mobile) {
     .layout__column {
       &:first-child {
-        display: none;
+        position: fixed;
+        padding: 12rem 4rem 4rem;
+        background: white;
+        top: 0;
+        left: -48rem;
+        height: 100vh;
+        overflow-y: scroll;
+        box-shadow: 0 0 1rem rgba(0,0,0, 0.2);
+        will-change: left;
+        transition: left 0.2s $ease-in-out-quart;
+        z-index: -z(mobile-nav);
+        max-width: calc(100% - 8.5rem);
+      }
+    }
+
+    .button--open-panel {
+      display: block;
+    }
+
+    &.is-open {
+      .layout__column:first-child {
+        left: 0;
+      }
+
+      .button--open-panel {
+        background-color: -color(purple-heart);
+        border-bottom-color: -color(purple-heart);
+
+        .button__text {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        .button__icon {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
   }

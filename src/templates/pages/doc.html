@@ -23,36 +23,26 @@
   </div>
 </header>
 
-<div class="layout--docs">
+<!-- ko component: "docsMenu" -->
+<div class="layout--docs" data-bind="css: {'is-open': isOpen}">
+  <button class="button--open-panel" data-bind="click: onClickToggle">
+    <span class="button__text">More Docs</span>
+
+    <span class="button__icon">
+      <svg role="img" title="close">
+        <use xlink:href="/assets/images/icons.svg#close"/>
+      </svg>
+    </span>
+  </button>
+
   <div class="layout__inner">
     <div class="layout__column">
-      <nav class="docs-nav">
-        <div class="docs-nav__inner">
-          <ul class="docs-nav__list">
-            {% for section in global.docs.toc.sections %}
-            <li data-bind="component: 'accordionItem'">
-              <div class="docs-nav__wrapper" data-bind="css: {'is-open': isOpen}">
-                <h3 class="docs-nav__heading" data-bind="click: onClickToggle">{{ section.title }}</h3>
-
-                <div class="docs-nav__content" data-bind="style: {height: currentHeightStyle}">
-                  <ul class="line-list--green" data-accordion-content>
-                    {% for doc in section.docs | sort %}
-                      {% set path = doc | route('docs') %}
-
-                      <li {% if currentPath === path %}class="is-current"{% endif %}><a href="{{ path }}">{{ doc.title }}</a></li>
-                    {% endfor %}
-                  </ul>
-                </div>
-              </div>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </nav>
+      {% include "partials/doc-menu.html" %}
     </div>
 
     <div class="layout__column">
       <section class="section">
+
         <div class="content">
           <h2>{{ doc.title }}</h2>
 
@@ -93,4 +83,5 @@
     </div>
   </div>
 </div>
+<!-- /ko -->
 {% endblock %}

@@ -1,18 +1,23 @@
-<div class="doc__menu">
-  <h3>Introduction</h3>
+<nav class="docs-nav">
+  <div class="docs-nav__inner">
+    <ul class="docs-nav__list">
+      {% for section in global.docs.toc.sections %}
+      <li data-bind="component: 'accordionItem'">
+        <div class="docs-nav__wrapper" data-bind="css: {'is-open': isOpen}">
+          <h3 class="docs-nav__heading" data-bind="click: onClickToggle">{{ section.title }}</h3>
 
-  <h3 class="test-menu">For Developers</h3>
+          <div class="docs-nav__content" data-bind="style: {height: currentHeightStyle}">
+            <ul class="line-list--green" data-accordion-content>
+              {% for doc in section.docs | sort %}
+              {% set path = doc | route('docs') %}
 
-  <div class="sub-menu">
-    <p>API Libraries and Integrations</p>
-    <p>API Libraries and Integrations</p>
-    <p>API Libraries and Integrations</p>
-    <p>API Libraries and Integrations</p>
+              <li {% if currentPath === path %}class="is-current"{% endif %}><a href="{{ path }}">{{ doc.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
-
-  <h3>For Clients</h3>
-
-  <h3>Getting Help</h3>
-
-  <h3>Pricing</h3>
-</div>
+</nav>

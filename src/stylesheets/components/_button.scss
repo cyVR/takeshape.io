@@ -63,3 +63,64 @@
     border-color: -color(bright-sun);
   }
 }
+
+.button--open-panel {
+  @extend %strip-input-style;
+  @include hd-e();
+
+  display: none;
+  position: fixed;
+  top: 8rem;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  background-color: -color(whisper);
+  border-bottom: 0.1rem solid -color(ghost);
+  cursor: pointer;
+  will-change: background, border;
+  transition: background 0.15s $ease-in-out-quart, border 0.15s $ease-in-out-quart, color 0.15s $ease-in-out-quart;
+  z-index: -z(subnav);
+  box-shadow: 0 0 0.2rem -color(chatelle);
+
+  .button__text {
+    opacity: 1;
+    visibility: visible;
+    will-change: opacity, visibility;
+    transition: opacity 0.15s $ease-in-out-quart, visibility $ease-in-out-quart;
+  }
+
+  .button__icon {
+    position: absolute;
+    right: 4.2rem;
+    top: 1.9rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    opacity: 0;
+    visibility: hidden;
+    will-change: opacity, visibility;
+    transition: opacity 0.15s $ease-in-out-quart, visibility $ease-in-out-quart;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      fill: -color(white);
+      will-change: fill;
+    }
+  }
+
+  &:hover {
+    color: -color(white);
+    background-color: -color(purple-heart);
+    border-bottom-color: -color(purple-heart);
+  }
+
+  &:active {
+    color: -color(white);
+    background-color: -color(bright-sun);
+    border-bottom-color: -color(bright-sun);
+    transition: background 0s linear, border 0s linear, color 0s linear;
+  }
+}
