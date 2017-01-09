@@ -50,6 +50,10 @@
       transition: opacity 0s;
     }
   }
+
+  @include below(mobile) {
+    overflow-y: scroll;
+  }
 }
 
 .pagination {

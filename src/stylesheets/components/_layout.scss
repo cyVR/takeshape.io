@@ -34,12 +34,11 @@
     .layout__column {
       &:first-child {
         position: fixed;
-        padding: 12rem 4rem 4rem;
+        padding: 10rem 4rem 4rem;
         background: white;
         top: 0;
         left: -48rem;
         height: 100vh;
-        overflow-y: scroll;
         box-shadow: 0 0 1rem rgba(0,0,0, 0.2);
         will-change: left;
         transition: left 0.2s $ease-in-out-quart;
@@ -53,6 +52,8 @@
     }
 
     &.is-open {
+      overflow: hidden;
+
       .layout__column:first-child {
         left: 0;
       }
