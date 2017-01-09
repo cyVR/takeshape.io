@@ -27,3 +27,11 @@
     margin-top: 4.6rem;
   }
 }
+
+.page-header--docs {
+  @extend .page-header;
+
+  @include below(mobile) {
+    margin-top: 18rem;
+  }
+}
