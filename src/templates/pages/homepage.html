@@ -1,7 +1,5 @@
 {% extends "layouts/default.html" %}
 
-{% from "macros/image-url.html" import imageUrl %}
-
 {% set base_url = "/" %}
 
 {% block body_class %}body--homepage{% endblock %}
@@ -31,7 +29,7 @@
     {% for feature in homepage.features %}
     <div class="strip-list__block">
       <div class="strip-list__image">
-        <img src="{{ imageUrl(feature.featureImage.s3Key) }}" alt="{{ feature.featureTitle }}" data-image data-bind="imageLoaded"/>
+        <img src="{{ feature.featureImage.s3Key | image }}" alt="{{ feature.featureTitle }}" data-image data-bind="imageLoaded"/>
       </div>
 
       <h3 class="strip-list__heading">{{ feature.featureTitle }}</h3>
@@ -61,7 +59,7 @@
           <div class="cycler__slides">
             {% for slide in homepage.slides %}
             <div class="cycler__slide">
-              <img src="{{ imageUrl(slide.slideImage.s3Key) }}" alt="{{ slide.slideHeading }}" data-image data-bind="imageLoaded"/>
+              <img src="{{ slide.slideImage.s3Key | image }}" alt="{{ slide.slideHeading }}" data-image data-bind="imageLoaded"/>
             </div>
             {% endfor %}
           </div>
@@ -132,7 +130,7 @@
     <div class="compress--medium">
       <div class="quote">
         <div class="quote__image">
-          <img src="{{ imageUrl(homepage.quoteImage.s3Key) }}" alt="" data-image data-bind="imageLoaded"/>
+          <img src="{{ homepage.quoteImage.s3Key | image }}" alt="" data-image data-bind="imageLoaded"/>
         </div>
 
         <blockquote class="quote__content">

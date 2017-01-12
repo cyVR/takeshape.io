@@ -1,7 +1,5 @@
 {% extends "layouts/default.html" %}
 
-{% from "macros/image-url.html" import imageUrl %}
-
 {% block body_class %}body--page{% endblock %}
 
 {% block content %}
@@ -63,7 +61,7 @@
             {% for feature in features.modelerFeatures %}
               <li>
                 <div class="thumb-list__image">
-                  <img src="{{ imageUrl(feature.modelerFeatureImage.s3Key) }}" class="thumb-list__image" alt=""
+                  <img src="{{ feature.modelerFeatureImage.s3Key | image }}" class="thumb-list__image" alt=""
                        data-image data-bind="imageLoaded"/>
                 </div>
 
@@ -83,7 +81,7 @@
               <div class="cycler__slides">
                 {% for slide in features.modelerFeatures %}
                   <div class="cycler__slide">
-                    <img src="{{ imageUrl(slide.modelerFeatureImage.s3Key) }}" alt="" data-image
+                    <img src="{{ slide.modelerFeatureImage.s3Key | image }}" alt="" data-image
                          data-bind="imageLoaded"/>
                   </div>
                 {% endfor %}
@@ -130,7 +128,7 @@
                 <div class="cycler__slides">
                   {% for slide in feature.creatorFeatureCycler %}
                     <div class="cycler__slide">
-                      <img src="{{ imageUrl(slide.cyclerImage.s3Key) }}" alt="" data-image data-bind="imageLoaded"/>
+                      <img src="{{ slide.cyclerImage.s3Key | image }}" alt="" data-image data-bind="imageLoaded"/>
                     </div>
                   {% endfor %}
                 </div>

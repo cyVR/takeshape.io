@@ -1,5 +1,3 @@
-{% from "macros/image-url.html" import imageUrl %}
-
 {% set socialGlobal = global.site.social %}
 
 {% if page.socialTitle %}
@@ -31,11 +29,11 @@
 {% endif %}
 
 {% if page.socialImage %}
-  <meta property="og:image" content="{{ imageUrl(page.socialImage.s3Key) }}">
+  <meta property="og:image" content="{{ page.socialImage.s3Key | image }}">
 {% elif page.heroImage %}
 
 {% elif socialGlobal.siteImage %}
-  <meta property="og:image" content="{{ imageUrl(socialGlobal.siteImage.s3Key) }}">
+  <meta property="og:image" content="{{ socialGlobal.siteImage.s3Key | image }}">
 {% endif %}
 
 {% if page %}

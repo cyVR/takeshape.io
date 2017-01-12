@@ -1,7 +1,5 @@
 {% extends "layouts/default.html" %}
 
-{% from "macros/image-url.html" import imageUrl %}
-
 {% set base_url = "/" %}
 
 {% block body_class %}body--page{% endblock %}
@@ -80,7 +78,7 @@
       <div class="compress--medium">
         <div class="quote">
           <div class="quote__image">
-            <img src="{{ imageUrl(pricing.quoteImage.s3Key) }}" alt="" data-image data-bind="imageLoaded"/>
+            <img src="{{ pricing.quoteImage.s3Key | image }}" alt="" data-image data-bind="imageLoaded"/>
           </div>
 
           <blockquote class="quote__content">
