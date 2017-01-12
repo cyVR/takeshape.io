@@ -1,3 +1,4 @@
+.card,
 [class*="card--"] {
   @extend %basic-block;
 
@@ -101,29 +102,4 @@
 
 .card__copy {
   @include copy-b($line-height: 1.77);
-}
-
-.card__link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  p {
-    @include hd-a();
-  }
-}
-
-.card__icon {
-  display: block;
-  position: relative;
-  width: 5.6rem;
-  height: 5.6rem;
-  margin-left: 4rem;
-  flex-shrink: 0;
-
-  svg {
-    @extend %absolute-center;
-
-    fill: -color(purple-heart);
-  }
 }

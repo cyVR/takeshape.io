@@ -1,0 +1,84 @@
+.tout {
+  @extend %basic-block;
+
+  &__link {
+    @extend .card;
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: $purple-shadow-dark;
+    will-change: box-shadow;
+    transition: box-shadow 0.15s $ease-in-out-quart;
+
+    p {
+      @include hd-b();
+
+      will-change: color;
+      transition: color 0.15s $ease-in-out-quart;
+    }
+
+    &:hover {
+      box-shadow: 3rem 3rem 0 0 rgba(113,91,210,0.1);
+
+      svg {
+        fill: -color(purple-heart);
+      }
+    }
+
+    &:active {
+      p {
+        color: -color(bright-sun);
+        transition: color 0s linear;
+      }
+
+      .tout__icon {
+        svg {
+          fill: -color(bright-sun);
+          transition: fill 0s linear;
+        }
+      }
+    }
+
+    @include below(initial) {
+      p {
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    @include above(mobile) {
+      justify-content: space-between;
+      flex-direction: row;
+
+      &:hover {
+        .tout__icon {
+          animation-name: bounce;
+          transform-origin: left center;
+          animation-duration: 0.75s;
+          animation-iteration-count: 1;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    position: relative;
+    width: 5.6rem;
+    height: 5.6rem;
+    flex-shrink: 0;
+
+    svg {
+      @extend %absolute-center;
+
+      fill: -color(viking);
+      will-change: fill;
+      transition: fill 0.15s $ease-in-out-quart;
+    }
+
+    @include above(mobile) {
+      margin-left: 4rem;
+    }
+  }
+}

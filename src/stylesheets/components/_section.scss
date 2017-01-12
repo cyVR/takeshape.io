@@ -23,10 +23,16 @@
   margin-top: 28rem;
 
   @include above(tablet) {
-    * + & {
+    .section--home + & {
       margin-top: 36rem;
     }
   }
+}
+
+.section--tint {
+  background-color: -color(whisper);
+  padding: 12rem 0;
+  margin: 24rem 0 32rem;
 }
 
 .section--features {

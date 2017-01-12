@@ -21,7 +21,7 @@
       <h1 class="hero__heading">{{ homepage.heroHeading }}</h1>
       <p class="hero__copy">{{ homepage.heroSubheading }}</p>
 
-      <a href="#" class="button">{{ homepage.heroCta }}</a>
+      <a href="/signup" class="button">{{ homepage.heroCta }}</a>
     </div>
   </div>
 </div>
@@ -101,6 +101,24 @@
   </div>
 </section>
 
+<section class="section--tint">
+  <div class="section__inner">
+    <div class="compress-large">
+      <div class="tout">
+        <a href="/manifesto" class="tout__link">
+          <p>Content management is broken. We set out to create something truly useful. Read why.</p>
+
+          <span class="tout__icon">
+              <svg role="img" title="caret-circle">
+                <use xlink:href="/assets/images/icons.svg#caret-circle"/>
+              </svg>
+            </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section--home">
   <div class="section__background" style="top: {{ homepage.quoteBackgroundTop }}rem; left: {{ homepage.quoteBackgroundLeft }}rem;">
     <div class="illustration" data-anim-type="morph" data-anim-reps="22"  data-anim-duration="14000" data-anim-translate-x="1" data-anim-translate-y="0.4" data-anim-path="M12.384,116.954l55.559,-48.172l-33.127,-52.045l131.923,47.183l12.384,106.34l-64.476,-80.222l-102.263,26.916Z" data-bind="illustration">
@@ -145,7 +163,7 @@
       <p class="section__copy">{{ homepage.getStartedCopy }}</p>
     </header>
 
-    <a href="#" class="button">{{ homepage.getStartedCta }}</a>
+    <a href="/signup" class="button">{{ homepage.getStartedCta }}</a>
   </div>
 </section>
 
