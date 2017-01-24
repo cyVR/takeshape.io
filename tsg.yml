@@ -37,10 +37,6 @@ routes:
       property: doc
       itemName: doc
 
-  search:
-    path: /search
-    template: pages/search.html
-
   changelog:
     path: /changelog
     template: pages/changelog.html
@@ -50,6 +46,14 @@ routes:
     path: /signup
     template: pages/signup.html
     context: data/signup.graphql
+
+  search:
+      path: /search
+      template: pages/search.html
+
+  error:
+    path: /error
+    template: pages/error.html
 
 deploy:
     - ${buildPath}/static

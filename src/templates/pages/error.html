@@ -1,0 +1,30 @@
+{% extends "layouts/default.html" %}
+
+{% block body_class %}body--error{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="section__background" style="top: -4rem; right: 10rem;">
+    <div class="illustration" data-anim-type="morph" data-anim-reps="22"  data-anim-duration="8000" data-anim-path="M10.641,109.261c0,0 -7.961,-15.828 0.251,-22.258c14.796,-11.586 41.336,11.879 72.636,-1.321c31.3,-13.2 23.896,-46.21 42.903,-45.528c22.629,0.812 4.651,27.583 10.83,35.811c5.914,7.875 52.631,-10.424 50.534,16.374c-2.006,25.62 -58.582,12.617 -39.458,45.498c18.503,31.813 1.009,45.152 -43.924,41.528c-28.239,-2.277 -30.532,-21.732 -59.352,-18.5c-42.982,4.821 -16.752,-14.269 -34.42,-51.604Z" data-bind="illustration">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+        <path stroke="#5539d2" stroke-opacity="0.5" fill="transparent" d="M2.861,135.765c0,0 1.6,-42.4 8.7,-59.8c7.1,-17.4 17.8,-33.3 49.1,-46.5c31.3,-13.2 43.3,-14.6 59.6,-4.8c16.3,9.8 8.5,45.5 17,51.3c8.5,5.8 23.6,-5.5 29.1,-8c5.5,-2.6 25.7,-10.1 30.7,43.1c5,53.2 -98.1,23.5 -104.3,23c-6.2,-0.5 -19.8,-2.1 -47.7,26.8c-27.9,28.9 -43.7,33.9 -42.2,-25.1Z"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="section__inner">
+    <div class="error">
+      <header>
+        <h1 class="error__heading">404</h1>
+        <h2 class="error__subheading">Page not found</h2>
+      </header>
+
+      <div class="compress--small">
+        <div class="error__content">
+          <p>Unfortunately, we couldn't find the page you were looking for. Please check the URL and try again, or try and find your page from our <a href="#">Homepage</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

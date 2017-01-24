@@ -1,0 +1,54 @@
+.error {
+  @extend %basic-block;
+
+  text-align: center;
+
+  header {
+    margin-bottom: 4.8rem;
+  }
+
+  &__heading {
+    color: -color(governor-bay);
+    font-family: $atlas;
+    font-size: 20vw;
+    font-weight: -weight(bold);
+    line-height: 1;
+    letter-spacing: -0.02em;
+
+    @include above(mobile) {
+      line-height: 0.8;
+    }
+  }
+
+  &__subheading {
+    color: -color(chatelle);
+    font-family: $atlas-typewriter;
+    font-size: 2.4rem;
+    line-height: 1.4;
+  }
+
+  &__content {
+    p {
+      color: -color(ebony-clay);
+      font-family: $atlas;
+      font-size: 1.6rem;
+      line-height: 1.77;
+
+      a {
+        color: -color(silver-tree);
+        font-weight: -weight(medium);
+        will-change: color;
+        transition: color 0.1s $ease-in-out-quart;
+
+        &:hover {
+          color: -color(purple-heart);
+        }
+
+        &:active {
+          color: -color(bright-sun);
+          transition: color 0s linear;
+        }
+      }
+    }
+  }
+}
