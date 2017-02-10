@@ -43,8 +43,7 @@
 
         <div class="content">
           <h2>{{ doc.title }}</h2>
-
-          {{ doc.content | md | safe }}
+          {{ doc.contentHtml | safe }}
         </div>
 
         <div class="pagination">
