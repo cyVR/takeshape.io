@@ -14,6 +14,7 @@ routes:
     path: /sitemap.xml
     template: feeds/sitemap.xml
     context: data/sitemap.graphql
+
   homepage:
     path: /
     template: pages/homepage.html

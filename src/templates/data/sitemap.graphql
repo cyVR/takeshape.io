@@ -1,5 +1,23 @@
 query {
   homepage: getHomepage {
-    heroHeading
+    _updatedAt
+  }
+  features: getFeatures {
+    _updatedAt
+  }
+  pricing: getPricing {
+    _updatedAt
+  }
+  manifesto: getManifesto {
+    _updatedAt
+  }
+  docs: getDocList {
+    _updatedAt
+  }
+  changelog: getChangelog {
+    _updatedAt
+  }
+  signup: getSignup {
+    _updatedAt
   }
 }

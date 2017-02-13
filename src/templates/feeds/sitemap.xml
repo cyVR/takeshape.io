@@ -4,8 +4,39 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
-    <loc>{{ global.baseUrl + homepage|route('homepage') }}</loc>
-    <lastmod>2006-11-18</lastmod>
+    <loc>{{ global.site.social.siteUrl + homepage|route('homepage') }}</loc>
+    <lastmod>{{ homepage._updatedAt }}</lastmod>
   </url>
 
+  <url>
+    <loc>{{ global.site.social.siteUrl + features|route('features') }}</loc>
+    <lastmod>{{ features._updatedAt }}</lastmod>
+  </url>
+
+  <url>
+    <loc>{{ global.site.social.siteUrl + pricing|route('pricing') }}</loc>
+    <lastmod>{{ pricing._updatedAt }}</lastmod>
+  </url>
+
+  <url>
+    <loc>{{ global.site.social.siteUrl + manifesto|route('manifesto') }}</loc>
+    <lastmod>{{ manifesto._updatedAt }}</lastmod>
+  </url>
+
+  {% for doc in docs %}
+  <url>
+    <loc>{{ global.site.social.siteUrl + doc|route('docs') }}</loc>
+    <lastmod>{{ doc._updatedAt }}</lastmod>
+  </url>
+  {% endfor %}
+
+  <url>
+    <loc>{{ global.site.social.siteUrl + changelog|route('changelog') }}</loc>
+    <lastmod>{{ changelog._updatedAt }}</lastmod>
+  </url>
+
+  <url>
+    <loc>{{ global.site.social.siteUrl + changelog|route('signup') }}</loc>
+    <lastmod>{{ signup._updatedAt }}</lastmod>
+  </url>
 </urlset>
