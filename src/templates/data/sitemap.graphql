@@ -13,6 +13,7 @@ query {
   }
   docs: getDocList {
     _updatedAt
+    title
   }
   changelog: getChangelog {
     _updatedAt
