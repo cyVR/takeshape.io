@@ -7,7 +7,6 @@ context:
   site: data/site.graphql
   docs: data/toc.graphql
   primaryNav: data/primary-navigation.graphql
-  baseUrl: "https://stage.takeshape.io"
 
 routes:
   sitemap:
