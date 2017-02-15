@@ -52,6 +52,6 @@ module.exports = {
   },
   plugins: [
     new ManifestPlugin(),
-    new Extract(isProd ? '[name].[chunkhash].css' : '[name].css')
+    new Extract(isProd ? '[name].[contenthash].css' : '[name].css')
   ]
 };
