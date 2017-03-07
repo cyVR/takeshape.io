@@ -82,7 +82,7 @@
     "style-loader": "^0.13.1",
     "stylelint": "^7.2.0",
     "stylelint-config-standard": "^13.0.0",
-    "svg-sprite-generator": "0.0.7",
+    "svg-sprite-generator": "^0.0.7",
     "svgo": "0.7.0",
     "takeshape-cli": "^1.6.0",
     "webpack": "2.1.0-beta.25",
