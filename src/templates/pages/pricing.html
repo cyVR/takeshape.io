@@ -1,4 +1,5 @@
 {% extends "layouts/default.html" %}
+{% from "macros/get-started-button.html" import getStartedButton %}
 
 {% set base_url = "/" %}
 
@@ -28,6 +29,8 @@
                   <span class="pricing__info">per month</span>
                 </div>
 
+                {{ getStartedButton(plan) }}
+
                 <ul class="pricing__list">
                   {% for feature in plan.planFeatures %}
                     <li>{{ feature.featureCopy }}</li>
@@ -35,16 +38,14 @@
                 </ul>
 
                 <footer class="pricing__footer--mobile">
-                  {% if plan.planDetailsUrl and plan.planUrl %}
-                    <a href="{{ plan.planUrl }}" class="button">{{ plan.planButtonCopy }}</a>
+                  {{ getStartedButton(plan) }}
 
-                    <div class="pricing__details">
-                      <a href="{{ plan.planDetailsUrl }}">Read plan details</a>
-
-                    </div>
-                  {% else %}
-                    <a href="mailto:contact@takeshape.com" class="button--border">Contact us</a>
+                  {% if plan.planDetailsUrl %}
+                  <div class="pricing__details">
+                    <a href="{{ plan.planDetailsUrl }}">Read plan details</a>
+                  </div>
                   {% endif %}
+
                 </footer>
               </div>
             </div>
@@ -54,13 +55,7 @@
         <div class="pricing__footer">
           {% for plan in pricing.plans %}
             <div class="pricing__block">
-              {% set planUrl = plan.planUrl %}
-              {% if planUrl %}
-                {% if 'mailto:' in planUrl %}
-                  {% set classDecorator = '--border' %}
-                {% endif %}
-                <a href="{{ planUrl }}" class="button{{ classDecorator }}">{{ plan.planButtonCopy }}</a>
-              {% endif %}
+              {{ getStartedButton(plan) }}
               {% if plan.planDetailsUrl %}
                 <div class="pricing__details">
                   <a href="{{ plan.planDetailsUrl }}">Read plan details</a>

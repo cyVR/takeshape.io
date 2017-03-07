@@ -1,0 +1,9 @@
+{% macro getStartedButton(plan) %}
+{% set planUrl = plan.planUrl %}
+{% if planUrl %}
+  {% if 'mailto:' in planUrl %}
+    {% set classDecorator = '--border' %}
+  {% endif %}
+  <a href="{{ planUrl }}" class="button{{ classDecorator }}">{{ plan.planButtonCopy }}</a>
+{% endif %}
+{% endmacro %}
