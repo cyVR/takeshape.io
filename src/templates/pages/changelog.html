@@ -6,7 +6,7 @@
 <header class="page-header">
   <div class="page-header__inner">
     <h1 class="page-header__heading">{{ changelog.heading }}</h1>
-    <p class="page-header__copy">{{ changelog.copy }}</p>
+    {% if changelog.copy %}<p class="page-header__copy">{{ changelog.copy }}</p>{% endif %}
   </div>
 </header>
 
@@ -20,12 +20,13 @@
     </div>
   </div>
 
+  {% if changelog.upcomingBodyHtml %}
   <div class="section__inner">
     <div class="section__content">
       <div class="compress--large">
         <div class="card--upcoming">
           <span class="card__rubric">Coming soon</span>
-          <h3 class="card__heading">{{ changelog.upcomingHeading }}</h3>
+          {% if changelog.upcomingHeading %}<h3 class="card__heading">{{ changelog.upcomingHeading }}</h3>{% endif %]
 
           <div class="card__content">
             {{ changelog.upcomingBodyHtml | safe }}
@@ -34,6 +35,7 @@
       </div>
     </div>
   </div>
+  {% endif %}
 </section>
 {% endif %}
 
