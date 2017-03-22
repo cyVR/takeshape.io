@@ -16,6 +16,7 @@ query {
       body
       bodyHtml
       _createdAt
+      _enabledAt
     }
     _updatedAt
   }
