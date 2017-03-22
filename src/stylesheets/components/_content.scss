@@ -75,8 +75,12 @@
   }
 
   code {
-    display: block;
     background-color: #FFF;
-    padding: 2rem;
+    padding: .5rem;
+
+    pre & {
+      display: block;
+      padding: 2rem;
+    }
   }
 }
