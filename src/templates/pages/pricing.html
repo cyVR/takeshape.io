@@ -41,9 +41,9 @@
                   {{ getStartedButton(plan) }}
 
                   {% if plan.planDetailsUrl %}
-                  <div class="pricing__details">
-                    <a href="{{ plan.planDetailsUrl }}">Read plan details</a>
-                  </div>
+                    <div class="pricing__details">
+                      <a href="{{ plan.planDetailsUrl }}">Read plan details</a>
+                    </div>
                   {% endif %}
 
                 </footer>
@@ -68,26 +68,28 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="section__inner">
-      <div class="compress--medium">
-        <div class="quote">
-          <div class="quote__image">
-            <img src="{{ pricing.quoteImage.s3Key | image }}" alt="" data-image data-bind="imageLoaded"/>
+  {% if pricing.quoteCopy %}
+    <section class="section">
+      <div class="section__inner">
+        <div class="compress--medium">
+          <div class="quote">
+            <div class="quote__image">
+              <img src="{{ pricing.quoteImage.s3Key | image }}" alt="" data-image data-bind="imageLoaded"/>
+            </div>
+
+            <blockquote class="quote__content">
+              <p>{{ pricing.quoteCopy }}</p>
+
+              <cite>
+                <span>{{ pricing.quoteName }}</span>
+                <span>{{ pricing.quotePosition }}</span>
+              </cite>
+            </blockquote>
           </div>
-
-          <blockquote class="quote__content">
-            <p>{{ pricing.quoteCopy }}</p>
-
-            <cite>
-              <span>{{ pricing.quoteName }}</span>
-              <span>{{ pricing.quotePosition }}</span>
-            </cite>
-          </blockquote>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  {% endif %}
 
   <section class="section">
     <div class="section__inner">
