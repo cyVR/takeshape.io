@@ -19,5 +19,20 @@ query {
       _enabledAt
     }
     _updatedAt
+  },
+  changes: getChangeList {
+    heading
+    bodyHtml
+    body
+    category
+    _id
+    _version
+    _contentTypeId
+    _contentTypeName
+    _createdAt
+    _updatedAt
+    _enabled
+    _enabledAt
+    searchSummary
   }
 }

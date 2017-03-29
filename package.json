@@ -84,8 +84,8 @@
     "stylelint-config-standard": "^13.0.0",
     "svg-sprite-generator": "^0.0.7",
     "svgo": "0.7.0",
-    "takeshape-cli": "^1.6.0",
-    "webpack": "2.1.0-beta.25",
+    "takeshape-cli": "^1.7.1",
+    "webpack": "^2.3.2",
     "webpack-manifest-plugin": "^1.1.0"
   },
   "dependencies": {
