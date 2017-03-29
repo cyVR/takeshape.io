@@ -10,14 +10,6 @@ query {
     upcomingHeading
     upcomingBody
     upcomingBodyHtml
-    changes {
-      heading
-      category
-      body
-      bodyHtml
-      _createdAt
-      _enabledAt
-    }
     _updatedAt
   },
   changes: getChangeList {
