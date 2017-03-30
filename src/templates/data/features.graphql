@@ -32,6 +32,7 @@ query {
     getStartedHeading
     getStartedCopy
     getStartedCta
+    getStartedLink
     bottomNav {
       bottomNavHeading
       bottomNavCopy
