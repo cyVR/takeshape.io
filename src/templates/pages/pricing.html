@@ -8,9 +8,11 @@
 {% block content %}
   <header class="page-header">
     <div class="page-header__inner">
-      <h1 class="page-header__heading">{{ pricing.pageHeaderHeading | safe }}</h1>
-      {% if pricing.pageHeaderCopy | length > 1 %}<p
-        class="page-header__copy">{{ pricing.pageHeaderCopy }}</p>{% endif %}
+      <h1 class="page-header__heading">{{ page.pageHeaderHeading | safe }}</h1>
+
+      {% if page.pageHeaderCopy | length > 1 %}
+      <p class="page-header__copy">{{ page.pageHeaderCopy }}</p>
+      {% endif %}
     </div>
   </header>
 
@@ -18,7 +20,7 @@
     <div class="section__inner">
       <div class="pricing">
         <div class="pricing__content">
-          {% for plan in pricing.plans %}
+          {% for plan in page.plans %}
             <div class="pricing__block">
               <div class="card--pricing">
                 <h3 class="pricing__heading">{{ plan.planName }}</h3>
