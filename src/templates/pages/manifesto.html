@@ -5,7 +5,7 @@
 {% block content %}
 <header class="page-header">
   <div class="page-header__inner">
-    <h1 class="page-header__heading">{{ manifesto.pageHeaderHeading }}</h1>
+    <h1 class="page-header__heading">{{ page.pageHeaderHeading }}</h1>
   </div>
 </header>
 
@@ -13,7 +13,7 @@
   <div class="section__inner">
     <div class="compress--small">
       <div class="content">
-        {{ manifesto.content | safe }}
+        {{ page.content | safe }}
       </div>
     </div>
   </div>

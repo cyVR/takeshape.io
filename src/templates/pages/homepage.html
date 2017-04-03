@@ -18,17 +18,17 @@
 
     <div class="hero__inner">
       <div class="hero__content">
-        <h1 class="hero__heading">{{ homepage.heroHeading }}</h1>
-        <p class="hero__copy">{{ homepage.heroSubheading }}</p>
+        <h1 class="hero__heading">{{ page.heroHeading }}</h1>
+        <p class="hero__copy">{{ page.heroSubheading }}</p>
 
-        <a href="/signup" class="button">{{ homepage.heroCta }}</a>
+        <a href="/signup" class="button">{{ page.heroCta }}</a>
       </div>
     </div>
   </div>
 
   <div class="strip-list">
     <div class="strip-list__inner">
-      {% for feature in homepage.features %}
+      {% for feature in page.features %}
         <div class="strip-list__block">
           <div class="strip-list__image">
             <img src="{{ feature.featureImage.s3Key | image }}" alt="{{ feature.featureTitle }}" data-image
@@ -44,7 +44,7 @@
 
   <section class="section--home">
     <div class="section__background"
-         style="top: {{ homepage.sliderBackgroundTop }}rem; right: {{ homepage.sliderBackgroundRight }}rem;">
+         style="top: {{ page.sliderBackgroundTop }}rem; right: {{ page.sliderBackgroundRight }}rem;">
       <div class="illustration" data-anim-type="morph" data-anim-reps="22" data-anim-duration="8000"
            data-anim-path="M10.641,109.261c0,0 -7.961,-15.828 0.251,-22.258c14.796,-11.586 41.336,11.879 72.636,-1.321c31.3,-13.2 23.896,-46.21 42.903,-45.528c22.629,0.812 4.651,27.583 10.83,35.811c5.914,7.875 52.631,-10.424 50.534,16.374c-2.006,25.62 -58.582,12.617 -39.458,45.498c18.503,31.813 1.009,45.152 -43.924,41.528c-28.239,-2.277 -30.532,-21.732 -59.352,-18.5c-42.982,4.821 -16.752,-14.269 -34.42,-51.604Z"
            data-bind="illustration">
@@ -57,14 +57,14 @@
 
     <div class="section__inner">
       <header class="section__header">
-        <h2 class="section__heading">{{ homepage.sliderHeading }}</h2>
+        <h2 class="section__heading">{{ page.sliderHeading }}</h2>
       </header>
 
       <div class="cycler" data-bind="component: 'slider'">
         <div class="cycler__inner" data-bind="attr: {'data-slide': slideNum()}">
           <div class="cycler__content">
             <div class="cycler__slides">
-              {% for slide in homepage.slides %}
+              {% for slide in page.slides %}
                 <div class="cycler__slide">
                   <img src="{{ slide.slideImage.s3Key | image }}" alt="{{ slide.slideHeading }}" data-image
                        data-bind="imageLoaded"/>
@@ -75,7 +75,7 @@
 
           <div class="cycler__nav">
             <ul class="line-list--green">
-              {% for slide in homepage.slides %}
+              {% for slide in page.slides %}
                 <li data-bind="click: goToSlide({{ loop.index }})">
                   <h4 class="line-list__heading">{{ slide.slideHeading }}</h4>
                   <p class="line-list__copy">{{ slide.slideCopy }}</p>
@@ -85,7 +85,7 @@
           </div>
 
           <ul class="cycler__pagination">
-            {% for slide in homepage.slides %}
+            {% for slide in page.slides %}
             <li data-bind="click: goToSlide({{ loop.index }})">
               {% endfor %}
           </ul>
@@ -93,7 +93,7 @@
           <div class="cycler__description">
             <div class="cycler__content">
               <div class="cycler__slides">
-                {% for slide in homepage.slides %}
+                {% for slide in page.slides %}
                   <div class="cycler__slide">
                     <h4 class="cycler__heading">{{ slide.slideHeading }}</h4>
                     <p class="cycler__copy">{{ slide.slideCopy }}</p>
@@ -125,10 +125,10 @@
     </div>
   </section>
 
-  {% if homepage.quoteCopy %}
+  {% if page.quoteCopy %}
     <section class="section--home">
       <div class="section__background"
-           style="top: {{ homepage.quoteBackgroundTop }}rem; left: {{ homepage.quoteBackgroundLeft }}rem;">
+           style="top: {{ page.quoteBackgroundTop }}rem; left: {{ page.quoteBackgroundLeft }}rem;">
         <div class="illustration" data-anim-type="morph" data-anim-reps="22" data-anim-duration="14000"
              data-anim-translate-x="1" data-anim-translate-y="0.4"
              data-anim-path="M12.384,116.954l55.559,-48.172l-33.127,-52.045l131.923,47.183l12.384,106.34l-64.476,-80.222l-102.263,26.916Z"
@@ -144,15 +144,15 @@
         <div class="compress--medium">
           <div class="quote">
             <div class="quote__image">
-              <img src="{{ homepage.quoteImage.s3Key | image }}" alt="" data-image data-bind="imageLoaded"/>
+              <img src="{{ page.quoteImage.s3Key | image }}" alt="" data-image data-bind="imageLoaded"/>
             </div>
 
             <blockquote class="quote__content">
-              <p>{{ homepage.quoteCopy }}</p>
+              <p>{{ page.quoteCopy }}</p>
 
               <cite>
-                <span>{{ homepage.quoteName }}</span>
-                <span>{{ homepage.quotePosition }}</span>
+                <span>{{ page.quoteName }}</span>
+                <span>{{ page.quotePosition }}</span>
               </cite>
             </blockquote>
           </div>
@@ -163,7 +163,7 @@
 
   <section class="section--home">
     <div class="section__background"
-         style="top: {{ homepage.getStartedBackgroundTop }}rem; right: {{ homepage.getStartedBackgroundLeft }}rem;">
+         style="top: {{ page.getStartedBackgroundTop }}rem; right: {{ page.getStartedBackgroundLeft }}rem;">
       <div class="illustration" data-anim-type="morph" data-anim-reps="22" data-anim-duration="8000"
            data-anim-path="M69.43,15.324c-15.039,12.884 2.193,36.157 -2.446,58.466c-5.824,28.006 -58.16,36.528 -21.838,87.688c9.725,13.699 32.968,25.918 51.258,27.331c21.544,1.665 47.234,-1.065 61.266,-23.442c17.173,-27.386 4.239,-44.853 -32.195,-52.209c-37.168,-7.504 23.166,-41.9 25.375,-64.129c2.447,-24.613 -17.369,-36.315 -32.947,-41.075c-14.394,-4.399 -34.391,-4.694 -48.473,7.37Z"
            data-bind="illustration">
@@ -176,17 +176,17 @@
 
     <div class="section__inner">
       <header class="section__header">
-        <h2 class="section__heading">{{ homepage.getStartedHeading }}</h2>
-        <p class="section__copy">{{ homepage.getStartedCopy }}</p>
+        <h2 class="section__heading">{{ page.getStartedHeading }}</h2>
+        <p class="section__copy">{{ page.getStartedCopy }}</p>
       </header>
 
-      <a href="/signup" class="button">{{ homepage.getStartedCta }}</a>
+      <a href="/signup" class="button">{{ page.getStartedCta }}</a>
     </div>
   </section>
 
   <div class="bottom-nav">
     <div class="bottom-nav__inner">
-      {% for item in homepage.bottomNav %}
+      {% for item in page.bottomNav %}
         <div class="bottom-nav__block">
           <div class="bottom-nav__content">
             <h3 class="bottom-nav__heading">{{ item.bottomNavHeading }}</h3>

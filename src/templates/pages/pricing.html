@@ -53,7 +53,7 @@
         </div>
 
         <div class="pricing__footer">
-          {% for plan in pricing.plans %}
+          {% for plan in page.plans %}
             <div class="pricing__block">
               {{ getStartedButton(plan) }}
               {% if plan.planDetailsUrl %}
@@ -68,21 +68,21 @@
     </div>
   </section>
 
-  {% if pricing.quoteCopy %}
+  {% if page.quoteCopy %}
     <section class="section">
       <div class="section__inner">
         <div class="compress--medium">
           <div class="quote">
             <div class="quote__image">
-              <img src="{{ pricing.quoteImage.s3Key | image }}" alt="" data-image data-bind="imageLoaded"/>
+              <img src="{{ page.quoteImage.s3Key | image }}" alt="" data-image data-bind="imageLoaded"/>
             </div>
 
             <blockquote class="quote__content">
-              <p>{{ pricing.quoteCopy }}</p>
+              <p>{{ page.quoteCopy }}</p>
 
               <cite>
-                <span>{{ pricing.quoteName }}</span>
-                <span>{{ pricing.quotePosition }}</span>
+                <span>{{ page.quoteName }}</span>
+                <span>{{ page.quotePosition }}</span>
               </cite>
             </blockquote>
           </div>
@@ -95,8 +95,8 @@
     <div class="section__inner">
       <div class="compress-large">
         <div class="tout">
-          <a href="{{ pricing.toutUrl }}" class="tout__link">
-            <p>{{ pricing.toutCta }}</p>
+          <a href="{{ page.toutUrl }}" class="tout__link">
+            <p>{{ page.toutCta }}</p>
 
             <span class="tout__icon">
               <svg role="img" title="caret-circle">
@@ -117,7 +117,7 @@
 
       <div class="section__content">
         <div class="faq">
-          {% for faq in pricing.faQs %}
+          {% for faq in page.faQs %}
             <div class="faq__block">
               <h3 class="faq__heading">{{ faq.faqHeading }}</h3>
 

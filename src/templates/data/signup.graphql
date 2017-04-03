@@ -1,5 +1,6 @@
 query {
-  signup: getSignup {
+  page: getSignup {
+    _contentTypeName
     backgroundImage {
       s3Key
     }

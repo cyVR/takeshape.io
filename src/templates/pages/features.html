@@ -5,12 +5,12 @@
 {% block content %}
   <header class="page-header">
     <div class="page-header__inner">
-      {% if features.pageHeaderHeading | length > 1 %}<h1
-        class="page-header__heading">{{ features.pageHeaderHeading }}</h1>{% endif %}
-      {% if features.pageHeaderCopy | length > 1 %}<p
-        class="page-header__copy">{{ features.pageHeaderCopy }}</p>{% endif %}
-      {% if features.pageHeaderCta | length > 1 %}<a href="{{ features.pageHeaderUrl }}"
-                                                     class="button--border">{{ features.pageHeaderCta }}</a>{% endif %}
+      {% if page.pageHeaderHeading | length > 1 %}<h1
+        class="page-header__heading">{{ page.pageHeaderHeading }}</h1>{% endif %}
+      {% if page.pageHeaderCopy | length > 1 %}<p
+        class="page-header__copy">{{ page.pageHeaderCopy }}</p>{% endif %}
+      {% if page.pageHeaderCta | length > 1 %}<a href="{{ page.pageHeaderUrl }}"
+                                                     class="button--border">{{ page.pageHeaderCta }}</a>{% endif %}
     </div>
   </header>
 
@@ -31,13 +31,13 @@
       <div class="section__content">
         <div class="compress--medium">
           <div class="card--feature">
-            <span class="card__rubric">{{ features.developersRubric }}</span>
-            <h3 class="card__heading">{{ features.developersHeading }}</h3>
-            <p class="card__copy">{{ features.developersCopy }}</p>
+            <span class="card__rubric">{{ page.developersRubric }}</span>
+            <h3 class="card__heading">{{ page.developersHeading }}</h3>
+            <p class="card__copy">{{ page.developersCopy }}</p>
           </div>
 
           <ul class="column-list">
-            {% for feature in features.developerFeatures %}
+            {% for feature in page.developerFeatures %}
               <li>
                 <h4 class="column-list__heading">{{ feature.developerFeatureHeading }}</h4>
                 {{ feature.developerFeatureCopy | md | safe }}
@@ -58,7 +58,7 @@
       <div class="section__content">
         <div class="compress--medium">
           <ul class="thumb-list">
-            {% for feature in features.modelerFeatures %}
+            {% for feature in page.modelerFeatures %}
               <li>
                 <div class="thumb-list__image">
                   <img src="{{ feature.modelerFeatureImage.s3Key | image }}" class="thumb-list__image" alt=""
@@ -79,7 +79,7 @@
           <div class="cycler__inner" data-bind="attr: {'data-slide': slideNum()}">
             <div class="cycler__content">
               <div class="cycler__slides">
-                {% for slide in features.modelerFeatures %}
+                {% for slide in page.modelerFeatures %}
                   <div class="cycler__slide">
                     <img src="{{ slide.modelerFeatureImage.s3Key | image }}" alt="" data-image
                          data-bind="imageLoaded"/>
@@ -89,7 +89,7 @@
             </div>
 
             <ul class="cycler__pagination">
-              {% for slide in features.modelerFeatures %}
+              {% for slide in page.modelerFeatures %}
               <li data-bind="click: goToSlide({{ loop.index }})">
                 {% endfor %}
             </ul>
@@ -97,7 +97,7 @@
             <div class="cycler__description">
               <div class="cycler__content">
                 <div class="cycler__slides">
-                  {% for slide in features.modelerFeatures %}
+                  {% for slide in page.modelerFeatures %}
                     <div class="cycler__slide">
                       <h4 class="cycler__heading">{{ slide.modelerFeatureHeading }}</h4>
                       <p class="cycler__copy">{{ slide.modelerFeatureCopy }}</p>
@@ -119,7 +119,7 @@
       </header>
 
       <div class="section__content">
-        {% for feature in features.creatorFeatures %}
+        {% for feature in page.creatorFeatures %}
           <h3 class="section__subheading">{{ feature.creatorFeatureHeading }}</h3>
 
           <div class="cycler" data-bind="component: 'slider'">
@@ -175,11 +175,11 @@
       <div class="compress--large">
         <div class="card--get-started">
           <header class="section__header">
-            <h2 class="section__heading">{{ features.getStartedHeading }}</h2>
-            <p class="section__copy">{{ features.getStartedCopy }}</p>
+            <h2 class="section__heading">{{ page.getStartedHeading }}</h2>
+            <p class="section__copy">{{ page.getStartedCopy }}</p>
           </header>
 
-          <a href="{{ features.getStartedLink }}" class="button">{{ features.getStartedCta }}</a>
+          <a href="{{ page.getStartedLink }}" class="button">{{ page.getStartedCta }}</a>
         </div>
       </div>
     </div>
@@ -187,7 +187,7 @@
 
   <div class="bottom-nav">
     <div class="bottom-nav__inner">
-      {% for item in features.bottomNav %}
+      {% for item in page.bottomNav %}
         <div class="bottom-nav__block">
           <div class="bottom-nav__content">
             <h3 class="bottom-nav__heading">{{ item.bottomNavHeading }}</h3>

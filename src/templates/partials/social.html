@@ -19,9 +19,17 @@
   <meta property="og:description" content="{{ socialGlobal.siteDescription }}">
 {% endif %}
 
-{% if socialGlobal.siteUrl %}
-  <link rel="canonical" href="{{ socialGlobal.siteUrl }}">
-  <meta property="og:url" content="{{ socialGlobal.siteUrl }}">
+{% if socialGlobal.siteUrl and page._contentTypeName %}
+  {% set path = '' %}
+
+  {% if page._contentTypeName != 'homepage' %}
+    {% set path = page | route(page._contentTypeName) + '/' %}
+  {% endif %}
+
+  {% set canonicalUrl = socialGlobal.siteUrl + path %}
+
+  <link rel="canonical" href="{{ canonicalUrl }}">
+  <meta property="og:url" content="{{ canonicalUrl }}">
 {% endif %}
 
 {% if socialGlobal.siteName %}

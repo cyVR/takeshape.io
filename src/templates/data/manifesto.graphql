@@ -1,5 +1,6 @@
 query {
-  manifesto: getManifesto {
+  page: getManifesto {
+    _contentTypeName
     pageHeaderHeading
     content: bodyContentHtml
   }

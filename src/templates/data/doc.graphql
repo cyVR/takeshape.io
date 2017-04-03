@@ -1,5 +1,6 @@
 query {
-  doc: getDocList {
+  docs: getDocList {
+    _contentTypeName
     title
     contentHtml
   }

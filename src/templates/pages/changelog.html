@@ -5,14 +5,14 @@
 {% block content %}
 <header class="page-header">
   <div class="page-header__inner">
-    <h1 class="page-header__heading">{{ changelog.heading }}</h1>
-    {% if changelog.copy %}<p class="page-header__copy">{{ changelog.copy }}</p>{% endif %}
+    <h1 class="page-header__heading">{{ page.heading }}</h1>
+    {% if page.copy %}<p class="page-header__copy">{{ page.copy }}</p>{% endif %}
   </div>
 </header>
 
-{% if changelog.upcomingHeading %}
+{% if page.upcomingHeading %}
 <section class="section">
-  <div class="section__background" style="top: {{ changelog.upcomingBackgroundTop }}rem; right: {{ changelog.upcomingBackgroundRight }}rem;">
+  <div class="section__background" style="top: {{ page.upcomingBackgroundTop }}rem; right: {{ page.upcomingBackgroundRight }}rem;">
     <div class="illustration" data-anim-type="morph" data-anim-reps="22"  data-anim-duration="14000" data-anim-translate-x="1" data-anim-translate-y="0.4" data-anim-path="M12.384,116.954l55.559,-48.172l-33.127,-52.045l131.923,47.183l12.384,106.34l-64.476,-80.222l-102.263,26.916Z" data-bind="illustration">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
         <path stroke="#1de9b6" stroke-opacity="0.5" fill="transparent" d="M2.327,171.216l65.616,-102.434l-15.428,-37.224l145.139,-15.011l-85.672,53.494l11.861,54.395l-121.516,46.78Z"/>
@@ -20,16 +20,16 @@
     </div>
   </div>
 
-  {% if changelog.upcomingBodyHtml %}
+  {% if page.upcomingBodyHtml %}
   <div class="section__inner">
     <div class="section__content">
       <div class="compress--large">
         <div class="card--upcoming">
           <span class="card__rubric">Coming soon</span>
-          {% if changelog.upcomingHeading %}<h3 class="card__heading">{{ changelog.upcomingHeading }}</h3>{% endif %}
+          {% if page.upcomingHeading %}<h3 class="card__heading">{{ page.upcomingHeading }}</h3>{% endif %}
 
           <div class="card__content">
-            {{ changelog.upcomingBodyHtml | safe }}
+            {{ page.upcomingBodyHtml | safe }}
           </div>
         </div>
       </div>

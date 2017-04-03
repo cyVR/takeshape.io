@@ -100,6 +100,7 @@
     "object-fit-images": "^2.3.1",
     "raf-ready": "^1.0.1",
     "svg4everybody": "2.1.0",
+    "takeshape-ssg": "^1.7.1",
     "youtube-player": "^3.0.4"
   }
 }

@@ -34,13 +34,13 @@ routes:
     template: pages/manifesto.html
     context: data/manifesto.graphql
 
-  docs:
+  doc:
     path: /docs/:title
     template: pages/doc.html
     context: data/doc.graphql
     paginate:
-      property: doc
-      itemName: doc
+      property: docs
+      itemName: page
 
   changelog:
     path: /changelog
