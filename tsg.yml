@@ -34,6 +34,14 @@ routes:
     template: pages/manifesto.html
     context: data/manifesto.graphql
 
+  legal:
+    path: /legal/:pageHeaderHeading
+    template: pages/legal.html
+    context: data/legal.graphql
+    paginate:
+      property: pages
+      itemName: page
+
   doc:
     path: /docs/:title
     template: pages/doc.html

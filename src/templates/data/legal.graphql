@@ -1,0 +1,7 @@
+query {
+  pages: getLegalList {
+    _contentTypeName
+    pageHeaderHeading
+    content: bodyContentHtml
+  }
+}
